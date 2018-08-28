@@ -42,7 +42,7 @@ a:active { color:#4b4133; }
 
 #leftnav
 {
-    position:relative;
+    position:fixed;
     float:left;
     padding: 10px;
     background-color:#FFFFFF;
@@ -50,6 +50,7 @@ a:active { color:#4b4133; }
     border-bottom: 50px solid #FFFFFF;
     width: 20%;
     text-align:center;
+    overflow-y: auto;
 }
 
 #leftnav p
@@ -59,12 +60,12 @@ a:active { color:#4b4133; }
 
 #content
 {
-    position:relative;
+    position:fixed;
     float:right;
     padding: 10px;
     width: 70%;
     background-color:#FFFFFF;
-    height: auto;
+    overflow-y: auto;
 }
 
 ul 
