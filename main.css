@@ -23,17 +23,18 @@ a:active { color:#4b4133; }
 
 #banner
 {
-    position:relative;
+    position:fixed;
     font-size: 40px;
     padding: 10px;
     background-color:#FFFFFF;
     border-bottom: 10px solid #224EA5;
     text-align:center;
+    overflow-y: auto;
 }
 
 #navigation
 {
-    position:relative;
+    position:fixed;
     padding: 1px;
     left: 60px;
     right: 5px;
