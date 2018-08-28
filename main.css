@@ -49,7 +49,7 @@ a:active { color:#4b4133; }
     background-color:#FFFFFF;
     border-top: 50px solid #FFFFFF;
     border-bottom: 50px solid #FFFFFF;
-    width: 200px;
+    width: 20%;
     text-align:center;
 }
 
@@ -63,7 +63,7 @@ a:active { color:#4b4133; }
     position:relative;
     float:right;
     padding: 10px;
-    width: 600px;
+    width: 70%;
     background-color:#FFFFFF;
     min-height: 100%;
     height: 100%;
