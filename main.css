@@ -1,6 +1,6 @@
 body
 {
-    background-color:#6500FC;
+    background-color:#EEEEF2;
     color:#000; 
 }
 
@@ -14,7 +14,7 @@ a:active { color:#4b4133; }
     position:absolute;
     top: 10px;
     left: 10px;
-    background-color:#D700FC;
+    background-color:#224EA5;
     border: 1px solid #4d493d;
     padding: 10px;
     width: 850px;
@@ -65,7 +65,7 @@ a:active { color:#4b4133; }
     float:right;
     padding: 10px;
     width: 600px;
-    background-color:#EEEFEF;
+    background-color:#FFFFFF;
     min-height: 100%;
     height: 100%;
 }
