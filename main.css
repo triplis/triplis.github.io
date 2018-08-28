@@ -28,7 +28,7 @@ a:active { color:#4b4133; }
     position:relative;
     font-size: 40px;
     padding: 10px;
-    background-color:#d9ceb2;
+    background-color:#FFFFFF;
     border-bottom: 10px solid #948c75;
     text-align:center;
 }
@@ -47,9 +47,9 @@ a:active { color:#4b4133; }
     position:relative;
     float:left;
     padding: 10px;
-    background-color:#d9ceb2;
-    border-top: 50px solid #d9ceb2;
-    border-bottom: 50px solid #d9ceb2;
+    background-color:#FFFFFF;
+    border-top: 50px solid #FFFFFF;
+    border-bottom: 50px solid #FFFFFF;
     width: 200px;
     text-align:center;
 }
