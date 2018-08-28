@@ -28,7 +28,7 @@ a:active { color:#4b4133; }
     font-size: 40px;
     padding: 10px;
     background-color:#FFFFFF;
-    border-bottom: 10px solid #948c75;
+    border-bottom: 10px solid #224EA5;
     text-align:center;
 }
 
@@ -55,7 +55,7 @@ a:active { color:#4b4133; }
 
 #leftnav p
 {
-    border-top: 1px solid #76521e;
+    border-top: 1px solid #224EA5;
 }
 
 #content
