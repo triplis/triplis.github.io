@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Sims 4 Mods made by creator Triplis">
+    <meta name="keywords" content="sims 4, modding, mods">
+    <meta name="author" content="Triplis">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <title>Become a Sorcerer Mod</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1>Triplis Mods for <span class="highlight">The Sims 4</span></h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="../index.html">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="mod-name">
+      <div class="container">
+        <div id="page-title">
+          <h1>Become a Sorcerer</h1>
+        </div>
+      </div>
+    </section>
+    <section id="main">
+      <div class="container">
+        <article id="main-col">
+          <div class="page-key">
+            <h3>Summary</h3>
+            <p>Investigate a Lump of Clay to get infused with magic, choose a ritual to specialize, then use spells, focus on an alignment, and unlock more spells! Become a master of the Black Arts and specialize further with a dark ritual of your choice, or become a master of the White Arts and specialize further with a light ritual of your choice.</p>
+            <h3>Features</h3>
+            <ul>
+              <li><a href="#subsection-become-sorcerer">How to Become a Sorcerer</a></li>
+              <li><a href="#subsection-alignment">Alignment</a></li>
+              <li><a href="#subsection-magical-connection">Magical Connection</a></li>
+              <li><a href="#subsection-spells-light">Spells Light</a></li>
+              <li><a href="#subsection-spells-dark">Spells Dark</a></li>
+              <li><a href="#subsection-spells-neutral">Spells Neutral</a></li>
+              <li><a href="#subsection-spells-neutral-minion">Spells Neutral - Minion System</a></li>
+              <li><a href="#subsection-mastery">Mastery</a></li>
+              <li><a href="#subsection-child">Child</a></li>
+              <li><a href="#subsection-toddler">Toddler</a></li>
+              <li><a href="#subsection-inheritance">Inheritance and Club Filters</a></li>
+              <li><a href="#subsection-cheats">Cheats</a></li>
+              <li><a href="#subsection-compatibility">Compatibility</a></li>
+              <li><a href="#subsection-translations">Translations</a></li>
+              <li><a href="#subsection-credits">Credits</a></li>
+              <li><a href="#subsection-faq">FAQ</a></li>
+            </u>
+          </div>
+          <div class="page-sections">
+            <div id="subsection-become-sorcerer">
+              <h4>How to Become a Sorcerer</h4>
+              <p>To obtain the Sorcerer Trait on a particular sim, you need to go into Build Mode and place a Lump of Clay anywhere on the Lot. If you already have a Lump of Clay, you can use that one. You don't need another.</p>
+              <p>The Lump of Clay has a new interaction on it: Investigate Object. The tooltip says the consequences of investigating may be permanent, but with 2.0 and beyond, you can remove the trait using the Lump of Clay.</p>
+              <p>When the interaction completes, your sim will now have a new hidden trait and a Spells menu with a toggle "Show/Hide Magical Energy Tingles," even if they are as young as Toddler. Toddler and older can get the trait, but Toddlers and Child sims have a different (and very limited) experience. Teen or older gets access to all the main features of the trait.</p>
+              <p>See the Toddler and Child sections respectively for information on how the trait works for them. The rest of the mod info will be based on sims who are Teen or older.</p>
+              <p>Now that you have the trait, clicking on your Sim will reveal a new menu called Spells. Under Spells, you'll see a menu called "Meditate on the Spirit of Llamadeus..." Under this menu, you'll see three interactions: Ritual of Digestive Control, Ritual of Runner's Vigor, and Ritual of Forced Isolation. Hovering over each tells you what it gives you, uniquely. </p>
+              <p>You can only complete one Ritual and it will define what flavor of Sorcerer you end up with, in terms of Needs. Every type gets two new Needs called Magical Connection and Alignment. These two Needs replace two of the six default Needs. The rituals and traits are as follows:</p>
+              <ul>
+                <li class="patch-note">Ritual of Digestive Control gives a trait called Iron Insides. With Iron Insides, Bladder and Hunger are replaced by Magical Connection and Alignment.</li>
+                <li class="patch-note">Ritual of Runner's Vigor gives a trait called Never Bedheader. With Never Bedheader, Hygiene and Energy are replaced by Magical Connection and Alignment. [To avoid some weird bugs, Hygiene decays very slowly instead of being locked at max. I may explore an alternative to this in the future.]</li>
+                <li class="patch-note">Ritual of Forced Isolation gives a trait called Sociolite. With Sociolite, Fun and Social are replaced by Magical Connection and Alignment.</li>
+              </ul>
+              <p>Once you've chosen a Ritual and completed it, your sim can begin being a Sorcerer!</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-alignment">
+              <h4>Alignment</h4>
+              <p>Alignment functions similarly to the Vampire Energy Need. It doesn't decay and it only changes based on casting Spells. Each time a Light or Dark spell is cast, Alignment increases by 10 points (Light) or decreases by 10 points (Dark), impacting your experience as a Sorcerer.</p>
+              <p>Alignment impacts how fast you gain Light/Dark skill and how fast you make friends/enemies with other Sims.</p>
+              <p>Spells cost 5 Magical Connection by default. As you progress in Alignment, spells go up in cost for the opposing side. It progresses at a rate of +2 cost for every 10 Alignment. For example, if you reach -50 Dark Alignment, that's 2x5=10. So now if you cast a Light Spell, it will cost 5+10=15 Magical Connection. At -100 Dark Alignment, a Light Spell will cost a total of 25 Magical Connection.</p>
+              <p>If you use an Alignment-Lock Ritual (see the section <a href="#subsection-mastery">Mastery</a> for details), your spell cost for that Alignment is now 0. For example, if you reach Max Dark Alignment, Level 10 Black Arts skill, and use the Ritual of Eternity, casting Dark Spells will now cost 0 Magical Connection. Light Spells, on the other hand, will have another +25 cost, totaling it to 50 Magical Connection for each Light Spell. </p>
+              <p>Locking your Alignment will lock you out of any Drain/Sacrifice Need spells of the opposing Alignment (for example, if you are Dark-Locked, you can no longer choose to Sacrifice a Need), but you will still have access to any other unlocked spells of the opposing Alignment.</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-magical-connection">
+              <h4>Magical Connection</h4>
+              <p>Unlike Alignment, Magical Connection works like a normal Need, with a decay rate and some consequences for letting it get too low. When it gets moderately low, you get a +3 Dazed Moodlet. When it reaches rock bottom, you get a +40 Dazed Moodlet. And if it gets too low, you won't be able to cast most spells. Like Vampire Power, Magical Connection is the "power cost" Need. Casting a spell costs you Magical Connection.</p>
+              <p>To fill the Magical Connection Need, you have two key routes to doing so: Practice on your own (click on your Sim and find Practice under Dark or Light Spells), or Drain/Sacrifice a Need with another Sim (click on another Sim and find a Drain or Sacrifice option under Spells > Renew Magical Connection).</p>
+              <ul>
+                <li class="patch-note">Practice: Practicing will both fill the Magical Connection Need over time and increase your skill level in one of the Black Arts or White Arts, depending on which type of practice you chose.</li>
+                <li class="patch-note">Sacrifice a Need (White Arts)(Bonded): Example of how this works. Your Energy Need is maxed, but the target Sim is a cranky Toddler who is exhausted. You use Sacrifice Energy on the Toddler and slowly transfer your Energy over to them.</li>
+                <li class="patch-note">Drain a Need (Black Arts)(Bonded): Example of how this works. Your Energy Need is low and you see a partying sim cranking it on the dance floor. You use Drain Energy on that dance machine and slowly drain their Energy, giving it to yourself.</li>
+                <li class="patch-note">Sacrifice a Need (White Arts)(Instant)(Requires Light Alignment Lock): Works like the bonded version, with the difference that the transfer happens as soon as the interaction executes and it happens as a preset value. You drain your own need to -90 and the target's targeted Need goes to 100[full], in addition to your Magical Connection filling to full. Your chosen Need (ex: Bladder) must be 30 or higher for you to be able to drain it. To give you a rough idea of what that means, 30 is somewhere in the vicinity of 2/3rds full, visually.</li>
+                <li class="patch-note">Drain a Need (Black Arts)(Instant)(Requires Dark Alignment Lock): Works like the bonded version, with the difference that the transfer happens as soon as the interaction executes and it happens as a preset value. You drain the target's targeted Need to -90 and yours refills to 100[full], in addition to Magical Connection filling to full. The target's targeted Need (ex: Bladder) must be 30 or higher for you to be able to drain it. To give you a rough idea of what that means, 30 is somewhere in the vicinity of 2/3rds full, visually.</li>
+              </ul>
+              <p>Note that for "Instant" version, the amount the Need needs to be at is a rough number chosen to be in the vicinity of "not full," without being "so low it's way too easy to do over and over." If you are draining other sims' needs a lot, you may want to be thinking about how to make sure that they can get them refilled, so that you're able to keep doing it. If you're sacrificing your own needs, you may want to be thinking about how to get them refilled in a timely manner.</p>
+              <p>It's all up to you to play as you want. You can even go around draining random people if you want and gain lots of Dark Alignment points, if you're into that sort of thing.</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-spells-light">
+              <h4>Spells Light</h4>
+              <p>You start with access to the Skill Level 1 spells. To begin progressing in White Arts skill, you can use the Skill Level 1 spells, use Sacrifice a Need on another Sim, or use the Light version of the Practice interaction.</p>
+              <p>Skill Level 1</p>
+              <ul>
+                <li class="patch-note">Enchanting Introduction: Works like Friendly Introduction, but stronger.</li>
+                <li class="patch-note">Cathartic Healing: Target another sim who is Sad when you are also Sad and lower Sad moodlets on both Sims while building your White Arts skill. Target can be Toddler and up.</li>
+                <li class="patch-note">Dry Out: Target a puddle and instantly get rid of it.</li>
+                <li class="patch-note">Workout: Heals fatigue on the targeted sim and prompts them to do a workout if something is available to do one on.</li>
+                <li class="patch-note">Health: Heals sickness if you have GTW and your sim is sick.</li>
+                <li class="patch-note">Workout (on the Treadmill): Periodically costs some Magical Connection, builds Fitness skill faster than normal, and doesn't fatigue the Sorcerer.</li>
+              </ul>
+              <p>Skill Level 2</p>
+              <ul>
+                <li class="patch-note">Aura of Nature: Click on yourself and pick a sim to cast the buff on; the sim with this buff will be protected from fire for the duration. Target can be Teen and up.</li>
+                <li class="patch-note">Simoleon Sacrifice: Click on yourself and radiate out a special Happy buff for the duration that makes sims more likely to hug each other; lose 1,000 Simoleons at the end. Recipients of the buff can be Toddler and up.</li>
+              </ul>
+              <p>Skill Level 3</p>
+              <ul>
+                <li class="patch-note">Transform Weight, Give Fat: Target another sim and periodically lose Fat while the target gains Fat; can be canceled early by clicking on the interaction to cancel (otherwise, the spell continues until you have no more Fat). Target can be Teen and up.</li>
+                <li class="patch-note">Transform Weight, Take Fat: Target another sim and periodically gain Fat while the target loses Fat; can be canceled early by clicking on the interaction to cancel (otherwise, the spell continues until the target has no more Fat). Target can be Teen and up.</li>
+              </ul>
+              <p>Skill Level 4</p>
+              <ul>
+                <li class="patch-note">Aura of Edibility: Click on yourself and pick a sim to cast the buff on; the sim with this buff will be capable of making food that doesn't spoil for the duration. Target can be Teen and up.</li>
+                <li class="patch-note">Aura of Agriculture: Click on yourself and pick a sim to cast the buff on; the sim with this buff will gain Gardening skill at 5x the normal rate for the duration.</li>
+              </ul>
+              <p>Skill Level 5</p>
+              <ul>
+                <li class="patch-note">Transform Muscle, Give Muscle: Target another sim and periodically lose Muscle while the target gains Muscle; can be canceled early by clicking on the interaction to cancel (otherwise, the spell continues until you have no more Muscle). Target can be Teen and up.</li>
+                <li class="patch-note">Transform Muscle, Take Muscle: Target another sim and periodically gain Muscle while the target loses Muscle; can be canceled early by clicking on the interaction to cancel (otherwise, the spell continues until the target has no more Muscle). Target can be Teen and up.</li>
+              </ul>
+              <p>Skill Level 6</p>
+              <ul>
+                <li class="patch-note">Douse: Target a sim who is on fire, or object or ground that is on fire, and put it out instantly. Can only put out one "piece" of fire at a time (e.g. if there is a raging inferno, it may take a few clicks).</li>
+              </ul>
+              <p>Skill Level 7</p>
+              <ul>
+                <li class="patch-note">Stasis Field: Target another sim and lock them into Stasis until you click on them and click Dispel Enchantment; while in Stasis, the target's moods and needs don't decay, and they can't move or perform any actions. Target can be Toddler and up.</li>
+              </ul>
+              <p>Skill Level 8</p>
+              <ul>
+                <li class="patch-note">Prolong Life: Target another sim and reset age progress back to the beginning of the life stage. Target can be Toddler and up.</li>
+              </ul>
+              <p>Skill Level 9</p>
+              <ul>
+                <li class="patch-note">Increase Chance of Boy: Target a pregnant sim (can be yourself or another sim), setting the current gender chance to the highest amount for giving birth to a boy.</li>
+                <li class="patch-note">Increase Chance of Girl: Target a pregnant sim (can be yourself or another sim), setting the current gender chance to the highest amount for giving birth to a girl.</li>
+              </ul>
+              <p>Skill Level 10</p>
+              <ul>
+                <li class="patch-note">Extract Spirit: Target a gravestone or urn and "pull out" the ghost. Note: Won't work if you've already released the spirit to the netherworld.</li>
+                <li class="patch-note">Resurrect: Target a ghost and bring them back to life.</li>
+              </ul>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-spells-dark">
+              <h4>Spells Dark</h4>
+              <p>You start with access to the Skill Level 1 spells. To begin progressing in Black Arts skill, you can use the Skill Level 1 spells, use Drain a Need on another Sim, or use the Dark version of the Practice interaction.</p>
+              <p>Skill Level 1</p>
+              <ul>
+                <li class="patch-note">Enchanting Introduction: Works like Rude Introduction, but stronger.</li>
+                <li class="patch-note">Lull to Sleep: Target another sim and put them to sleep. Target can be Toddler and up.</li>
+                <li class="patch-note">Enchant to Kneel: Target another sim and enchant them to kneel. Can be removed by clicking on the sim and clicking Dispel Enchantment. Target can be Child and up.</li>
+              </ul>
+              <p>Skill Level 2</p>
+              <ul>
+                <li class="patch-note">Set on Fire (ground): Click on the ground and start a fire. Must be within the Build Mode outline of the lot.</li>
+                <li class="patch-note">Siphon Joy into Wealth: Target a sim who is happy and periodically drain happy moodlets, while gaining ticks of money. Target can be Teen and up.</li>
+              </ul>
+              <p>Skill Level 3</p>
+              <ul>
+                <li class="patch-note">Suppress Sadness: Click on yourself and remove Sad moodlets with completion. Also adds a buff that keeps new Sad moodlets from being added for the duration.</li>
+                <li class="patch-note">Set on Fire (table): Click on a table and start a fire. Must be within the Build Mode outline of the lot.</li>
+                <li class="patch-note">Set on Fire (chair): Click on a chair and start a fire. Must be within the Build Mode outline of the lot.</li>
+              </ul>
+              <p>Skill Level 4</p>
+              <ul>
+                <li class="patch-note">Suppress Sadness buff lasts for much longer and you can remove it at any time by targeting yourself and clicking Dispel Enchantment.</li>
+                <li class="patch-note">Induce Panic: Target another sim and trap them in a state of panic, draining their Energy. Target can be Child and up.</li>
+                <li class="patch-note">Induce Panic (available on the Piano with Piano skill 10): Plays a song, nearby sims will panic while it's playing and eventually pass out.</li>
+              </ul>
+              <p>Skill Level 5</p>
+              <ul>
+                <li class="patch-note">Tabula Rasa: Target another sim and wipe relationship between yourself and the target completely. Target can be Toddler and up.</li>
+                <li class="patch-note">Aura of Glamour: Click on yourself and pick a sim to cast the buff on; the sim with this buff will draw extra romantic attention and have more success with romantic interactions. Picked sim can be Teen and up.</li>
+              </ul>
+              <p>Skill Level 6</p>
+              <ul>
+                <li class="patch-note">Wipe Romance: Target another sim and wipe romantic relationship only between yourself and the target. Target can be Toddler and up to allow debugging (e.g. if a bug occurs that gives a Child or Toddler a romance bar, you could use this to help with that... its intended purpose is to wipe Romance between Teen and up though). If used on someone with which you don't have a Romance bar, it just won't do anything.</li>
+              </ul>
+              <p>Skill Level 7</p>
+              <ul>
+                <li class="patch-note">Wipe Friendship: Target another sim and wipe friendship relationship only between yourself and the target. Target can be Toddler and up.</li>
+              </ul>
+              <p>Skill Level 8</p>
+              <ul>
+                <li class="patch-note">Set on Fire (sims): Click on yourself and pick a sim to set on fire; target must be within the Build Mode outline of the lot. Target can be Teen and up.</li>
+              </ul>
+              <p>Skill Level 9</p>
+              <ul>
+                <li class="patch-note">Create Fire Dancer: Target another sim and lock them into a deadly fire "dance" of panic... for the rest of their life. Target can be Teen and up.</li>
+              </ul>
+              <p>Skill Level 10</p>
+              <ul>
+                <li class="patch-note">Create Lightning Rod: Target another sim and call forth lighting to end their poor sim existence. Target can be Teen and up.</li>
+              </ul>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-spells-neutral">
+              <h4>Spells Neutral</h4>
+              <p>A few Spells are functionality I wanted Sorcerers to have, but it didn't make sense to force them into the roster of Light or Dark Spells. They are as follows:</p>
+              <ul>
+                <li class="patch-note">Walkstyle like the Vampire Super Speed. Toggle under Spells with "Run!"</li>
+                <li class="patch-note">Change Outfit: Target a sim and pick the outfit for them to change into out of their available outfits.</li>
+                <li class="patch-note">Teleport as... Lamadeus' Torch (Neutral Alignment) / Purity's Flame (Light Alignment) / Reaper's Shroud (Dark Alignment): Teleports yourself to the selected area.</li>
+                <li class="patch-note">Teleport as... (picked sim)(click on the ground and pick a Sim in the zone to teleport to the selected area)</li>
+              </ul>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-spells-neutral-minion">
+              <h4>Spells Neutral - Minion System</h4>
+              <p>The Minion system operates under the pie menu category Spells > Boss. Most commands are done by targeting another sim. A couple (which I'll specify below) are used by targeting yourself and picking a sim to apply the command to.</p>
+              <p>Minion Roles: Minion Roles specify what limitations are set on the minion, while the role is active. The following are the available minion roles to choose from.</p>
+              <ul>
+                <li class="patch-note">Dance: The minion will follow around the sim who applied the role to them and dance near them. Note: Upon loading or traveling, the minion may lose track of who to follow around. You can re-apply it if this happens by swapping to another role and then swapping back to Dance.</li>
+                <li class="patch-note">Guest: The minion, if on a residential lot, will treat it as if they are a welcome guest. If they are not on a residential lot, they will likely just perform whatever range of actions is normal.</li>
+                <li class="patch-note">Maid: The minion will only tidy things up. If there is nothing to tidy up, they will stand around in place, doing nothing.</li>
+                <li class="patch-note">Musician: The minion's Guitar, Violin, and Piano skills will be immediately set to max level. With this role active, they will look for instruments nearby to play songs on. If no instruments are available, they will stand around in place, doing nothing.</li>
+                <li class="patch-note">Painter: The minion will only paint. If no easel is available to paint, they will stand around in place, doing nothing.</li>
+                <li class="patch-note">Repair: The minion will only repair broken objects. If no object is available to repair, they will stand around in place, doing nothing.</li>
+                <li class="patch-note">Romantic: The minion will act identically to Guest, with the addition of an always active +50 Flirty moodlet, making them an easy candidate for romance.</li>
+              </ul>
+              <p>Some general details about how Minions work:</p>
+              <ul>
+                <li class="patch-note">Only NPCs (uncontrolled sims) can have minion commands used on them.</li>
+                <li class="patch-note">Minions with a role active can be chatted with normally, though they may interrupt chatting to do whatever action is high priority for them, if available.</li>
+                <li class="patch-note">Minion Needs are locked at max while a role is active, so you don't need to be concerned with managing their needs.</li>
+                <li class="patch-note">PlantSims and Vampires can be minions, in addition to normal sims. Sorcerers cannot.</li>
+                <li class="patch-note">Minions with a role active will always use the Run walkstyle, making them super efficient at getting around to perform their role. Note: Vampires may use super speed or teleport instead of Run, if it's active when they take on a minion role.</li>
+                <li class="patch-note">Minion roles can be applied on public lots, though they were designed with residential in mind, so they may not be all that interesting outside of the home.</li>
+                <li class="patch-note">A minion will stay in its active role forever, unless: 1) You use Dismiss on it or, 2) You leave the lot and the minion leaves the role for some reason that I don't have a fix for. Minions may stick around if you travel, they may not. Expect some inconsistency with this aspect of it. Minions will leave the role if *they* travel, for sure.</li>
+                <li class="patch-note">Once a role has been successfully applied to a target once, that target will have a permanent trait on them that makes them a minion, even if they don't have any roles currently active. This trait can be removed with the ability Fire, explained in detail below in the special commands.</li>
+              </ul>
+              <p>Special minion commands (these commands are always available once a minion has the special trait applied to them through applying a role at least once):</p>
+              <p>Targeting the Minion</p>
+              <ul>
+                <li class="patch-note">Sleep: Puts the minion into a sleeping interaction. This is to allow you to go into the highest game speed, without the presence of minions screwing it up. To wake the minion from this, target them with a sorcerer and use Wake Up.</li>
+                <li class="patch-note">Dismiss: Forces the minion to leave the lot. In case you're wondering, this can be used on both residential and public lots.</li>
+              </ul>
+              <p>Targeting Yourself and Picking a Sim</p>
+              <ul>
+                <li class="patch-note">Call Over: Works like the voodoo summon ability. Can only be used on a minion who isn't currently on the loaded neighborhood somewhere. It will bring them onto the lot, to you (they may have to walk/run to you once they spawn, so don't expect to see them instantly).</li>
+                <li class="patch-note">Fire: Removes the minion trait from the minion, so that they are no longer considered a minion. The minion must be present on the loaded neighborhood somewhere for you to do this. It will also apply the functionality of Dismiss, so that they'll be sure to leave, as opposed to getting stuck in a role.</li>
+              </ul>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-mastery">
+              <h4>Mastery</h4>
+              <p>When you've reached Level 10 in White Arts or Black Arts and have maxed Alignment of the related type, you can choose from one of three rituals under the menu Devote Yourself to the Light/Dark to lock your alignment and gain a special trait in the process. They are as follows:</p>
+              <p>Light</p>
+              <ul>
+                <li class="patch-note">Ritual of Transcendence: +50 Fine Buff that can be toggled at will.</li>
+                <li class="patch-note">Salvation: Special Ability <b>Sacrifice Magical Connection</b> under White Arts menu; tank your Magical Connection and fill all of the target's needs to full. Target can be Toddler and up.</li>
+                <li class="patch-note">Creation: Special Abilities <b>Create Life inside Target</b> and <b>Create Life inside Self</b> under White Arts menu; target another sim and make yourself or them pregnant. Target can be Young Adult and up.</li>
+              </ul>
+              <p>Additionally, all Light traits unlock the optional toggle Purity's Aura and optional toggle Hover walkstyle. With Purity's Aura active, the Sim will have a sun VFX in the middle of their chest and nearby Sims will come to them and cheer for them, like a famous person being mobbed.</p>
+              <p>Dark</p>
+              <ul>
+                <li class="patch-note">Ritual of Eternity: Become Immortal, aka: Can't age or die.</li>
+                <li class="patch-note">Ritual of Might: Special Ability <b>Fight for Llamadeus's Favor</b> under Mean menu; drains the target's needs and fills your Magical Connection. Target can be Teen and up.</li>
+                <li class="patch-note">Ritual of Wealth: Special Ability <b>Wealth from Death</b> under Black Arts menu; kill the target and gain 50,000 Simoleons. Target can be Teen and up.</li>
+              </ul>
+              <p>Additionally, all Dark traits unlock the optional toggle Reaper's Aura and optional toggle Hover walkstyle. With Reaper's Aura active, the Sim will have a Grim Reaper black smoke VFX by their feet and nearby Sims will run away and panic. While said Sims are panicking, the Sorcerer can use "Scare" on them, which will cause them to pee themselves.</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-child">
+              <h4>Child</h4>
+              <p>Child Sim Sorcerers can't cast Spells yet. In the wise words of a petulant child, &quot;Maybe later.&quot;&#160;</p>
+              <p>Child Sim Sorcerers have a different relationship with magic than older sims. They have a lot of magical energy, but don't understand how to use it yet. Sometimes this can manifest in the form of Spontaneous Combustion. Spontaneous Combustion works as follows:</p>
+              <p>Spontaneous Combustion: When Angry, there's a chance that your Child Sim may spontaneously combust, i.e. catch on fire.</p>
+              <p>The exact numbers for chance of it happening are: Minimum 4 hours initially, maximum 8 hours initially. Then min 6 hours, max 24 hours. It's intended to be rare overall, rather than being something you habitually have to deal with. But let's keep it moving before we catch on fire here...</p>
+              <p>After spontaneously combusting at least once, Child Sim Sorcerers can ask an older Sim who is a Sorcerer to do a Flame Containment Spell on them, which protects them from spontaneously combusting for two days. This buff is called Combustion Suppression and when it's added, all Tense, Angry, and Uncomfortable buffs are removed. (This does not apply to buffs that are dependent on something other than time remaining, like the low Hygiene discomfort from being dirty after being on fire, nor does it apply to buffs of these types that are added AFTER Combustion Suppression is added.)</p>
+              <p>Child Sim Sorcerers can also Teleport, with some heavy caveats. For a Child Sim to be able to Teleport, a Teen+ Sorcerer needs to do the interaction with them, under Friendly, called &quot;Imbue with Teleportation Power.&quot; Upon completion, the Child Sim Sorcerer (let's just call him Bob... that's easier to type... Bob is an easy name). Upon completion, Bob gains a 6 hour, +2 Fine buff called Teleporty Tingles. Bob can now click on the ground and use Teleport as Llamadeus's Torch.&#160;</p>
+              <p>The catch is, when Bob teleports he'll get a 30 second, +3 Uncomfortable Moodlet called Queasy. While Queasy is active, Bob can't Teleport. His little Bob body isn't built for such speed. Once Queasy drops, Bob can Teleport again, provided he still has the Teleporty Tingles buff.</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-toddler">
+              <h4>Toddler</h4>
+              <p>Like Child Sims, Toddlers can't cast Spells. They can't spontaneously combust either. So what can they do?</p>
+              <p>What they can do is use the Lump of Clay to get the Sorcerer trait. Once they have it, they will have a new interaction available if you click on them called "Play." They can do it autonomously, so let me know if you feel that it happens too often.</p>
+              <p>This interaction, like the connotation of the word "play," is for "fun." It doesn't do anything other than look cute and give them some Fun Need. It looks magical though, so there's that. Weirder stories!</p>
+              <p>Toddlers can also be teleported by older Sims and will get a buff specific to their Toddler trait as a result.</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-inheritance">
+              <h4>Inheritance and Club Filters</h4>
+              <p>If you would like to have either of these features in relation to the Sorcerer mod, head on over to <a href="http://modthesims.info/download.php?t=594519" target="_blank">KlingonDragon's mod</a> and add that to your game, in addition to this mod. </p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-cheats">
+              <h4>Cheats</h4>
+              <p>If for some reason you want to manually set White Arts or Black Arts skill level, you can use cheats, where "10" in the following is the skill level you want:</p>
+              <ul>
+                <li class="patch-note">stats.set_skill_level Triplis_Sorcerer_LightSkill 10</li>
+                <li class="patch-note">stats.set_skill_level Triplis_Sorcerer_DarkSkill 10</li>
+              </ul>
+              <p>You can also have Magical Connection be maxed out all the time. Shift-click your Sim and use Spells > Magical Connection to lock it at full.</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-compatibility">
+              <h4>Compatibility</h4>
+              <p>This mod overrides the following files:</p>
+              <ul>
+                <li class="patch-note">interactions.interaction_cancel_compatibility | S4_03B33DDF_00000000_B17F7F4EF5ED9623 (to ensure Douse shows up during fires)</li>
+                <li class="patch-note">services.fire_service | S4_03B33DDF_00000000_7A60E6E4F74B7502 (to prevent fire from touching a Sim when they have the Aura of Nature buff)</li>
+              </ul>
+              <p>Beware of using this mod with other mods that edit the same files.</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-translations">
+              <h4>Translations</h4>
+              <ul>
+                <li class="patch-note">German by swaggibaum083</li>
+                <li class="patch-note">French by Llumex</li>
+                <li class="patch-note">Chinese by justin10</li>
+                <li class="patch-note">Italian by mrsb0red</li>
+                <li class="patch-note">Polish by Trozuu</li>
+                <li class="patch-note">Portuguese Brazil by kibapvp2</li>
+                <li class="patch-note">Russian by Amalenne</li>
+                <li class="patch-note">Spanish by <a href="https://www.youtube.com/channel/UCNfA9K6EyWx140F9UCmhqpQ" target="_blank">Moonly Sims</a></li>
+              </ul>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-credits">
+              <h4>Credits</h4>
+              <p>Special thanks to the following folks who helped me at one point or another with this mod. They are, in no particular order: Candyd, Neia, DramaticGamer, SimGuruModSquad, CmarNYC, Hadron1776, Turbodriver, KlingonDragon, WildWitch</p>
+              <p>Special thanks to Niker293 as well, in particular for putting together some of the main icons used in the mod (for example, the Wand icons)</p>
+              <p>And to Simone Caporalini for creating the animations used in the bonded interactions.</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-faq">
+              <h4>FAQ</h4>
+              <p>Q: How do supernaturals interact with one another?</p>
+              <p>A: Sorcerers can't drain/sacrifice needs with one another, or with the grim reaper (and a few special active roles, like yoga instructor). They also can't do it to Vampires or Plant Sims; this is simply because Vampires and Plant Sims have different Needs and it would be an obnoxious level of complexity trying to factor in all of the different scenarios. Also, Vampires cannot become Sorcerers, but Plant Sims have been given two of the three ritual options to become one. The reason for these restrictions is just the messy nature of handling the different unique Needs.</p>
+              <p>Q: Is anything autonomous? Will there be Sorcerers running around in my game randomly?</p>
+              <p>A: Nothing is autonomous. Every interaction is set to not allow autonomy and no one should be getting the Sorcerer Trait without you making it happen (with the exception of Inheritance - See the section <a href="#subsection-inheritance">Inheritance and Club Filters</a> for details on that optional add-on). As Supernatural Sims are a touchy area when it comes to autonomy, I decided at the beginning to stick to this, so peoples' games wouldn't become overwhelmed by autonomous Sorcerers.</p>
+              <p>Q: I can't start a fire / my fire isn't working in X area.</p>
+              <p>A: Fires can't be started outside the Build Mode zone of a lot. If you are unsure where this begins and ends, go into Build Mode for the lot you're on and you'll see the outline. I also added some restrictions and a tooltip, so that this should be communicated better in-game for fire-starting abilities.</p>
+              <p>Q: My sim has a red/orange/yellow Plumbob above their head when they have Dark Alignment progress. Is this normal?</p>
+              <p>A: As far as I'm aware, there is no known way to change this with modding, but it's nothing to be concerned about either. The Plumbob changes color because Alignment uses the Needs coding and that coding signals your Need being low with a Plumbob color change. Because Dark Alignment uses the lower end of a Need (it not being full) it shows up as a different color.</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <aside id="sidebar">
+          <div class="dark">
+            <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/683897/" target="_blank">Download</a></span></h3>
+            <p><b>Latest:</b> V2-4-5, tested with Maxis Patch, August 16, 2018</p>
+            <h4>Patch Notes</h4>
+            <ul>
+              <li class="patch-note">Fixed the Light version of teleport.</li>
+              <li class="patch-note">Fixed some stuff with the memory wipe spells that was triggering a lastexception error.</li>
+              <li class="patch-note">Added updated version of German translation by swaggibaum083</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <footer>
+      <p>Triplis Sims 4 Mods, Copyright &copy; 2018</p>
+    </footer>
+  </body>
+</html>
