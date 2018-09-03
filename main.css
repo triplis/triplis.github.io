@@ -186,6 +186,24 @@ header .highlight, header .current a
     font-weight: bold;
 }
 
+header .nav-link a
+{
+    font-weight: bold;
+    background: #68371E;
+    border: #321A0D 3px solid;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: #FFEFE8;
+}
+
+header .nav-link a:hover
+{
+    color: #FFEFE8;
+    font-weight: bold;
+}
+
 header a:hover
 {
     color: #393D38;
