@@ -233,6 +233,11 @@ header a:hover
     font-size: 20px;
 }
 
+#showcase a
+{
+    color: #FFFFFF;
+}
+
 #newsletter
 {
     padding: 15px;
