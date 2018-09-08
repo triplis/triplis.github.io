@@ -248,6 +248,12 @@ header a:hover
 #newsletter h1
 {
     float: left;
+    font-size: 16px;
+}
+
+#newsletter h1 a
+{
+    color: #0E2244;
 }
 
 #newsletter form
