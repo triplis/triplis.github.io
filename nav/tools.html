@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Sims 4 Mods made by creator Triplis">
+    <meta name="keywords" content="sims 4, modding, mods">
+    <meta name="author" content="Triplis">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <title>Modding Tools</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1>Triplis Mods for <span class="highlight">The Sims 4</span></h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="nav-link"><a href="https://www.patreon.com/triplissims" target="_blank">Blog/Patreon</a></li>
+            <li class="current"><a href="../nav/tools.html">Tools</a></li>
+            <li class="nav-link"><a href="../nav/help.html">Help</a></li>
+            <li class="nav-link"><a href="../index.html">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="mod-name">
+      <div class="container">
+        <div id="page-title">
+          <h1>Modding Tools</h1>
+        </div>
+      </div>
+    </section>
+    <section id="main">
+      <div class="container">
+        <article id="main-col">
+          <div class="page-key">
+            <p>The following are tools that I've built specifically for modding The Sims 4. In the spirit of sharing and open source, you can download the source code if you'd like, as well as the program itself.</p>
+            <h3>Tools</h3>
+            <ul>
+              <li><a href="#subsection-auto-hash">Sims 4 Auto Hash</a></li>
+            </u>
+          </div>
+          <div class="page-sections">
+            <div id="subsection-auto-hash">
+              <h4>Sims 4 Auto Hash</h4>
+              <img src="../img/auto-hash-icon-for-show.png">
+              <p><a href="http://www.simfileshare.net/download/838912/" target="_blank">Download</a></p>
+              <p><a href="http://www.simfileshare.net/download/838933/" target="_blank">Download Source Code</a></p>
+              <h3>Introduction</h3>
+              <p>I built this program as a way to speed up the process of creating and applying unique hash IDs to custom XML tuning files. Please note that the program may have bugs or be incomplete in some ways, so use at your own risk. The priority here was functionality for an experienced modder, less so than ease-of-use for those with little knowledge of modding.</p>
+              <p>That said, I have every intention of improving on it where I can and where it makes sense to for its intended purpose, especially as I improve in my knowledge of programming.</p>
+              <h3>Warnings</h3>
+              <p>Results should match other standard hash generators (ex: Sims 4 Studio, ArtUrlWWW's FNV Hasher), provided the internal filename contains no non-english characters. Unlike other hash generators, I have not figured out how to properly handle non-english characters. I built the program in C++, so I couldn't just copy the functionality of other tools (which are written in C#). So if you try to use the tool with a filename that has non-english characters, you will encounter messy results. This is something I desperately wanted to include support for, but support for different languages is an apparently oceanic topic of study in my research so far, so I am putting it aside for now and releasing what I have.</p>
+              <p>Also, the program will only function properly on Windows. It is not compatible with other operating systems to my knowledge.</p>
+              <p>Also also, every file type defaults to 64 bit unless otherwise specified. There may be file types I haven't manually set where 32 bit or 32 high bit is required to get the file to work in game. If you are using the tool and notice something like this, feel free to let me know and I will make it a priority to update the tool with that file type adjusted accordingly.</p>
+              <h3>How to Use (summary)</h3>
+              <p>When you open the program, you should see a standard console interface. You paste in a file path, press enter, and it will do a number of operations on the file: generate a hash for it, insert the hash as its internal file hash in decimal and then apply the hash to its external filename as hexadecimal.</p>
+              <p>So the simplest usage should look something like the following:</p>
+              <ul>
+                <li class="patch-note">Pick a name for your XML file internally and save it with that name. For example: n="Triplis:Interaction_DoThings" -- This is the name that will be used for generating the hash. Make sure the external filename includes "S4_" and is the file type XML.</li>
+                <li class="patch-note">Copy the file path. You can do this by doing shift + right-click while looking at the file in windows explorer. Notepad++ and Atom text editors both have an option to copy file path as well.</li>
+                <li class="patch-note">Paste the file path into the program and press enter.</li>
+                <li class="patch-note">You're done!</li>
+              </ul>
+              <p>When you are finished, you can click the X or type in one of a few standards for quitting the program and press enter: -1, q, or quit</p>
+              <p>The program is designed to loop, so you can leave it open and do file after file if you wish.</p>
+              <h3>How to Use (advanced)</h3>
+              <p><b>Multiple Files</b></p>
+              <p>You can do more than one file at a time. Simply select more than one in windows explorer, use shift + right-click to copy path, and then paste into the program. When you paste in multiple paths at the same time, it will process all but the last one automatically. You'll have to press enter to get it to proceed on the last one.</p>
+              <p><b>What Gets Appended as Name</b></p>
+              <p>When choosing an internal filename, consider the example n="Triplis:Interaction_DoThings"</p>
+              <p>Note the colon, ":" operator in there. That's optional. If included, it will cause the program to ignore anything before ":" when appending the internal filename to the end of the external filename. For example, if you want your external filename to be S4_3C1D8799_00000000_D3613ABC297B23B7_MyZoneModifier even though the internal filename is Triplis:MyZoneModifier, you would include the ":" operator. This is purely a preference thing; it has nothing to do with the hash generation itself. I put it in because I like to use S4PE and S4PE will build a key list for assets that have a name appended to the end of them, making it easier to navigate your projects when looking at them in S4PE, but if my hash generation appended the entire filename, it could get rather long! You might know that your project is only by you and so there is no need to append your modder name to the external name of the file.</p>
+              <p>Keep in mind, of course, that using a unique modder name does matter for hash generation when it comes to what you choose for the internal filename! You want to make sure the chances of someone using the same hash is as low as possible. MyZoneModifier is not likely to be unique, but TheLastKnightOfBardledom:MyZoneModifier or TheLastKnightOfBardledom_MyZoneModifier probably will be.</p>
+              <p><b>Data Template Files</b></p>
+              <p>The program comes with a set of template data files. Meaning, existing data files that will be copied for some file types when a hash is generated. This is to speed up the process of hunting down data file types every time you want to make a new tuning file that requires one. Not all data template files have been added yet.</p>
+              <p>Some, however, have more than one template and you can choose which one will get copied by naming your XML file in the right way.</p>
+              <p>For example, if you have a buff XML file and you want to generate a data file for the mood Confident, include, somewhere in your internal filename, "BuffConfident." This might look something like: n="Triplis:Buff_StrutAround_BuffConfident"</p>
+              <p>You can look at the template folder (it comes with the program) and see what the syntax looks like for these template variations. Right now, most of the variation revolves around different types for buffs and different types for traits. Note that you will still need to edit the data file somehow for modifying things like strings.</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <p>Triplis Sims 4 Mods, Copyright &copy; 2018</p>
+    </footer>
+  </body>
+</html>
