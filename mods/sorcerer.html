@@ -37,7 +37,7 @@
         <article id="main-col">
           <div class="page-key">
             <h3>Summary</h3>
-            <p>Investigate a Suspicious Lump of Clay to get infused with magic, choose a ritual to specialize, then use spells, focus on an alignment, and unlock more spells! Become a master of the Black Arts and specialize further with a dark ritual of your choice, or become a master of the White Arts and specialize further with a light ritual of your choice.</p>
+            <p>Investigate a Suspicious Lump of Clay to get infused with magic, choose a ritual to specialize, then use spells, focus on an alignment, and unlock more spells! Become a master of the Black Arts or White Arts and specialize further with a ritual of your choice. Or focus on the NEW Mischief Arts!</p>
             <h3>Features</h3>
             <ul>
               <li><a href="#subsection-become-sorcerer">How to Become a Sorcerer</a></li>
@@ -45,6 +45,7 @@
               <li><a href="#subsection-alignment">Alignment</a></li>
               <li><a href="#subsection-gf-reputation">Get Famous Reputation</a></li>
               <li><a href="#subsection-magical-connection">Magical Connection</a></li>
+              <li><a href="#subsection-spells-mischief">Spells Mischief</a></li>
               <li><a href="#subsection-spells-light">Spells Light</a></li>
               <li><a href="#subsection-spells-dark">Spells Dark</a></li>
               <li><a href="#subsection-spells-neutral">Spells Neutral</a></li>
@@ -101,7 +102,8 @@
             <div id="subsection-gf-reputation">
               <h4>Get Famous Reputation</h4>
               <p>If you have Get Famous, performing alignment-oriented spells in public will affect your reputation. Light spells will give Good reputation and Dark spells will give Bad reputation.</p>
-              <p>As of writing this note, there is no particular way to get fame through the spells, though it is something I would like to do if I can figure out a way to do it that makes sense. The fame system and its workings are a bit more nuanced and complicated than simple reputation gain/loss.</p>
+              <p>Mischief Arts will give some Bad reputation, with the amount depending on whether the spell is Single-target (small), Burst (medium), or Mass (large). See the Spells Mischief section for details on the ways that high Skill Mischief Arts Sorcerers can impact their reputation loss.</p>
+              <p>As of V2-5-0, you can gain a very small, not very noticeable amount of fame through spells in some very specific circumstances. If you target a Sim in public who is 2 or more fame levels higher than you with a spell (White Arts, Black Arts, Mischief Arts) you should get a little bit of fame. This was only implemented for spells where you are targeting another Sim with a spell by clicking on them. Picker interactions and other types don't have any such fame integration at this time.</p>
               <div class="to-top">
                 <p><a href="#main-col">^</a></p>
               </div>
@@ -123,6 +125,86 @@
                 <p><a href="#main-col">^</a></p>
               </div>
             </div>
+            <div id="subsection-spells-mischief">
+              <h4>Spells Mischief</h4>
+              <p>You start with access to the Skill Level 1 spells. To begin progressing in Mischief Arts skill, you can use the Skill Level 1 spells listed below. The Mischief Arts is best paired with the Ritual of Neutrality, added with V2-4-11. It can be played with the other rituals too, though it doesn't impact, or is impacted by, Alignment or Magical Connection.</p>
+              <p>Some of these Spells require Seasons or Get Famous and may not appear at all if you don't have those expansions. Some may appear, but won't do anything if you don't have the expansion in question. Generally speaking, anything involving weather (Seasons) or reputation (Get Famous) requires those expansions.</p>
+              <p>This is a departure from my normal MO of trying to make everything base game compatible. The reason is, quite a few fundamental features of Mischief Arts were inspired by features from Seasons and Get Famous, and I wanted to see what I could do with the possibilities opened up by those expansions.</p>
+              <p>If you are missing one or more of those expansions, the mod should still be compatible with your game, the same as before. You just won't be able to get the full experience if you pursue the Mischief Arts.</p>
+              <p>Skill Level 1</p>
+              <ul>
+                <li class="patch-note">Apply Random Hairstyle (self target picker): The picked Sim will get a temporary buff that gives them a random hairstyle/color. This buff is temporary and should not have a permanent impact on the Sim's appearance in any way.</li>
+                <li class="patch-note">Shrink Bladder (target): Makes the target pee themself. They also get a temporary buff that makes Bladder decay much faster for a few hours.</li>
+                <li class="patch-note">Summon Swarm of Bees / Summon Mini Storm Cloud (target): Visual effect and name is slightly different depending on whether the current Season is Warmer (Spring, Summer) or Colder (Fall, Winter). Target will run around the neighborhood, being chased by bees (Warmer Season) or a mini storm cloud (Colder Season).</li>
+                <li class="patch-note">Introduce to Imaginary Friend (target): Target will talk to an imaginary person for a while.</li>
+                <li class="patch-note">Change Social Context (Funny, Awkward): Must be a targeted Sim you are introduced to. Will change the current social context (if you are unfamiliar with the terminology, that's the part at the top, indicating how the conversation is going). You can change it in a variety of ways as you get higher in skill, opening up the ability to influence the conversation context in most possible ways a conversation can be.</li>
+                <li class="patch-note">Telepathy, Create Telepathic Connection (target): The target will become a telepathic "hub," meaning that telepathy-based interactions can pick them as a target.</li>
+                <li class="patch-note">Telepathy, Remove Telepathic Connection (target): Remove the trait that makes the target a telepathic hub.</li>
+                <li class="patch-note">Telepathy, Chat (self target picker): Picked Sim must be a telepathic hub. Your Sim will look like they are chatting with someone imaginary. Social Need will go up for both Sims (your Sim and the Picked Sim). Mischief Arts will go up for the caster and for the Picked Sim (if they are a Sorcerer who can progress in Mischief Arts Skill).</li>
+              </ul>
+              <p>Skill Level 2</p>
+              <ul>
+                <li class="patch-note">Grow Mold (target must be food or drink): Changes the state of the food or drink to "spoiled." Let me know if you notice anything weird with this. It's a generic state change applied to every type of food and drink, so if any foods or drinks have special states for being spoiled, there may be oddities.</li>
+                <li class="patch-note">Change Weather (self target): Can change the weather to Cold, Hot, Clear Skies, or Cloudy Skies.</li>
+                <li class="patch-note">Change Social Context (Friendly, Suggestive, Boring): Must be a targeted Sim you are introduced to. Will change the current social context.</li>
+                <li class="patch-note">Change Weather Forecast (self target): Can change the weather forecast in a variety of ways, depending on what Season it is. The number of possible ways should be the same as the weather machine.</li>
+              </ul>
+              <p>Skill Level 3</p>
+              <ul>
+                <li class="patch-note">Fuse Components Together (target must an object that is breakable): Breaks the targeted object. Note that a couple of objects have a special state for brokenness that I accounted for. If you notice any objects where breaking it seems to break it in an unexpected way (repairing it won't work or some such thing), let me know. I tried to cover as many breakable objects as I could think of and didn't find the time to test all of them in detail.</li>
+                <li class="patch-note">Change Walkstyle, Pee Walk, Sleepy Walk, or Panic Run (self target picker): Temporarily changes the Picked Sim's walkstyle to the one you chose out of the three possible variations. Should override most walkstyle priorities, with some exceptions.</li>
+                <li class="patch-note">Change Social Context (Very Awkward): Must be a targeted Sim you are introduced to. Will change the current social context.</li>
+                <li class="patch-note">Telepathy, Play (self target picker): Picked Sim must be a telepathic hub. Your Sim will look like they are dancing with no one. Fun Need will go up for both Sims (your Sim and the Picked Sim). Mischief Arts will go up for the caster and for the Picked Sim (if they are a Sorcerer who can progress in Mischief Arts Skill).</li>
+              </ul>
+              <p>Skill Level 4</p>
+              <ul>
+                <li class="patch-note">Change Season, Spring, Summer, Fall, Winter (self target): Changes the current Season to the one of your choosing.</li>
+                <li class="patch-note">Burst of Apply Random Hairstyle, Shrink Bladder, Summon Swarm of Bees / Summon Mini Storm Cloud, Introduce to Imaginary Friend (self target): Any Sim within range of the spell, with the exception of the caster, will be impacted by its effect.</li>
+                <li class="patch-note">Change Social Context (Hilarious): Must be a targeted Sim you are introduced to. Will change the current social context.</li>
+              </ul>
+              <p>Skill Level 5</p>
+              <ul>
+                <li class="patch-note">Induce Extreme Laughter (target): Gives the target a 4h, +50 Playful moodlet, making them dangerously Playful, assuming they are of an age where such is dangerous. If they are younger (ex: Toddler, Child, Teen), they will just be highly Playful, no danger.</li>
+                <li class="patch-note">Change Weather (self target): Can change the weather to Blizzard, Rain, Thunderstorm, Snow, or Heatwave.</li>
+                <li class="patch-note">Change Social Context (Distasteful, Tedious): Must be a targeted Sim you are introduced to. Will change the current social context.</li>
+                <li class="patch-note">Telepathy, Nap (self target picker): Picked Sim must be a telepathic hub. Your Sim will use the same animation as the one used in the Sleep on Ground mod. Energy Need will go up for your Sim like a normal Nap, with an additional minor Energy gain for both your Sim and the Picked Sim. Mischief Arts will go up for the caster and for the Picked Sim (if they are a Sorcerer who can progress in Mischief Arts Skill).</li>
+              </ul>
+              <p>Skill Level 6</p>
+              <ul>
+                <li class="patch-note">Apply/Remove Blame Disguise (self target): Prevents reputation loss from performing Mischief Arts spells in public that would normally give a loss to reputation.</li>
+                <li class="patch-note">Burst of Change Walkstyle, Pee Walk, Sleepy Walk, or Panic Run (self target): Any Sim within range of the spell, with the exception of the caster, will be impacted by its effect.</li>
+                <li class="patch-note">Change Social Context (Amorous): Must be a targeted Sim you are introduced to. Will change the current social context.</li>
+              </ul>
+              <p>Skill Level 7</p>
+              <ul>
+                <li class="patch-note">Enchant Locks to Open (target must be a residential door on a lot that is not your own): Works exactly like the Vampire house entry ability. Grants you entry to a residential home that is not your own, without being invited in.</li>
+                <li class="patch-note">Burst of Induce Extreme Laughter (self target): Any Sim within range of the spell, with the exception of the caster, will be impacted by its effect.</li>
+                <li class="patch-note">Change Social Context (Offensive): Must be a targeted Sim you are introduced to. Will change the current social context.</li>
+              </ul>
+              <p>Skill Level 8</p>
+              <ul>
+                <li class="patch-note">Lock/Unlock Door (target must be a door on a lot that is not your own): Works like the Vampire door locking/unlocking abilities.</li>
+                <li class="patch-note">Mass Apply Random Hairstyle, Shrink Bladder, Summon Swarm of Bees / Summon Mini Storm Cloud, Introduce to Imaginary Friend (self target): Every currently loaded Sim who can normally qualify as a target of the ability in question, with the exception of the caster, will be impacted by its effect.</li>
+                <li class="patch-note">Add/Remove No Mischief Mark (self target picker): Makes the Picked Sim immune to most Mischief Arts spells. More specifically, it nullifies the effects of spells that have a Burst and Mass version. This is so that if you want to effect most Sims with a large impact spell, but you want one or more in particular to be immune to the effect, you can set up something like that.</li>
+                <li class="patch-note">Change Social Context (Insufferably Tedious): Must be a targeted Sim you are introduced to. Will change the current social context.</li>
+              </ul>
+              <p>Skill Level 9</p>
+              <ul>
+                <li class="patch-note">Attribute Blame to (self target picker): The Picked Sim will temporarily get some blame when you cast Mischief Arts spells in public. More specifically, spells that would cause a loss in reputation will cause the Picked Sim to lose some reputation as well. Enjoy tanking the reputations of Sims you don't like!</li>
+                <li class="patch-note">Mass Change Walkstyle, Pee Walk, Sleepy Walk, Panic Run (self target): Every currently loaded Sim who can normally qualify as a target of the ability in question, with the exception of the caster, will be impacted by its effect.</li>
+                <li class="patch-note">Change Social Context (Abhorrent): Must be a targeted Sim you are introduced to. Will change the current social context.</li>
+              </ul>
+              <p>Skill Level 10</p>
+              <ul>
+                <li class="patch-note">Apply/Remove Blame Reversal (self target): With this active, Mischief Arts spells that would normally cause a loss in reputation will cause a gain in reputation instead. Negative flipped to positive, in other words. Note: This does NOT impact the "Attribute Blame to" interaction. That interaction will still cause a reputation loss for the Picked Sim, not a reputation gain.</li>
+                <li class="patch-note">Mass Induce Extreme Laughter (self target): Every currently loaded Sim who can normally qualify as a target of the ability in question, with the exception of the caster, will be impacted by its effect.</li>
+                <li class="patch-note">Enchant Boss to Promote (self target, must have a career): Instantly promotes your Sim. Much like the trickster gods in so many tales, your Sim has the ability to influence their job status and move up in the world easily. Enjoy being ridiculously powerful!</li>
+                <li class="patch-note">Change Social Context (Steamy): Must be a targeted Sim you are introduced to. Will change the current social context. In case you're wondering, this is the strongest Romance social context and this interaction will cap it out at the highest amount, making Romance a breeze (or, well... far easier).</li>
+              </ul>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
             <div id="subsection-spells-light">
               <h4>Spells Light</h4>
               <p>You start with access to the Skill Level 1 spells. To begin progressing in White Arts skill, you can use the Skill Level 1 spells, use Sacrifice a Need on another Sim, or use the Light version of the Practice interaction.</p>
@@ -131,9 +213,9 @@
                 <li class="patch-note">Enchanting Introduction: Works like Friendly Introduction, but stronger.</li>
                 <li class="patch-note">Cathartic Healing: Target another sim who is Sad when you are also Sad and lower Sad moodlets on both Sims while building your White Arts skill. Target can be Toddler and up.</li>
                 <li class="patch-note">Dry Out: Target a puddle and instantly get rid of it.</li>
-                <li class="patch-note">Workout: Heals fatigue on the targeted sim and prompts them to do a workout if something is available to do one on.</li>
-                <li class="patch-note">Health: Heals sickness if you have GTW and your sim is sick.</li>
-                <li class="patch-note">Workout (on the Treadmill): Periodically costs some Magical Connection, builds Fitness skill faster than normal, and doesn't fatigue the Sorcerer.</li>
+                <li class="patch-note">Heal Workout Fatigue: Heals fatigue on the targeted sim and prompts them to do a workout if something is available to do one on.</li>
+                <li class="patch-note">Heal Sickness: Heals sickness if you have GTW and your sim is sick.</li>
+                <li class="patch-note">Enchanted Workout (on the Treadmill): Periodically costs some Magical Connection, builds Fitness skill faster than normal, and doesn't fatigue the Sorcerer.</li>
               </ul>
               <p>Skill Level 2</p>
               <ul>
@@ -240,7 +322,7 @@
               <h4>Spells Neutral</h4>
               <p>A few Spells are functionality I wanted Sorcerers to have, but it didn't make sense to force them into the roster of Light or Dark Spells. They are as follows:</p>
               <ul>
-                <li class="patch-note">Walkstyle like the Vampire Super Speed. Toggle under Spells with "Run!"</li>
+                <li class="patch-note">Walkstyle like the Vampire Super Speed. Toggle under Spells with "Enable Enchanted Run / Disable Enchanted Run"</li>
                 <li class="patch-note">Change Outfit: Target a sim and pick the outfit for them to change into out of their available outfits.</li>
                 <li class="patch-note">Teleport as... Lamadeus' Torch (Neutral Alignment) / Purity's Flame (Light Alignment) / Reaper's Shroud (Dark Alignment): Teleports yourself to the selected area.</li>
                 <li class="patch-note">Teleport as... (picked sim)(click on the ground and pick a Sim in the zone to teleport to the selected area)</li>
@@ -251,7 +333,7 @@
             </div>
             <div id="subsection-spells-neutral-minion">
               <h4>Spells Neutral - Minion System</h4>
-              <p>The Minion system operates under the pie menu category Spells > Boss. Most commands are done by targeting another sim. A couple (which I'll specify below) are used by targeting yourself and picking a sim to apply the command to.</p>
+              <p>The Minion system operates under the pie menu category Spells > Minion. Most commands are done by targeting another sim. A couple (which I'll specify below) are used by targeting yourself and picking a sim to apply the command to.</p>
               <p>Minion Roles: Minion Roles specify what limitations are set on the minion, while the role is active. The following are the available minion roles to choose from.</p>
               <ul>
                 <li class="patch-note">Dance: The minion will follow around the sim who applied the role to them and dance near them. Note: Upon loading or traveling, the minion may lose track of who to follow around. You can re-apply it if this happens by swapping to another role and then swapping back to Dance. You can pick what mood they will dance based on, choosing from most possible moods. The differences aren't anything extremely stark, but it gives some variety.</li>
@@ -389,7 +471,7 @@
             </div>
             <div id="subsection-credits">
               <h4>Credits</h4>
-              <p>Special thanks to the following folks who helped me at one point or another with this mod. They are, in no particular order: Candyd, Neia, DramaticGamer, SimGuruModSquad, CmarNYC, Hadron1776, Turbodriver, KlingonDragon, WildWitch</p>
+              <p>Special thanks to the following folks who helped me at one point or another with this mod, or something relating to it. They are, in no particular order: Candyd, Neia, DramaticGamer, SimGuruModSquad, CmarNYC, Hadron1776, Turbodriver, KlingonDragon, WildWitch, Scumbumbo, Fogity.</p>
               <p>Special thanks to Niker293 as well, in particular for putting together some of the main icons used in the mod (for example, the Wand icons)</p>
               <p>And to Simone Caporalini for creating the animations used in the bonded interactions.</p>
               <div class="to-top">
@@ -414,11 +496,14 @@
         </article>
         <aside id="sidebar">
           <div class="dark">
-            <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/839104/" target="_blank">Download</a></span></h3>
-            <p><b>Latest:</b> V2-4-11, tested with Maxis Patch, November 13, 2018</p>
+            <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/892697/" target="_blank">Download</a></span></h3>
+            <p><b>Latest:</b> V2-5-0, tested with Maxis Patch, December 20, 2018</p>
             <h4>Patch Notes</h4>
             <ul>
-              <li class="patch-note">You can now choose the Ritual of Neutrality when picking a ritual for your Sorcerer. See the additional "How to Become a Sorcerer" section for details.</li>
+              <li class="patch-note">Say hello to the NEW Mischief Arts Skill! Designed to play with the Ritual of Neutrality introduced in V2-4-11, the Mischief Arts are all about trickery and fun! You can read about it in detail in the new <a href="#subsection-spells-mischief">Spells Mischief</a> section on this page.</li>
+              <li class="patch-note">With the help of a handy program, I can now add new strings much more easily, so a number of things that were using base game strings now have a custom string. For example, the "Boss" menu is now more accurately named "Minion."</li>
+              <li class="patch-note">Basic Get Famous fame integration for spells: If you use a targeted spell, in public, on a Sim who is 2 or more fame levels higher than you, you should get some fame. It's very little, so don't expect a clear fame path solely through Sorcery. I just wanted to integrate something for the time being.</li>
+              <li class="patch-note">(since V2-4-11) You can now choose the Ritual of Neutrality when picking a ritual for your Sorcerer. See the additional "How to Become a Sorcerer" section for details.</li>
               <li class="patch-note">(since V2-4-10) Get Famous reputation integration: If you perform spells in public, you may lose reputation (dark spells) or gain reputation (light spells). This seemed important to me to do, given the emphasis on light/dark as part of the mod.</li>
               <li class="patch-note">(since V2-4-7) Removed script dependency (e.g. scripts are no longer used)</li>
               <li class="patch-note">(since V2-4-7) Trait is now obtained through new object "Suspicious Lump of Clay"</li>
