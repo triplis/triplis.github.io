@@ -160,12 +160,14 @@ header li
 {
     float: left;
     display: inline;
-    padding: 0 20px 0 20px;
+    padding: 0 5px 0 5px;
 }
 
 header #branding
 {
     float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 header #branding h1
@@ -184,6 +186,12 @@ header .highlight, header .current a
 {
     color: #262825;
     font-weight: bold;
+}
+
+header .nav-link, header .current
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 header .nav-link a
