@@ -111,6 +111,11 @@ ul
     color: #000000;
 }
 
+.page-sections h3
+{
+    font-size: 24px;
+}
+
 .page-sections h4
 {
     text-decoration: underline;
@@ -308,6 +313,16 @@ aside#sidebar
 {
     float: right;
     width: 30%;
+}
+
+aside#sidebar a
+{
+    color: #000000;
+}
+
+aside#sidebar .dl-link a
+{
+    color: #FFEFE8;
 }
 
 /*Main-col*/
