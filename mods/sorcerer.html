@@ -61,8 +61,13 @@
               <li><a href="#subsection-credits">Credits</a></li>
               <li><a href="#subsection-faq">FAQ</a></li>
             </u>
+            <h3>Patch Notes</h3>
+            <ul>
+              <li><a href="#subsection-patch-notes-v2-5-1">Version 2-5-1</a></li>
+            </u>
           </div>
           <div class="page-sections">
+            <h3>FEATURES</h3>
             <div id="subsection-become-sorcerer">
               <h4>How to Become a Sorcerer</h4>
               <p>To obtain the Sorcerer Trait on a particular sim, you need to go into Build Mode and place a Suspicious Lump of Clay anywhere on the Lot (this is a variation on the Lump of Clay added through the mod).</p>
@@ -334,16 +339,20 @@
             </div>
             <div id="subsection-spells-neutral-minion">
               <h4>Spells Neutral - Minion System</h4>
-              <p>The Minion system operates under the pie menu category Spells > Minion. Most commands are done by targeting another sim. A couple (which I'll specify below) are used by targeting yourself and picking a sim to apply the command to.</p>
-              <p>Minion Roles: Minion Roles specify what limitations are set on the minion, while the role is active. The following are the available minion roles to choose from.</p>
+              <p>The Minion system operates under the pie menu category Spells > Minion. Most commands are done by targeting another sim. A few (which I'll specify below) are used by targeting yourself and picking a sim to apply the command to.</p>
+              <p>Minion Roles are the core of the minion system. They specify what limitations are set on the minion, while the role is active.</p>
+              <p>As of version 2-5-1 or later, some changes have been made to allow more flexibility in applying minion roles/uses and mixing things up in the way you want them to be. You can get a little more creative with it than in the past.</p>
+              <p>Instead of choosing one role over another, most roles can now be combined, toggling them on/off at will. The exception to this is the Guest role and Restricted mode. When a sim is Restricted, they will only do the narrow behaviors allowed by any active roles. Guest is a role that is NOT narrow and is meant to allow most normal sim behavior, so it automatically deactivates Restricted mode and vice-versa.</p>
+              <p>You can now also Set Mood of the minion to any mood.</p>
+              <p>The following are the roles you can toggle on/off (note that Romance role has been removed, but you can get the same result by combining Guest and setting the minion's mood to Flirty).</p>
               <ul>
-                <li class="patch-note">Dance: The minion will follow around the sim who applied the role to them and dance near them. Note: Upon loading or traveling, the minion may lose track of who to follow around. You can re-apply it if this happens by swapping to another role and then swapping back to Dance. You can pick what mood they will dance based on, choosing from most possible moods. The differences aren't anything extremely stark, but it gives some variety.</li>
+                <li class="patch-note">Dance: The minion will follow around the sim who applied the role to them and dance near them. If more than one Sorcerer has control over the same minion, the minon may pick one or the other at random to dance near.</li>
                 <li class="patch-note">Guest: The minion, if on a residential lot, will treat it as if they are a welcome guest. If they are not on a residential lot, they will likely just perform whatever range of actions is normal.</li>
-                <li class="patch-note">Maid: The minion will only tidy things up. If there is nothing to tidy up, they will stand around in place, doing nothing.</li>
-                <li class="patch-note">Musician: The minion's Guitar, Violin, and Piano skills will be immediately set to max level. With this role active, they will look for instruments nearby to play songs on. If no instruments are available, they will stand around in place, doing nothing.</li>
-                <li class="patch-note">Painter: The minion will only paint. If no easel is available to paint, they will stand around in place, doing nothing.</li>
-                <li class="patch-note">Repair: The minion will only repair broken objects. If no object is available to repair, they will stand around in place, doing nothing.</li>
-                <li class="patch-note">Romantic: The minion will act identically to Guest, with the addition of an always active +50 Flirty moodlet, making them an easy candidate for romance.</li>
+                <li class="patch-note">Maid: The minion will clean things up if there is anything to clean.</li>
+                <li class="patch-note">Musician: The minion's Guitar, Violin, and Piano skills will be immediately set to max level. They will play Guitar, Violin, or Piano if one is available to play.</li>
+                <li class="patch-note">Painter: The minion will paint if there is an easel available to paint on.</li>
+                <li class="patch-note">Repair: The minion will repair broken objects if there are objects available to repair.</li>
+                <li class="patch-note">Gardener: The minion will tend to plants in need of care.</li>
               </ul>
               <p>Some general details about how Minions work:</p>
               <ul>
@@ -354,10 +363,10 @@
                 <li class="patch-note">Minions with a role active will always use the Run walkstyle, making them super efficient at getting around to perform their role. Note: Vampires may use super speed or teleport instead of Run, if it's active when they take on a minion role.</li>
                 <li class="patch-note">Minion roles can be applied on public lots, though they were designed with residential in mind, so they may not be all that interesting outside of the home.</li>
                 <li class="patch-note">A minion will stay in its active role forever, unless: 1) You use Dismiss on it or, 2) You leave the lot and the minion leaves the role for some reason that I don't have a fix for. Minions may stick around if you travel, they may not. Expect some inconsistency with this aspect of it. Minions will leave the role if *they* travel, for sure.</li>
-                <li class="patch-note">Once a role has been successfully applied to a target once, that target will have a permanent trait on them that makes them a minion, even if they don't have any roles currently active. This trait can be removed with the ability Fire, explained in detail below in the special commands.</li>
+                <li class="patch-note">Once a role has been successfully applied to a target once, that target will have a permanent relationship bit with the Sorcerer who made them a minion, even if they don't have any roles currently active. This relationship bit can be removed with the ability Release, explained in detail below in the special commands.</li>
                 <li class="patch-note">Upon exiting their special Sleep interaction, a minion's needs are all set to full. This is to ensure that they aren't staying low somehow, as the result of (for example) a Sorcerer instant drain interaction.</li>
               </ul>
-              <p>Special minion commands (these commands are always available once a minion has the special trait applied to them through applying a role at least once):</p>
+              <p>Special minion commands (these commands are always available for a Sorcerer who has made the target into a minion at least once):</p>
               <p>Targeting the Minion</p>
               <ul>
                 <li class="patch-note">Sleep: Puts the minion into a sleeping interaction. This is to allow you to go into the highest game speed, without the presence of minions screwing it up. To wake the minion from this, target them with a sorcerer and use Wake Up.</li>
@@ -365,8 +374,8 @@
               </ul>
               <p>Targeting Yourself and Picking a Sim</p>
               <ul>
-                <li class="patch-note">Call Over: Works like the voodoo summon ability. Can only be used on a minion who isn't currently on the loaded neighborhood somewhere. It will bring them onto the lot, to you (they may have to walk/run to you once they spawn, so don't expect to see them instantly).</li>
-                <li class="patch-note">Fire: Removes the minion trait from the minion, so that they are no longer considered a minion. The minion must be present on the loaded neighborhood somewhere for you to do this. It will also apply the functionality of Dismiss, so that they'll be sure to leave, as opposed to getting stuck in a role.</li>
+                <li class="patch-note">Summon: Works like the voodoo summon ability. Can only be used on a minion who isn't currently on the loaded neighborhood somewhere. It will bring them onto the lot, to you (they may have to walk/run to you once they spawn, so don't expect to see them instantly). They may try to run off immediately after being summoned; this is because they can be summoned even if at work or occupied with something else like that. You'll want to watch for them and apply a minion role when you see them, to make sure they don't run off.</li>
+                <li class="patch-note">Release: Removes the relationship bit between Minion and Sorcerer, so that they are no longer considered a minion of that sorcerer. The minion must be present on the loaded neighborhood somewhere for you to do this. It will also apply the functionality of Dismiss, so that they'll be sure to leave, as opposed to getting stuck in a role.</li>
                 <li class="patch-note">Sleep (can pick up to 7 minions at a time): Tells the minion(s) to go into their special Sleep interaction.</li>
                 <li class="patch-note">Wake Up (can pick up to 7 minions at a time): Tells the minion(s) to Wake Up from their special Sleep interaction</li>
               </ul>
@@ -386,7 +395,7 @@
               <ul>
                 <li class="patch-note">Ritual of Transcendence: +50 Fine Buff that can be toggled at will.</li>
                 <li class="patch-note">Salvation: Special Ability <b>Sacrifice Magical Connection</b> under White Arts menu; tank your Magical Connection and fill all of the target's needs to full. Target can be Toddler and up.</li>
-                <li class="patch-note">Creation: Special Abilities <b>Create Life inside Target</b> and <b>Create Life inside Self</b> under White Arts menu; target another sim and make yourself or them pregnant. Target can be Young Adult and up.</li>
+                <li class="patch-note">Creation: Special Abilities <b>Create Life inside Target</b> and <b>Create Life inside Self</b> under White Arts menu; target another sim and make yourself or them pregnant. Target can be Young Adult and up. <i>NOTE: This seems to be incompatible with MC Command Center's MC Pregnancy / MC Woohoo modules, due to the strict rules it applies to pregnancy. I'm aware of the issue, but it's not the simplest thing to fix. I'm not sure if I even can fix it, if MC Command Center's rules are too strict to get around.</i></li>
               </ul>
               <p>Additionally, all Light traits unlock the optional toggle Purity's Aura and optional toggle Hover walkstyle. With Purity's Aura active, the Sim will have a sun VFX in the middle of their chest and nearby Sims will come to them and cheer for them, like a famous person being mobbed.</p>
               <p>Dark</p>
@@ -476,6 +485,7 @@
               <p>Special thanks to the following folks who helped me at one point or another with this mod, or something relating to it. They are, in no particular order: Candyd, Neia, DramaticGamer, SimGuruModSquad, CmarNYC, Hadron1776, Turbodriver, KlingonDragon, WildWitch, Scumbumbo, Fogity.</p>
               <p>Special thanks to Niker293 as well, in particular for putting together some of the main icons used in the mod (for example, the Wand icons)</p>
               <p>And to Simone Caporalini for creating the animations used in the bonded interactions.</p>
+              <p>Thanks to Ian Adams for helping me test V2-5-1.</p>
               <div class="to-top">
                 <p><a href="#main-col">^</a></p>
               </div>
@@ -494,17 +504,44 @@
                 <p><a href="#main-col">^</a></p>
               </div>
             </div>
+            <h3>PATCH NOTES</h3>
+            <div id="subsection-patch-notes-v2-5-1">
+              <h4>Version 2-5-1</h4>
+              <p>Movement</p>
+              <ul>
+                <li class="patch-note">Walkstyle toggles (superspeed, hover) are now found under their own menu, Spells > Movement</li>
+                <li class="patch-note">Alignment-locked Sorcerers normally get access to a Hover walkstyle, like the Grim Reaper. They can now also access a Hover walkstyle that is much faster. It's called Hoverjet.</li>
+                <li class="patch-note">Hoverjet is a much faster version of the Hover walkstyle. I put it in as kind of an experiment, for fun. Unfortunately, I couldn't figure out how to change the animation itself without errors (only the movement speed), so I don't recommend focusing the camera on it for long. It's kind of jittery-looking due to the speed. I figure if you're just seeing it in the background while you play, it might be fun to use.</li>
+              </ul>
+              <p>Minion</p>
+              <ul>
+                <li class="patch-note">The goal of these changes is to allow more flexibility in applying minion roles/uses and mixing things up in the way you want them to be. You can get a little more creative with it than in the past.</li>
+                <li class="patch-note">Instead of choosing one role over another, most roles can now be combined, toggling them on/off at will. The exception to this is the Guest role and Restricted mode. When a sim is Restricted, they will only do the narrow behaviors allowed by any active roles. Guest is a role that is NOT narrow and is meant to allow most normal sim behavior, so it automatically deactivates Restricted mode and vice-versa.</li>
+                <li class="patch-note">The roles available are the same as before, with the addition of Gardener and the removal of Romantic: Guest, Maid, Repair, Musician, Painter, Gardener, Dance</li>
+                <li class="patch-note">You can now Set Mood to change the minion's mood. This makes the Romantic role and the mood variations for Dance no longer necessary, so they have been removed.</li>
+                <li class="patch-note">Call Over is now called Summon.</li>
+                <li class="patch-note">Fire is now called Release.</li>
+                <li class="patch-note">Minions are now created with a relationship bit instead of a trait. What this means is, once you've made someone a minion, only the Sorcerer who made them a minion will be able to do the normal commands to them. If you want more than one Sorcerer to have access to the commands on the same Minion, they both need to apply a role or use the option Be Minion on the target. Due to this change, the trait is no longer used, so if you've played with minions in prior versions of the mod, you could lose track of existing minions who are not currently on the lot. To get around this, you can, with testingcheats on, use a Cheat version of the Summon interaction to bring old minions to your lot. Once you've applied a role to them in the new system, they will be set up with the relationship bit.</li>
+                <li class="patch-note">Now that Minions are created with a relationship bit, Dance target should no longer be lost when reloading the game. The minion will still know who to dance near.</li>
+              </ul>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
           </div>
         </article>
         <aside id="sidebar">
           <div class="dark">
-            <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/892697/" target="_blank">Download</a></span></h3>
-            <p><b>Latest:</b> V2-5-0, tested with Maxis Patch, December 20, 2018</p>
-            <h4>Patch Notes</h4>
+            <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/908806/" target="_blank">Download</a></span></h3>
+            <p><b>Latest:</b> V2-5-1, tested with Maxis Patch, December 20, 2018</p>
+            <h4>Patch Notes Summary (full notes found <a href="#subsection-patch-notes-v2-5-1">here</a>)</h4>
             <ul>
-              <li class="patch-note">Say hello to the NEW Mischief Arts Skill! Designed to play with the Ritual of Neutrality introduced in V2-4-11, the Mischief Arts are all about trickery and fun! You can read about it in detail in the new <a href="#subsection-spells-mischief">Spells Mischief</a> section on this page.</li>
-              <li class="patch-note">With the help of a handy program, I can now add new strings much more easily, so a number of things that were using base game strings now have a custom string. For example, the "Boss" menu is now more accurately named "Minion."</li>
-              <li class="patch-note">Basic Get Famous fame integration for spells: If you use a targeted spell, in public, on a Sim who is 2 or more fame levels higher than you, you should get some fame. It's very little, so don't expect a clear fame path solely through Sorcery. I just wanted to integrate something for the time being.</li>
+              <li class="patch-note">Minion system has received a number of changes. The goal of these changes is to allow more flexibility in applying minion roles/uses and mixing things up in the way you want them to be. You can get a little more creative with it than in the past.</li>
+              <li class="patch-note">Walkstyle toggles (superspeed, hover) are now found under their own menu, Spells > Movement</li>
+              <li class="patch-note">Alignment-locked Sorcerers normally get access to a Hover walkstyle, like the Grim Reaper. They can now also access a Hover walkstyle that is much faster. It's called Hoverjet.</li>
+              <li class="patch-note">(since V2-5-0) Say hello to the NEW Mischief Arts Skill! Designed to play with the Ritual of Neutrality introduced in V2-4-11, the Mischief Arts are all about trickery and fun! You can read about it in detail in the new <a href="#subsection-spells-mischief">Spells Mischief</a> section on this page.</li>
+              <li class="patch-note">(since V2-5-0) With the help of a handy program, I can now add new strings much more easily, so a number of things that were using base game strings now have a custom string. For example, the "Boss" menu is now more accurately named "Minion."</li>
+              <li class="patch-note">(since V2-5-0) Basic Get Famous fame integration for spells: If you use a targeted spell, in public, on a Sim who is 2 or more fame levels higher than you, you should get some fame. It's very little, so don't expect a clear fame path solely through Sorcery. I just wanted to integrate something for the time being.</li>
               <li class="patch-note">(since V2-4-11) You can now choose the Ritual of Neutrality when picking a ritual for your Sorcerer. See the additional "How to Become a Sorcerer" section for details.</li>
               <li class="patch-note">(since V2-4-10) Get Famous reputation integration: If you perform spells in public, you may lose reputation (dark spells) or gain reputation (light spells). This seemed important to me to do, given the emphasis on light/dark as part of the mod.</li>
               <li class="patch-note">(since V2-4-7) Removed script dependency (e.g. scripts are no longer used)</li>
