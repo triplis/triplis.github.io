@@ -40,40 +40,24 @@
             <p>Having a problem with one of my mods? Here are some possible solutions.</p>
             <h3>Issues</h3>
             <ul>
-              <li><a href="#subsection-getting-help">How to get help</a></li>
               <li><a href="#subsection-no-show">I can't get the mod to show up</a></li>
               <li><a href="#subsection-broken">One of your mods generates a lastexception file / your mod is breaking my game</a></li>
               <li><a href="#subsection-bug">I've noticed a bug / issue with a specific feature</a></li>
             </u>
           </div>
           <div class="page-sections">
-            <div id="subsection-getting-help">
-              <h4>How to get help</h4>
-              <p>If you've tried everything I've listed below and still can't get the mod to work, the following are some steps you can take to speed up the process of getting help from me:</p>
-              <p>The key is in the fact that when I try to help people with getting a mod to work, I invariably ask them standard questions. Things like "are script mods enabled?" or "are you getting any lastexception files"?</p>
-              <p>The more information of this kind you can provide up-front, the less standard questions I need to go back and forth with you on. You also might find that in writing down the steps you've taken, there's some step you missed, something you forgot to try.</p>
-              <p>In summary:</p>
-              <ul>
-                <li class="patch-note">List the steps you've tried to get the mod to work.</li>
-                <li class="patch-note">Share the contents of a relevant lastexception file, if it exists. (Take note of the date on when the file was created when looking to share it. If it wasn't created around the time when you were having problems, it could be related to some other mod/time entirely.)</li>
-                <li class="patch-note">The more specific, the better. For example, "it won't show up" tells me nothing about the circumstances of the mod not working. Does this mean it's not in the mods list when you load up the game? Does it mean the interaction isn't on the Suspicious Lump of Clay? An example of specific might look something like: "Sorcerer Mod V2-4-7 shows up in the mod list when I load up the game, but the interaction doesn't show up on the Suspicious Lump of Clay." I recently changed it to be on a new object, the Suspicious Lump of Clay instead. If you'd said "it doesn't show up on the Lump of Clay," I might have to ask if you mean the old object or the custom one. Less ambiguity means less possibilities and less time spent on questions that lead nowhere.</li>
-              </ul>
-              <p>Finally, please keep in mind that most of what I'm doing to try to help is narrowing down standard possibilities. I have some ability to interpret lastexception files and reason about what might be going wrong, but it's limited. If your issue is outside the scope of normal mod issues, I may not be able to help you. If it is within that scope, <a href="https://forums.thesims.com/en_US/categories/mods-bugs-issues" target="_blank">I'm probably not the only one who can help you.</a></p>
-              <p>In fact, there are volunteers there who have loads more experience with common mod issues than I do and are far more active.</p>
-              <div class="to-top">
-                <p><a href="#main-col">^</a></p>
-              </div>
-            </div>
             <div id="subsection-no-show">
               <h4>I can't get the mod to show up</h4>
-              <p>The following are some steps you can take to ensure the mod will work:</p>
+              <p>Please check these steps before asking for help. If you haven't, I will ask you if you have. This is because all I can do to help you is go down a checklist of possible causes.</p>
               <ul>
-                <li class="patch-note">Make sure you have the latest version of the mod and the latest patch for the game by Maxis. Things break and sometimes in a big way. I can't guarantee that anything will work retroactively, as I have no control over what the Maxis team changes.</li>
-                <li class="patch-note">If it is a mod that uses scripts, make sure Scripts Mods are enabled in your game settings. Mods get turned off automatically after most Maxis patches, so you'll have to turn the settings back on each time such an update happens.</li>
-                <li class="patch-note">Make sure the mod is not too many folders deep and is not inside of a folder with the extension .zip (examples: Mods > ModName.ts4script = Correct, Mods > MyMod > ModName.ts4script = Correct, Mods > MyMod > ForSureMyMod > ModName.ts4script = Incorrect)</li>
-                <li class="patch-note">Make sure you only have one version of the mod installed at a time (the most up-to-date one). Rarely, I might have an optional add-on, but it will be specified as such on the mod's page if so.</li>
-                <li class="patch-note">Check for incompatibility with other mods. See the section below on lastexception files.</li>
-                <li class="patch-note">If you try all of this and the mod still won't work, you can ask for help in a comment in the latest bugs thread on <a href="https://www.patreon.com/triplissims" target="_blank">Patreon</a>. Please read the section <a href="#subsection-getting-help">How to get help</a> for how best to get help from me.</li>
+                <li class="patch-note">Make sure you have the latest version of the mod and the latest patch for the game by EA. Things break and sometimes in a big way. I can't guarantee that anything will work retroactively, as I have no control over what the EA team changes.</li>
+                <li class="patch-note">If it is a mod that uses scripts, make sure Scripts Mods are enabled in your game settings. Mods get turned off automatically after most EA patches, so you'll have to turn the settings back on each time such an update happens.</li>
+                <li class="patch-note">If it is a mod that uses scripts, make sure the .ts4script file is not too many folders deep. (examples: Mods > ModName.ts4script = Correct, Mods > MyMod > ModName.ts4script = Correct, Mods > MyMod > ForSureMyMod > ModName.ts4script = Incorrect)</li>
+                <li class="patch-note">Make sure any .zip files are unzipped. Do NOT unzip .ts4script files, unless you want to peer at the compiled python files for some reason.</li>
+                <li class="patch-note">Make sure you only have one version of the mod installed at a time (the most up-to-date one). Rarely, I might have an optional add-on, but it will be specified as such on the mod's page if so. Note: The Sorcerer mod has some old versions whose naming is a little different; be wary of assuming you've found all versions because there isn't more than one right next to each other in the folder.</li>
+                <li class="patch-note">If you are trying to get the Sorcerer mod to work and the interaction isn't showing up on the clay, make sure you're looking on the new custom object that comes with the mod, the Suspicious Lump of Clay, not the old way, the default Lump of Clay.</li>
+                <p>If you've checked this and none of it works, and you'd like my help, please let me know that you've gone down the list. If you've reviewed everything correctly, it's most likely an incompatibility, in which case you can try with only the not-working mod installed and see if it still fails to show up</p>
+                <p>If all of this fails, the best way to get help is to go to my discord server <a href="https://discord.gg/JhNwtYv" target="_blank">Triplis Station</a> and post in the mod-wont-work section. Other forms of asking me for help tend to be slow and drawn out, and it's going to be harder for both of us to keep track of what's been said and what might work to fix the issue.</p>
               </ul>
               <div class="to-top">
                 <p><a href="#main-col">^</a></p>
@@ -82,7 +66,7 @@
             <div id="subsection-broken">
               <h4>One of your mods generates a lastexception file / your mod is breaking my game</h4>
               <ul>
-                <li class="patch-note">If one of my mods is showing up in a lastexception error, you can post its contents as a comment in the latest bugs thread on <a href="https://www.patreon.com/triplissims" target="_blank">Patreon</a>. Please keep in mind that I can't promise to respond to everything and if I do respond, the response may be that to my knowledge, the mention of the lastexception in my mod is erroneous and isn't caused by my mod. I can only give you my best guess/evaluation based on what I know about how the game works and what the file says.</li>
+                <li class="patch-note">If one of my mods is showing up in a lastexception error, you can drag and drop the file and explain the context of it (ex: when it occurred) in the mod-has-bug section of my discord server <a href="https://discord.gg/JhNwtYv" target="_blank">Triplis Station</a>. Please keep in mind that I can't promise to respond to everything and if I do respond, the response may be that to my knowledge, the mention of the lastexception in my mod is erroneous and isn't caused by my mod. I can only give you my best guess/evaluation based on what I know about how the game works and what the file says.</li>
                 <li class="patch-note">If you do suspect that a mod of mine is breaking your game, there are ways you can test this without requiring a response from me, or requiring help from another member of the community. Namely, "process of elimination." This is a highly useful process to have on hand when you are facing an issue with computers in general and works well for broken mods. First, move all of your mods to somewhere safe, leaving behind the one that you suspect is breaking the game. Now load up the game and see if you can use it without the issue you noticed. I recommend doing this on a New Game, to avoid any accidental mishaps with existing saves, where the lack of a mod causes things to disappear and you inadvertently save it in that state. If the mod works fine, you can be relatively certain that it's not the one causing the issue. You can now add back in each mod, one at a time, until you find the one that is causing the issue, adding in first the ones that seem most suspect if you have any particular suspicions (for example, based on what shows up in lastexception files).</li>
               </ul>
               <div class="to-top">
@@ -91,7 +75,7 @@
             </div>
             <div id="subsection-bug">
               <h4>I've noticed a bug / issue with a specific feature</h4>
-              <p>Please let me know in the latest bugs thread on my <a href="https://www.patreon.com/triplissims" target="_blank">Patreon</a>.</p>
+              <p>Please let me know in the mod-has-bug section of my discord server <a href="https://discord.gg/JhNwtYv" target="_blank">Triplis Station</a>.</p>
               <p>If I can repeat the bug in my own game, I will probably be able to fix it. Sometimes patches break little bits here and there and it's difficult to track them all down on my own, so I appreciate any reports that catch this stuff.</p>
               <p>When reporting a bug, please try to be as specific as possible (this helps me more easily hone in on the issue and repeat it in my own game). Example:</p>
               <p>Vague: Lightning Rod doesn't work</p>
