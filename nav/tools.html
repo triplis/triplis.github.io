@@ -41,6 +41,7 @@
             <h3>Tools</h3>
             <ul>
               <li><a href="#subsection-auto-hash">Sims 4 Auto Hash</a></li>
+              <li><a href="#subsection-auto-stbl">Sims 4 Auto STBL</a></li>
             </u>
           </div>
           <div class="page-sections">
@@ -80,6 +81,41 @@
               <p>Some, however, have more than one template and you can choose which one will get copied by naming your XML file in the right way.</p>
               <p>For example, if you have a buff XML file and you want to generate a data file for the mood Confident, include, somewhere in your internal filename, "BuffConfident." This might look something like: n="Triplis:Buff_StrutAround_BuffConfident"</p>
               <p>You can look at the template folder (it comes with the program) and see what the syntax looks like for these template variations. Right now, most of the variation revolves around different types for buffs and different types for traits. Note that you will still need to edit the data file somehow for modifying things like strings.</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-auto-stbl">
+              <h4>Sims 4 Auto STBL</h4>
+              <img src="../img/auto-stbl-icon-for-show.png">
+              <p><a href="http://www.simfileshare.net/download/948625/" target="_blank">Download</a></p>
+              <p><a href="http://www.simfileshare.net/download/948626/" target="_blank">Download Source Code</a></p>
+              <h3>Introduction</h3>
+              <p>Creating new strings and adding them to string tables has always been tedious for me and sometimes challenging, when adding to existing projects, especially ones that are a mixture of english strings and translated strings. I wanted a way to automate most of this process. As I will say with any tool, the program may have bugs or be incomplete in some ways, so use at your own risk. The priority here was functionality for an experienced modder, less so than ease-of-use for those with little knowledge of modding.</p>
+              <h3>Warnings</h3>
+              <p>This program will only function properly on Windows. It is not compatible with other operating systems to my knowledge. It will also only read english strings from XML files, currently (it can handle non-english characters that are in existing stbl files, just not reading in from XML files).</p>
+              <p>Due to the nature of how it's designed, it comes with some (limited) safeguards. Namely, it will make a backup of XML files inputted and STBL files referenced before editing them. However, with the way it's currently designed, it will ignore files with the same name when making backups. So if you want a "most recent" backup each time, you'll need to clean out the Backup folder on a regular basis.</p>
+              <p>That said, I can say with confidence that I've used the tool extensively and never run into any unexpected results. As long as you use it as designed, nothing weird should happen and there is some error-checking in case you don't.</p>
+              <h3>How to Use</h3>
+              <p><b>Example</b></p>
+              <p>When you open the program, you should see a standard console interface. You paste in a file path, press enter, and it will do a number of operations on the file. It's similar to the Auto Hash tool in this way. The following is an example to explain how it works.</p>
+              <p>You have a custom interaction file and you want a unique string name for your interaction that'll show up in-game. Somewhere in the file is a line like the following:</p>
+              <p><code>&lt;T n=&quot;display_name&quot;&gt;0x588ECF04&lt;!--String: &quot;Enchant to Kneel&quot;--&gt;&lt;/T&gt;</code></p>
+              <p>Note that the comment describing what the string should be is important. The formatting the program looks for is precise and is based on strings being commented in the way that standard tools do (like Scumbumbo's XML Extractor - I'm not sure if S4S extraction does the same).</p>
+              <p>Now let's get the tool to recognize our string. It was Enchant to Kneel, but we're going to change it to Bungalow Banjos. So we do this:</p>
+              <p><code>&lt;T n=&quot;display_name&quot;&gt;0x588ECF04&lt;!--StringCustom: &quot;Bungalow Banjos&quot;--&gt;&lt;/T&gt;</code></p>
+              <p>If we run the program on this XML file, it will find the commented string with the "StringCustom" identifier and create a unique hash for the string in quotes, our "Bungalow Banjos." Note that this hash is created from a combination of the string itself and the internal name of the file (the "n=" value), so for best practice to avoid hash collisions, make sure you've given the file a unique name first!</p>
+              <p>This also means that you could theoretically put "Bungalow Banjos" in two different files and generate the same string for both, but with a different hash value, which is not ideal. So keep this in mind when making your strings. More info on the limitations of checking for duplicates below.</p>
+              <p>Next, the program will insert the new hash into the XML file for you. So your line of code might end looking something like this:</p>
+              <p><code>&lt;T n=&quot;display_name&quot;&gt;0xA706DD72&lt;!--StringCustom: &quot;Bungalow Banjos&quot;--&gt;&lt;/T&gt;</code></p>
+              <p>Now all that's left is the string table itself. The program comes with a folder called Edit. If one or more stbl files is in the Edit folder, the program will append our Bungalow Banjos string to each. If no stbl file is in the Edit folder, the program will create a new stbl file, one for each language variation type, with any strings from our XML file added to it.</p>
+              <p>And that's it! You can add the stbl files from your Edit folder to a package file, add in your interaction, and you're ready to see your string in-game.</p>
+              <p><b>Duplicate Checking</b></p>
+              <p>The program will check for and remove duplicates from the same inputted XML file. For example, if you have a motive file where a string is repeated, it will only add this string once, even if you have the StringCustom syntax for the same string twice. It should also catch hash duplicates. Strings with the same text, but a different hash, across more than one file, may get through, so be wary of that. You don't need to use the tool on more than one file for the same string anyway. You can just copy/paste the hash value and string from file to file once you've got it working in one file.</p>
+              <p><b>File Type Requirements</b></p>
+              <p>Like the Auto Hash tool, make sure the external filename includes "S4_" and is the file type XML. I can consider offering support for S4S syntax on request. My habit is using the default syntax from Scumbumbo's XML Extractor along with S4PE, so that's what it was made to support.</p>
+              <h3>Credits</h3>
+              <p>This program would not have been possible without the help of Scumbumbo aiding me in tracking down a mysterious bug that was causing a game crash. As is often the case in programming, it turned out to be an "off by one" error. You don't have to worry about that error though. I've utilized the tool extensively since and there is no crashing from the string tables it makes anymore (I would not be releasing it if there was such an issue still). Thank you to Fogity and Turbodriver as well, who also offered some input and insight in the process of trying to figure out the bug.</p>
               <div class="to-top">
                 <p><a href="#main-col">^</a></p>
               </div>
