@@ -66,6 +66,7 @@
             </u>
             <h3>Patch Notes</h3>
             <ul>
+              <li><a href="#subsection-patch-notes-v3-1">Version 3-1</a></li>
               <li><a href="#subsection-patch-notes-v3-0">Version 3-0</a></li>
               <li><a href="#subsection-patch-notes-v2-5-1">Version 2-5-1</a></li>
               <li><a href="#subsection-patch-notes-legacy">Version 2-5-0 and earlier</a></li>
@@ -202,6 +203,7 @@
                 <li class="patch-note">Create Lightning Rod (targeting a sim): Call forth lighting to end the target's poor sim existence. Target can be Teen and up.</li>
                 <li class="patch-note">Create Whirlpool (targeting a sim): Create a hideously magical drowning puddle of water that the target will... well, die in. Target can be Teen and up.</li>
                 <li class="patch-note">Kiss of Death (targeting a sim): Kiss the target on the hand, ending their life. Target can be Teen and up.</li>
+                <li class="patch-note">Erase Life (targeting a sim): Unlike other death spells, no one will react to it having happened. They may react to Grim showing up, but that's it. Target can be Teen and up.</li>
                 <li class="patch-note">Show/Hide Reaper Garb (targeting yourself): Toggles on the appearance of the Grim Reaper. A somewhat darker colored Grim Reaper robes and hood because I thought the existing one was too gray and not dark enough. You will also periodically gain Magical Connection over time, refilling it.</li>
               </ul>
               <h3>Greed</h3>
@@ -463,6 +465,7 @@
               <h4>Spells Neutral - Minion System</h4>
               <p>The Minion system operates under the pie menu category Spells > Minion. Most commands are done by targeting another sim. A few (which I'll specify below) are used by targeting yourself and picking a sim to apply the command to.</p>
               <p>Minion Roles are the core of the minion system. They specify what limitations are set on the minion, while the role is active.</p>
+              <p>As of version 3-1 or later, you can toggle "Enable/Disable Ignore Weather." With "Ignore Weather" enabled, the minion will ignore weather as a mechanic completely.</p>
               <p>As of version 3-0 or later, you can toggle "Enable/Disable Always Minion." With "Always Minion" enabled, the minion will enter the minion role upon entering a lot, no matter when or where (this includes being summoned!). Note that some priorities could override it, but the minion will probably enter the role even if other roles are applied, applying whatever behavior restrictions may be toggled on, in the process. Such restrictions could cause conflicts with other priorities, so be wary of, for example, applying it to a restaurant worker.</p>
               <p>As of version 2-5-1 or later, some changes have been made to allow more flexibility in applying minion roles/uses and mixing things up in the way you want them to be. You can get a little more creative with it than in the past.</p>
               <p>Instead of choosing one role over another, most roles can now be combined, toggling them on/off at will. The exception to this is the Guest role and Restricted mode. When a sim is Restricted, they will only do the narrow behaviors allowed by any active roles. Guest is a role that is NOT narrow and is meant to allow most normal sim behavior, so it automatically deactivates Restricted mode and vice-versa.</p>
@@ -520,15 +523,22 @@
                 <li class="patch-note">Ritual of Salvation: Special Ability <b>Sacrifice Magical Connection</b> under White Arts menu; tank your Magical Connection and fill all of the target's needs to full. Target can be Toddler and up.</li>
                 <li class="patch-note">Ritual of Creation: Special Abilities <b>Create Life inside Target</b> and <b>Create Life inside Self</b> under White Arts menu; target another sim and make yourself or them pregnant. Target can be Young Adult and up. <i>NOTE: This seems to be incompatible with MC Command Center's MC Pregnancy / MC Woohoo modules, due to the strict rules it applies to pregnancy. I'm aware of the issue, but it's not the simplest thing to fix. I'm not sure if I even can fix it, if MC Command Center's rules are too strict to get around.</i></li>
               </ul>
-              <p>Additionally, all Light traits unlock the optional toggle Purity's Aura and optional toggle Hover walkstyle. With Purity's Aura active, the Sim will have a sun VFX in the middle of their chest and nearby Sims will come to them and cheer for them, like a famous person being mobbed.</p>
+              <p>Additionally, all Light traits unlock the optional toggle Purity's Aura and optional toggle Hover walkstyle.</p>
+              <p>With Purity's Aura active, the Sim will have a sun VFX in the middle of their chest. To activate the component that causes nearby Sims to come to them and cheer for them, like a famous person being mobbed, go to Spells (Cheat) > Reaction.</p>
               <p>Dark</p>
               <ul>
                 <li class="patch-note">Ritual of Eternity: Become Immortal, aka: Can't age or die.</li>
                 <li class="patch-note">Ritual of Might: Special Ability <b>Fight for Llamadeus's Favor</b> under Mean menu; drains the target's needs and fills your Magical Connection. Target can be Teen and up.</li>
                 <li class="patch-note">Ritual of Wealth: Special Ability <b>Wealth from Death</b> under Black Arts menu; kill the target and gain 50,000 Simoleons. Target can be Teen and up.</li>
               </ul>
-              <p>Additionally, all Dark traits unlock the optional toggle Reaper's Aura and optional toggle Hover walkstyle. With Reaper's Aura active, the Sim will have a Grim Reaper black smoke VFX by their feet and nearby Sims will run away and panic. While said Sims are panicking, the Sorcerer can use "Scare" on them, which will cause them to pee themselves.</p>
+              <p>Additionally, all Dark traits unlock the optional toggle Reaper's Aura and optional toggle Hover walkstyle.</p> 
+              <p>With Reaper's Aura active, the Sim will have a Grim Reaper black smoke VFX by their feet. To activate the component that causes nearby Sims to run away and panic, go to Spells (Cheat) > Reaction. While said Sims are panicking, the Sorcerer can use "Scare" on them, which will cause them to pee themselves.</p>
               <p>As of version 3-0 or later, there are two new Alignment Lock rituals, one Light and one Dark, Ritual of Radiance and Ritual of Shadows. These require the same things as listed above, with one difference: You need mastery in all three Light Specializations, or mastery in all three Dark Specializations. They also give you access to all three perks/abilities. For example, Ritual of Shadows would give you the traits Fighter, Counterfeiter, and Immortal, and lock Domination, Destruction, and Greed decay.</p>
+              <p>As of version 3-1 or later, you can use the Ritual of Infinite Balance to get access to everything and lock everything, light and dark. The requirements for it are: Grandmaster in all specializations, max Light/Dark skill, and Alignment at 0 (the middle). Ritual of Infinite Balance unlocks the abilities:</p>
+              <ul>
+                <li class="patch-note"><b>Reveal Type of Sims on Lot</b> (targeting yourself): Temporarily adds a visual to some sims on the lot. Those included are PlantSim, Vampire, Alien, Sorcerer, Good Trait, and Evil Trait. The visual is distinct for each, so that you can recognize what kind of sim they are at a glance.</li>
+                <li class="patch-note"><b>Reveal True Form</b> (targeting another sim): Target a Vampire or Alien and force them to change into their undisguised form.</li>
+              </ul>
               <div class="to-top">
                 <p><a href="#main-col">^</a></p>
               </div>
@@ -697,6 +707,28 @@
               </div>
             </div>
             <h3>PATCH NOTES</h3>
+            <div id="subsection-patch-notes-v3-1">
+              <h4>Version 3-1</h4>
+              <ul>
+                <li class="patch-note">Added new ritual called Ritual of Infinite Balance, requires you to be maxed in everything and have Alignment at the middle, aka: 0. Locks all specializations and gives access to all of the alignment lock perks and abilities, in addition to a couple of new abilities. To rethink this, use the new Ritual of Infinite Indecision.</li>
+                <li class="patch-note">Added spell Reveal Type of Sims on Lot (requires completion of Ritual of Infinite Balance): Temporarily adds a visual to some sims on the lot. Those included are PlantSim, Vampire, Alien, Sorcerer, Good Trait, and Evil Trait. The visual is distinct for each, so that you can recognize what kind of sim they are at a glance. What you use this for is up to you. I didn't have a specific usage in mind here. I just thought it would be cool to be able to do such a thing and fits the theme of someone who is aligned in the middle.</li>
+                <li class="patch-note">Added spell Reveal True Form (requires completion of Ritual of Infinite Balance): Target a Vampire or Alien and force them to change into their undisguised form.</li>
+                <li class="patch-note">Added spell Erase Life (requires Grandmaster Rank 5 Destruction Specialization): Unlike other death spells, no one will react to it having happened. They may react to Grim showing up, but that's it.</li>
+                <li class="patch-note">Added Mass version of Stasis Field (Mass spells apply to every sim on the lot except the caster).</li>
+                <li class="patch-note">Added an additional version of Enchant to Kneel, using a custom animation I made.</li>
+                <li class="patch-note">Added toggle for Minions "Ignore Weather." Should only show up if you have Seasons installed. Will cause the Minion to ignore weather as a mechanic completely.</li>
+                <li class="patch-note">Extract Spirit now works for pets on pet urns.</li>
+                <li class="patch-note">Resurrect can now resurrect pets.</li>
+                <li class="patch-note">Heal Sickness can now cure pets. (I don't recommend using this on Patient pets at a Vet. It may break the mechanics of how the vet process runs for that Patient, since they technically have no sickness now, but haven't been processed through the system as expected.)</li>
+                <li class="patch-note">The toggle-able Fine buff from Ritual of Transcendence now blocks emotions other than Fine, in addition to giving the Fine buff it always has. Given how roBurky's Meaningful Stories mod changes the way Fine influences other buffs, causing a buff like this one to not overpower them in the same way, I wanted it to retain its same power if you are using both Meaningful Stories and this mod.</li>
+                <li class="patch-note">The options for "rethinking" a ritual (e.g. when you're committed to light, dark) are now found by shift-clicking with cheats enabled. They are not under the Spells (Cheat) menu, to be clear. The menu they are in is the same as before under Spells, it's just now accessed by shift-clicking with cheats enabled. The goal here is to cut down on menu clutter for something that you probably won't be using often.</li>
+                <li class="patch-note">VFX toggles like Magical Energy Tingles are now under Spells > Visuals, to avoid clutter when you click on Spells if you have a lot unlocked.</li>
+                <li class="patch-note">Reaper's Aura and Purity's Aura are now broken into two different parts: the visual and the reaction. The visual toggle is found under Spells > Visuals. The reaction toggle is found under the Spells (Cheats) menu in a new submenu Reaction (despite being under cheats, the requirements for using it are still the same - I don't consider it 'cheating' to use it, it went there mainly to avoid clutter and I plan to use the Reaction submenu for some other things too).</li>
+              </ul>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
             <div id="subsection-patch-notes-v3-0">
               <h4>Version 3-0</h4>
               <p>Scripts</p>
@@ -805,16 +837,14 @@
         </article>
         <aside id="sidebar">
           <div class="dark">
-            <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/984605/" target="_blank">Download</a></span></h3>
+            <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/1007282/" target="_blank">Download</a></span></h3>
             <p>If Simfileshare is having issues, you can use the following alternative download link.</p>
-            <h3><span class="dl-link"><a href="https://workupload.com/file/5kns3QuX" target="_blank">Download (Alt)</a></span></h3>
-            <p><b>Latest:</b> V3-0b, tested with Maxis Patch, February 21, 2019</p>
-            <h4>Patch Notes Summary (full notes found <a href="#subsection-patch-notes-v3-0">here</a>)</h4>
+            <h3><span class="dl-link"><a href="https://workupload.com/file/w3UYTLGz" target="_blank">Download (Alt)</a></span></h3>
+            <p><b>Latest:</b> V3-1, tested with Maxis Patch, February 21, 2019</p>
+            <h4>Patch Notes Summary (full notes found <a href="#subsection-patch-notes-v3-1">here</a>)</h4>
             <ul>
-              <li class="patch-note">Focus on one of 6 new Specializations, 3 Light and 3 Dark, or try to master them all!</li>
-              <li class="patch-note">Alignment Lock with Ritual of Radiance or Ritual of Shadows to gain all three mastery traits and perks for the chosen Alignment.</li>
-              <li class="patch-note">Make Minions show up as Minions always with "Enable Always Minion".</li>
-              <li class="patch-note">Use Sorcerer-related cheats much more easily, with interactions found under the new "Spells (Cheat)" menu.</li>
+              <li class="patch-note">Added Ritual of Infinite Balance for having mastery of everything for those who want to be uber uber powerful, comes with a couple of new spells too.</li>
+              <li class="patch-note">Various other tweaks and bits added (see the full patch notes for details).</li>
             </ul>
           </div>
         </aside>
