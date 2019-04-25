@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Sims 4 Mods made by creator Triplis">
+    <meta name="keywords" content="sims 4, modding, mods">
+    <meta name="author" content="Triplis">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico"/>
+    <title>Love and Hate Mod</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1>Triplis Mods for <span class="highlight">The Sims 4</span></h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="nav-link"><a href="../index.html">Home</a></li>
+            <li class="nav-link"><a href="https://www.patreon.com/triplissims" target="_blank">Patreon</a></li>
+            <li class="nav-link"><a href="../nav/community.html">Contact</a></li>
+            <li class="nav-link"><a href="../nav/tools.html">Tools</a></li>
+            <li class="nav-link"><a href="../nav/help.html">Help</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="mod-name">
+      <div class="container">
+        <div id="page-title">
+          <h1>Love and Hate</h1>
+        </div>
+      </div>
+    </section>
+    <section id="main">
+      <div class="container">
+        <article id="main-col">
+          <div class="page-key">
+            <h3>Summary</h3>
+            <p>Allows you to customize what a sim Loves and Hates from a variety of options, impacting autonomous behavior and providing bonuses or penalties when doing what one Loves or Hates.</p>
+            <h3>Features</h3>
+            <ul>
+              <li><a href="#subsection-intro">Introduction</a></li>
+              <li><a href="#subsection-love">Love</a></li>
+              <li><a href="#subsection-hate">Hate</a></li>
+              <li><a href="#subsection-misc-settings">Other Settings</a></li>
+              <li><a href="#subsection-prefs-list">Complete List of Preferences</a></li>
+              <li><a href="#subsection-credits">Credits</a></li>
+            </u>
+          </div>
+          <div class="page-sections">
+            <div id="subsection-intro">
+              <h4>Introduction</h4>
+              <p>This mod adds a new menu when clicking on sims called Passion. Listed under that is two menus, Loves and Hates, as well as the options Skill Jump, Set Random Preferences, and Reset Preferences. They will be described below. The general idea of the mod is that you can turn on/off preferences for a sim in the form of things they "Hate" and "Love." You can do this on any sim, whenever you want to, even if it's a sim you don't directly control. You just need to be able to click on the sim and you can change what they Love and Hate.</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-love">
+              <h4>Love</h4>
+              <p>If a sim Loves something, they will (for the most part) be able to do it autonomously, even if they aren't able to otherwise. There are a few cases where all the interactions for a particular preference are not autonomous at all, so those are left alone (I may consider trying to change this later, but for now, that's how it works). These exceptions to the rule are specified in the Complete List of Preferences.</p>
+              <p>Sims who Love something will also get a Happy moodlet while doing it and this moodlet will last for some time after the interaction they obtained it from ends. This moodlet gives various bonuses while it's active. Increased skill gain, Fun gain over time and slower decay for Fun, increased relationship gain rate for Friendship and Romance, and a higher success rate with social interactions (most social interactions should be included in this bonus, though a few here and there might be excluded).</p>
+              <p>If a Sim's Energy is very low (the exact number is -51 or lower) they will get an Uncomfortable moodlet instead. This moodlet provides none of the bonuses and is just a negative. The general idea here is that sometimes you are so tired that even doing what you love is not fun.</p>
+              <p>Below are the exact numbers on the bonuses from the Happy moodlet, as of writing this note:</p>
+              <ul>
+                <li class="patch-note">+25 Success Modifier for most social interactions (e.g. the odds of it being successful).</li>
+                <li class="patch-note">Skill Gain x2 modifier.</li>
+                <li class="patch-note">Fun decay x0.5 modifier (e.g. it will decay half as quickly, not taking into account any other possible Fun decay modifiers on the sim)</li>
+                <li class="patch-note">Fun gain over time of 0.5 (is added over time while the moodlet is active).</li>
+                <li class="patch-note">Relationship Increase Rate x1.5 modifier for Romance and Friendship.</li>
+              </ul>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-hate">
+              <h4>Hate</h4>
+              <p>If a sim Hates something, they will not be able to do it autonomously, regardless of whether they are able to normally.</p>
+              <p>Sims who Hate something who are forced to do it (e.g. by the player) will get a Tense moodlet while doing it and this moodlet will last for some time after the interaction they obtained it from ends (note: if you have roBurky's Meaningful Stories mod installed, the duration will be significantly longer than normal). This moodlet gives various penalties while it's active. Decreased skill gain, Fun loss over time and faster decay for Fun, decreased relationship gain rate for Friendship and Romance, and a decreased success rate with social interactions (most social interactions should be included in this penalty, though a few here and there might be excluded).</p>
+              <p>If a Sim's Energy is very low (the exact number is -51 or lower) they will get an Angry moodlet instead. This moodlet gives significantly stronger penalties. Higher tendency to do Mean socials, vastly decreased success rate with social interactions, vastly decreased skill gain, and faster decay for Fun compared to the Tense moodlet.</p>
+              <p>Below are the exact numbers on the penalties from the Tense moodlet, as of writing this note:</p>
+              <ul>
+                <li class="patch-note">-25 Success Modifier for most social interactions (e.g. the odds of it being successful).</li>
+                <li class="patch-note">Skill Gain x0.5 modifier.</li>
+                <li class="patch-note">Fun decay x1.5 modifier</li>
+                <li class="patch-note">Fun loss over time of 0.5 (is decreased over time while the moodlet is active).</li>
+                <li class="patch-note">Relationship Increase Rate x0.5 modifier for Romance and Friendship.</li>
+              </ul>
+              <p>Below are the exact numbers on the penalties from the Angry moodlet, as of writing this note:</p>
+              <ul>
+                <li class="patch-note">-75 Success Modifier for most social interactions (e.g. the odds of it being successful).</li>
+                <li class="patch-note">+10 content score bonus for Mean socials (e.g. increases the chance of them being picked over other socials).</li>
+                <li class="patch-note">Skill Gain x0.1 modifier.</li>
+                <li class="patch-note">Fun decay x2.5 modifier</li>
+                <li class="patch-note">Fun loss over time of 0.5 (is decreased over time while the moodlet is active).</li>
+                <li class="patch-note">Relationship Increase Rate x0.5 modifier for Romance and Friendship.</li>
+              </ul>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-misc-settings">
+              <h4>Other Settings</h4>
+              <p><b>Skill Jump:</b> You can turn this on or off on any given sim. If it's on, when you turn on a Loves preference, the sim's skill may increase a bit, depending on the preference. For example, if you chose Loves > Playing Music > Piano, the sim's Piano skill will jump to Level 3. This is to ensure that the sim can play the Piano autonomously, since they are supposed to love doing so. Most preferences don't require a skill jump like this and for those that do, keep in mind that Skill Jump will never boost their skill past the minimum needed for autonomous behavior. It is also completely optional and you can have a sim Love something without using it, they just may not do the action autonomously in some cases until they've passed a certain skill level. (Side Note: Skill Jump only applies when manually turning on a Loves preference. Set Random Preferences does not use it, for reasons of limitations in how the mod is designed and how Skill Jump does its operations. I may look into the possibility of changing this at a later date.)</p>
+              <p><b>Set Random Preferences:</b> Set Random Preferences will pick 3 Loves preferences and 3 Hates preferences at random to apply to the sim you use it on. I've made sure that this will not include preferences from expansion content you don't have, so you don't need to worry about getting preferences that are useless. The idea here is to have a way to apply preferences without needing to choose them all yourself, if you want to play that way with any given sim.</p>
+              <p><b>Reset Preferences:</b> Reset Preferences will remove all Loves and Hates preferences that have been set on a sim. Useful for if you don't like what random gave you and want to try again, or you have a lot of preferences set and want to clear them.</p>
+              <p><b>List Active Preferences:</b> List Active Preferences lists all of the active preferences on the targeted sim in a notification. Due to size limitations in how it works, you won't be able to use the interaction past having 16 preferences active. Note that this has no impact on how many preferences you can have active at the same time (there is no set limitation on that). It only has to do with being able to display them as a list in a notification and I put the restriction in to safeguard against trying to use the notification and breaking something if you have an enormous amount of preferences set. I don't expect that most people will set an enormous number of preferences on a single sim to begin with. Odds are you will never notice this restriction.</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-prefs-list">
+              <h4>Complete List of Preferences</h4>
+              <p>Note that some preferences are incompatible with each other and will be specified next to the preference, below (for example, you can't Hate Computer and Love Video Games). You also can't Hate and Love something at the same time. This is just to avoid weird overlap, resulting in contradictory behavior that defeats the point of having preferences or causes conflicts between intended preference priorities in interactions.</p>
+              <p>Minimum Skill Required: These are preferences that require a minimum skill level for them to be used autonomously when a sim Loves them. This can be optionally gotten around by turning on Skill Jump to boost the skill to the minimum required.</p>
+              <ul>
+                <li class="patch-note">Playing Music: Piano (level 3)</li>
+                <li class="patch-note">Playing Music: Pipe Organ (level 2)</li>
+                <li class="patch-note">Programming: All, Programming: App Building, Programming: Hacking, Programming: Video Games (level 3)</li>
+                <li class="patch-note">Painting (level 2)</li>
+              </ul>
+              <p>No Autonomy: These are preferences that won't activate autonomous behavior, even if the sim Loves them. This is because all of the related interactions are set to not be autonomous ever, normally. I may consider trying to override this in the future. Note that the moodlets will still happen, so they aren't entirely pointless as preferences.</p>
+              <ul>
+                <li class="patch-note">Flower Arranging</li>
+                <li class="patch-note">Media Production</li>
+                <li class="patch-note">Rocket Science</li>
+              </ul>
+              <p>Everything Else: Should behave as the main functionality of the mod is described, with no notable exceptions</p>
+              <ul>
+                <li class="patch-note">Acting</li>
+                <li class="patch-note">Baking</li>
+                <li class="patch-note">Bowling</li>
+                <li class="patch-note">Chess</li>
+                <li class="patch-note">Computer (can't Love Computer and Hate Video Games, or vice-versa)</li>
+                <li class="patch-note">Cooking (this is separate from Baking and, for the purpose of this mod, is considered a different type of Cooking)</li>
+                <li class="patch-note">Dancing</li>
+                <li class="patch-note">Fishing</li>
+                <li class="patch-note">Fitness: All</li>
+                <li class="patch-note">Fitness: Strength Training (encompasses weight machines mostly)</li>
+                <li class="patch-note">Fitness: Cardio (encompasses treadmill, jogging, etc.)</li>
+                <li class="patch-note">Fitness: Basketball</li>
+                <li class="patch-note">Fitness: Rock Climbing</li>
+                <li class="patch-note">Fitness: Swimming</li>
+                <li class="patch-note">Fitness: Wellness</li>
+                <li class="patch-note">Gardening</li>
+                <li class="patch-note">Handiness</li>
+                <li class="patch-note">Listening to Music</li>
+                <li class="patch-note">Mixology</li>
+                <li class="patch-note">Painting</li>
+                <li class="patch-note">Phone (can't Love Phone and Hate Video Games, or vice-versa)</li>
+                <li class="patch-note">Playing Music: All</li>
+                <li class="patch-note">Playing Music: Guitar</li>
+                <li class="patch-note">Playing Music: Violin</li>
+                <li class="patch-note">Playing Music: DJ Mixing</li>
+                <li class="patch-note">Playing Music: Singing</li>
+                <li class="patch-note">Reading</li>
+                <li class="patch-note">Skating</li>
+                <li class="patch-note">Socializing: All</li>
+                <li class="patch-note">Socializing: Friendly</li>
+                <li class="patch-note">Socializing: Funny</li>
+                <li class="patch-note">Socializing: Mean</li>
+                <li class="patch-note">Socializing: Mischief</li>
+                <li class="patch-note">Socializing: Romance</li>
+                <li class="patch-note">Television</li>
+                <li class="patch-note">Video Games (can't Love Video Games and Hate Phone or Computer, or vice-versa)</li>
+                <li class="patch-note">Writing</li>
+              </ul>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-credits">
+              <h4>Credits</h4>
+              <p>Thanks to Evangelina Silvercloud for helping me with some testing and feedback.</p>
+              <p>Thanks to Scumbumbo for all of his scripting resources and help he's provided over the course of my time as a modder. This is the most script-heavy mod I've done to date and I wouldn't have even known where to begin without all of the things I've learned from him. Also, he helped me solve a problem I was stumped on to do with List Active Preferences, so thanks for that too. :)</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <aside id="sidebar">
+          <div class="dark">
+            <h3><span class="dl-link"><a href="" target="_blank">Download</a></span></h3>
+            <p><b>Latest:</b> V1.0, tested with Maxis Patch, April 19, 2019</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <footer>
+      <p>Triplis Sims 4 Mods, Copyright &copy; 2018</p>
+    </footer>
+  </body>
+</html>
