@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Sims 4 Modding Guides made by creator Triplis">
+    <meta name="keywords" content="sims 4, modding, mods, guides">
+    <meta name="author" content="Triplis">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <title>Modding Guides</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1>Triplis Mods for <span class="highlight">The Sims 4</span></h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="nav-link"><a href="../index.html">Home</a></li>
+            <li class="nav-link"><a href="https://www.patreon.com/triplissims" target="_blank">Patreon</a></li>
+            <li class="nav-link"><a href="../nav/community.html">Contact</a></li>
+            <li class="nav-link"><a href="../nav/tools.html">Tools</a></li>
+            <li class="current"><a href="../nav/guides.html">Guides</a></li>
+            <li class="nav-link"><a href="../nav/help.html">Help</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="mod-name">
+      <div class="container">
+        <div id="page-title">
+          <h1>Modding Guides</h1>
+        </div>
+      </div>
+    </section>
+    <section id="main">
+      <div class="container">
+        <article id="main-col">
+          <div class="page-key">
+            <p>The following are guides that I've written for some aspect of modding The Sims 4. If you have comments or questions, I suggest asking in the creators-workshop section of Deaderpool's discord or in Scumbumbo's discord (I am in both as are many other modders). I don't have a devoted section for modding questions in my discord and I'm the only modder I know of in my discord who pays attention to it, so you'll likely get help more reliably in those other two discords.</p>
+            <h3>Guides</h3>
+            <ul>
+              <li><a href="#subsection-test-autonomous">Injecting to Test Autonomous</a></li>
+            </u>
+          </div>
+          <div class="page-sections">
+            <div id="subsection-test-autonomous">
+              <h4>Injecting to Test Autonomous</h4>
+              <p><a href="http://www.simfileshare.net/download/1043988/" target="_blank">Download Template Script</a></p>
+              <h3>Introduction</h3>
+              <p>I suggest downloading the Template Script first, so that you have the full thing on hand for reference. This guide assumes you have basic knowledge of modding for The Sims 4 already (though you are of course welcome to jump into the deep end if you don't) and will attempt to show you how to inject to the tuning in an interaction <code>test_autonomous</code> through a script, bypassing issues with overrides and compatibility, such that you will be able to:</p>
+              <ul>
+                <li class="patch-note">Allow an interaction to be autonomous under new circumstances. For example, make it so that <code>guitar_Practice</code> can be done autonomously under new circumstances, like when a sim has the dazed buff from losing a fight.</li>
+                <li class="patch-note">Restrict an interaction's autonomy, such that under your desired circumstances, the sim can never do the interaction autonomously. For example, making it so that <code>bed_Nap</code> can only be done in a certain time range during the day (ex: from 1pm to 5pm).</li>
+                <li class="patch-note">Have some awareness of the limitations of injecting to <code>test_autonomous</code> and the logical issues that could arise if two different mods have conflicting design goals for the same interaction.</li>
+              </ul>
+              <p>What this guide will NOT cover:</p>
+              <ul>
+                <li class="patch-note">How to make an interaction autonomous that has its <code>allow_autonomous</code> tuning set to False. This is another topic and could require a lot more than fiddling with <code>test_autonomous</code></li>
+                <li class="patch-note">How to change an interaction's <code>test_globals</code> or main <code>tests</code> section. For some interactions, you would need to modify both these and <code>test_autonomous</code> to expand the circumstances under which the interaction can autonomously occur. That is a convoluted area and is just a mess to work with for some interactions.</li>
+                <li class="patch-note">Why it is that the other reindeer never let Rudolph join in any reindeer games. That's a question for the creators of the character. I mean, who was raising those other reindeer? Bullies, I tell you.</li>
+              </ul>
+              <h3>Step 1: Allowing, aka: Whitelist</h3>
+              <p>The first thing we will cover is how to add something as a new type of circumstance under which the interaction can trigger autonomously. We will be using the interaction <code>guitar_Practice</code> as the interaction we want to modify. I suggest locating this file in your extracted files if you have them all extracted, or going and extracting it with your XML Extraction Tool of choice, so you can follow along.</p>
+              <p>If you look in its <code>test_autonomous</code> section, you will notice a number of circumstances under which the interaction can occur autonomously already. Things like if it passes the <code>appropriateness</code> parameter, if Guitar Skill is level 2 or higher, etc. Note that each <code>&lt;L&gt;&lt;/L&gt;</code> part is a set of tests. This is important information, but don't worry, you don't need to memorize it. There won't be a test. I mean, wait. There will be tests... in the interaction. There won't be a test, testing you.</p>
+              <p>You know what I mean.</p>
+              <p>For what we're wanting to accomplish, we want to add a new set of tests, or new list, aka: <code>&lt;L&gt;&lt;/L&gt;</code> part. We're going to place these tests inside of a TestSetInstance file, so that our script only needs to know how to inject one type of input: a TestSetInstance file. You can go and extract any TestSetInstance file for reference, to build yours off of. I'm going to go for the first one I see, which is <code>testSetInstance_NotOverflowingTrash</code>, but it doesn't matter which one. I'm just pulling one out and making a copy so I don't have to write all of the code by scratch for our TestSetInstance file. I'm going to rename its <code>n=</code> value to <code>Triplis:TestSetInstance_InjectingToTestAutonomous_Tutorial</code> and then use my <a href="../nav/tools.html" target="_blank">Auto Hash</a> tool on it to get it set up more quickly.</p>
+              <p>Now we need to figure out what tests we want to have. How about I get your input? ... What's that? You want to make it so that sims can go for the Guitar when their bladder is low? Alright, if you say so.</p>
+              <p>I'm going to now go through the game files and look for an example of a test that checks for a statistic being in a certain range. There is no method to this particular madness, I just sort of search through a giant folder of the extracted XML files with various search terms until I find what I'm looking for. Aha! I found it and it's referencing bladder already too. Saves some time there.</p>
+              <p>Your file should now look something like this:</p>
+              <a href="../img/tutorial-injecting-to-test-autonomous-test-set-instance-just-a-prank-bro.png" target="_blank">TestSetInstance file</a>
+              <p>No wait, that's a picture of somebody's lunch. Hang on...</p>
+              <p>Here we go:</p>
+              <a href="../img/tutorial-injecting-to-test-autonomous-test-set-instance.png" target="_blank">TestSetInstance file</a>
+              <p>Now that we have our test, we need to add it to the interaction, but without needing to override and create compatibility problems. So our script comes into play. I suggest going and pulling up your Template Script you forgot to download at the beginning and/or I forgot to upload to the website. You will need it to follow what I'm talking about and create a working script for your mod.</p>
+              <p>The next step should be extremely simple, so I'm going to drag it out and make it sound way more complicated than it is: In the area of the Template Script where it says <code><- Put TestSetInstance ID here</code>, put the <code>s=</code> value of your TestSetInstance file. This will summon the God of Thunder, Thor, who will bless your script with the electric fire of a thousand screaming suns.</p>
+              <p>Next, in the area where it says <code><- Put Interaction ID here</code>, put the <code>s=</code> value of your Interaction file (in this case, the value from <code>guitar_Practice</code>). This will summon the God of Thunder, Thor, who will be very annoyed at you summoning him twice in a row and will smite you with the electric fire of a thousand screaming suns.</p>
+              <p>Finally, make sure that the part that says <code>add_to_all</code> on Line 67 is set to <code>False</code>. (Oh and if you're feeling daring and/or know how to code, you can change the comment that says "Put thing here" to the name of the interaction or test set, so you'll know what it's referencing at a glance.)</p>
+              <p>And you are done. Now you just need to do the steps which I will assume you already know how to do, even if you don't, because this tutorial isn't built to cover those things. Things like putting the TestSetInstance in a package file and compiling the script.</p>
+              <h3>Step 2: Blocking, aka: Blacklist</h3>
+              <p>This step erroneously assumes that you have done the first step, which may be very wrong-headed, but it does it anyway, so that it doesn't need to explain the same things twice. This step is all about blocking, aka: blacklist, aka: preventing an interaction that can be done autonomously from ever being done autonomously, unless it's under the circumstances you desire.</p>
+              <p>Incidentally, this is where things start to get complicated. Not the code or the steps you will need to perform, but the logic of the operations. I will cover this more in the final section, but for now, just know that making absolutely sure nothing can get through your blacklist operations can mean making sure things happen in the correct order. You may now proceed to furrow your brows and carry this concern with you throughout the rest of the guide.</p>
+              <p>For this example, we're going to revisit <code>guitar_Practice</code>. We're going to include what we did before and add on to it, so if you haven't done the first step yet, I suggest ignoring it and jumping into this with total confusion. I mean, no. The opposite of that. Whatever that is.</p>
+              <p>I will now get your input again... what's that? You want to make it so that <code>guitar_Practice</code> can only trigger autonomously if the sim's bladder is low? Well... ok. Weirdo. That makes things a bit easier though. Since we're doing it this way, we already have our TestSetInstance file ready to go and it can be used for our blocking/blacklist procedure.</p>
+              <p>We're going to go through the exact same procedure with our Script Template again, including being smited by Thor's unholy wrath, except this time we're going to make sure <code>add_to_all</code> on Line 75 is set to <code>True</code>. This will tell the code to add our test to every single test set in the <code>test_autonomous</code> tuning of the interaction, rather than only to a new, additional one.</p>
+              <p>The result is that every single set of tests in the <code>test_autonomous</code> tuning for <code>guitar_Practice</code> will now require the sim's bladder to be low, in addition to any other requirements it may have, for the test to be able to pass. Note that we're doing both this and adding a new set of tests with our bladder test, so that the sim can also pass the test just by having a low bladder, as that is a pretty important feature here. Who doesn't go for a Guitar when they need to pee? This needs to be as realistic gameplay as possible.</p>
+              <p>And now it is time for the last step, where I attempt to explain some convoluted scenarios and confuse you.</p>
+              <h3>Step 3: Logic, aka: Headaches</h3>
+              <p>If you have followed along to this point and understood clearly the directions provided, you may be wondering: That's it? All this for a couple of simple procedures? I brought the unholy wrath of the Thunder God, Thor, down on me for this?</p>
+              <p>Yes, but Thor thought you were important enough to smite. That's gotta be worth something, right? Furthermore, the main reason I decided to make an actual guide out of this is because of this last section.</p>
+              <p>Here's the deal: If you've been reading between the lines, it may have occurred to you that if, for example, Bob the modder makes a mod that changes <code>guitar_Practice</code>, specifically with the addition that it can occur autonomously when a sim is in their last stage of pregnancy, Bobbo (Bob's evil twin) may come in and make a mod that changes <code>guitar_Practice</code>, specifically with the change that it can only occur autonomously when a sim has the irritated moodlet from having witnessed a nearby toddler throwing a tantrum. One of these is going to lose out in the process.</p>
+              <p>In terms of code and errors, there will be no noticeable incompatibility between the two mods. In terms of design and desired outcome, one of two things will happen: Either Bob's mod will get away with running when it wants to, potentially trivializing the way Bobbo's mod restricted the interaction. Or Bobbo's mod will get away with blocking Bob's test from passing, potentially trivializing the way Bob's mod expanded the interaction.</p>
+              <p>And this is where order of operations comes in, which can be managed to some extent in the context of your own mod, but would probably be a lost cause if you're trying to resolve a conflict between two mods in this way. For example, in my <a href="https://triplis.github.io/mods/love-and-hate.html" target="_blank">Love and Hate Mod</a>, I do all of my allowing/whitelisting first and then my blocking/blacklisting after. I do this because I have two different types of priorities at play: Checking for something a sim Loves, expanding when they can do a particular interaction if it pertains to something they Love, and blocking a particular interaction if it pertains to something a sim Hates. The whitelist procedure (which is the same one used in our Template Script) only expands the operations of the given interaction if it has something in its <code>test_autonomous</code> already. Otherwise, it would be creating an exclusive circumstance under which the interaction can occur in an interaction that has no existing <code>test_autonomous</code> restrictions, rather than expanding on the existing circumstances under which it can occur. So the blacklist needs to come after. If it was first, the whitelist would see the added blacklist and assume the interaction's <code>test_autonomous</code> has some kind of built in circumstances, so we need to expand on them.</p>
+              <p>This is just one example of the sort of convoluted logic you can get into with <code>test_autonomous</code>. It's also worth noting that expanding the circumstances under which an interaction can occur autonomously does nothing to how desirable the interaction is overall, so you could make something more available only for it to never, or rarely, run because there is little to no priority for it to do so.</p>
+              <p>With this knowledge in mind, you should be better equipped to handle it when someone comes to you and says your mod isn't working and you can't trace it to a script or tuning error. And then you realize that Bobbo, your evil twin, has once again been going off and wreaking havoc on the world, and you need to go collect the Sword of Indecisive Weight from the Stone, so that you can become King Arthur.</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <p>Triplis Sims 4 Mods, Copyright &copy; 2019</p>
+    </footer>
+  </body>
+</html>
