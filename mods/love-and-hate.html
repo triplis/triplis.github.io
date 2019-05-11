@@ -45,6 +45,7 @@
               <li><a href="#subsection-intro">Introduction</a></li>
               <li><a href="#subsection-love">Love</a></li>
               <li><a href="#subsection-hate">Hate</a></li>
+              <li><a href="#subsection-chemistry">Chemistry</a></li>
               <li><a href="#subsection-misc-settings">Other Settings</a></li>
               <li><a href="#subsection-prefs-list">Complete List of Preferences</a></li>
               <li><a href="#subsection-autonomy-problems">If Autonomy Doesn't Seem Quite Right</a></li>
@@ -99,6 +100,18 @@
                 <li class="patch-note">Fun loss over time of 0.5 (is decreased over time while the moodlet is active).</li>
                 <li class="patch-note">Relationship Increase Rate x0.5 modifier for Romance and Friendship.</li>
               </ul>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-chemistry">
+              <h4>Chemistry</h4>
+              <p>With version 1-1, I've added the basics of a Chemistry system for romance interactions. Don't expect this to be super precise and complex as it is now.</p>
+              <p>Right now, how it works is, for example, if Sim A Hates TV and Sim B Loves TV, the chance of a romance interaction succeeding will be slightly lower. Or if Sim A Hates TV and Sim B Hates TV, the chance of a romance interaction succeeding will be slightly higher.</p>
+              <p>This effect is cumulative, so for each preference two sims have in common, they will have an increasingly easier time romancing each other. For each preference they have that is conflicting, they will have an increasingly harder time romancing each other.</p>
+              <p>I'm emphasizing that it's basics because apart from some testing to ensure it works and trying to make sure it isn't too high to the point of breaking all balance for romance, balancing the numbers is more something where I'd like to get a broad range of feedback from different people who play in different ways. So I'm releasing it as is and looking for feedback on what kind of impact it makes.</p>
+              <p>Does it seem too powerful? Too weak? Just right? Does it mess with existing romances in a way you do or don't like? Let me know on my <a href="https://discord.gg/JhNwtYv">Discord</a> in the #mod-feedback section.</p>
+              <p>To give you a sense of what my goals are with this, I'd like to get it in a place where you'll notice some impact, but without it trampling over other priorities to the point of absurdity. So far, in my testing, it takes having around 6 preferences in common to start overriding things like embarrassment and awkward conversation, which seems fairly reasonable to me, as I'd consider that a pretty high number of things for two sims to have in common.</p>
               <div class="to-top">
                 <p><a href="#main-col">^</a></p>
               </div>
@@ -207,13 +220,11 @@
         </article>
         <aside id="sidebar">
           <div class="dark">
-            <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/1035971/" target="_blank">Download</a></span></h3>
-            <p><b>Latest:</b> V1.0, tested with Maxis Patch, April 19, 2019</p>
+            <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/1048338/" target="_blank">Download</a></span></h3>
+            <p><b>Latest:</b> v1-1, tested with Maxis Patch, April 19, 2019</p>
             <h4>Patch Notes</h4>
             <ul>
-              <li class="patch-note">Added Chinese translation by Miaow_CC (for real this time, slight mishap in getting it added, sorry)</li>
-              <li class="patch-note">Added Russian translation by KissaLopa</li>
-              <li class="patch-note">Added French translation by Maïa Game</li>
+              <li class="patch-note">Added basic Chemistry framework for romance.</li>
             </ul>
           </div>
         </aside>
