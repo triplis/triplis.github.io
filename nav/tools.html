@@ -41,13 +41,70 @@
             <p>The following are tools that I've built specifically for modding The Sims 4. In the spirit of sharing and open source, you can download the source code if you'd like, as well as the program itself.</p>
             <h3>Tools</h3>
             <ul>
-              <li><a href="#subsection-auto-hash">Sims 4 Auto Hash</a></li>
+              <li><a href="#subsection-auto-hash-gui">Sims 4 Auto Hash GUI Version</a></li>
+              <li><a href="#subsection-auto-hash-console">Sims 4 Auto Hash Console Version</a></li>
               <li><a href="#subsection-auto-stbl">Sims 4 Auto STBL</a></li>
             </u>
           </div>
           <div class="page-sections">
-            <div id="subsection-auto-hash">
-              <h4>Sims 4 Auto Hash</h4>
+            <div id="subsection-auto-hash-gui">
+              <h4>Sims 4 Auto Hash GUI Version</h4>
+              <img src="../img/auto-hash-icon-for-show.png">
+              <p><a href="http://www.simfileshare.net/download/1226931/" target="_blank">Download</a></p>
+              <h3>Introduction</h3>
+              <p>I built this program as a way to speed up the process of creating and applying unique hash IDs to custom XML tuning files. Please note that the program may have bugs or be incomplete in some ways, so use at your own risk. The priority here was functionality for an experienced modder, less so than ease-of-use for those with little knowledge of modding.</p>
+              <p>This version of the tool was built to have a GUI! So not just relying on a console. With the interface comes some additional functionalities that I will go into below. First, some general warnings that are more or less the same as in the console version.</p>
+              <h3>Warnings</h3>
+              <p>Results should match other standard hash generators (ex: Sims 4 Studio), provided the internal filename contains no non-english characters. Unlike other hash generators, I have not figured out how to properly handle non-english characters. I built the program in C++, so I couldn't just copy the functionality of other tools (which are written in C#). So if you try to use the tool with a filename that has non-english characters, you will encounter messy results.</p>
+              <p>As with the console version, it will likely only function properly on Windows. Qt is more cross-compatible in theory, but I don't think I've set up everything I need to, to get it to work on a Mac and I don't have a Mac to go fiddle with trying stuff. If you use something other than Windows and give it a try, feel free to let me know what happens. I can't guarantee I'll jump to go change things to make it work, but it is something I would like to offer support for if I can figure out how in ways that don't take an obscene amount of time to set up.</p>
+              <p>Every file type defaults to 64 high bit unless otherwise specified. There may be file types I haven't manually set where 32 bit or 32 high bit is required to get the file to work in game. If you are using the tool and notice something like this, feel free to let me know and I will try to update the tool with that file type adjusted accordingly.</p>
+              <h3>How to Use (summary)</h3>
+              <p>In the box that says "Files to Hash" above it, paste in a file path, and it will do a number of operations on the file: generate a hash for it, insert the hash as its internal file hash in decimal and then apply the hash to its external filename as hexadecimal.</p>
+              <p>So the simplest usage should look something like the following:</p>
+              <ul>
+                <li class="patch-note">Pick a name for your XML file internally and save it with that name. For example: n="Triplis:Interaction_DoThings" -- This is the name that will be used for generating the hash. Make sure the external filename is in one of two formats: Scumbumbo's XML Extractor or Sims 4 Studio, and that it's the file type XML. If you are unsure what those formats are, I'm referring to the default format when you extract XML files using Scumbumbo's tool or the Sims 4 Studio tool.</li>
+                <li class="patch-note">Copy the file path. You can do this by doing shift + right-click while looking at the file in windows explorer. Notepad++ and Atom text editors both have an option to copy file path as well.</li>
+                <li class="patch-note">Paste the file path into the program. If Preferences > Auto Hash on Paste is checked, the file will start being processed as soon as the path is pasted in. If it's not checked, you'll have to click the Hash Files button above the box.</li>
+                <li class="patch-note">You're done!</li>
+              </ul>
+              <p>When you're finished, you can exit it out, leave it open for using it more, up to you. You can also use "Save Log To File..." to save the contents of the Debug Log to a file, which should have some stuff in it after hashing.</p>
+              <h3>How to Use (advanced)</h3>
+              <p><b>Multiple Files</b></p>
+              <p>You can do more than one file at a time. To do this in windows, select more than one file in windows explorer, use shift + right-click to copy path, and then paste into the program.</p>
+              <p><b>What Gets Appended as Name</b></p>
+              <p>When choosing an internal filename, consider the example n="Triplis:Interaction_DoThings"</p>
+              <p>Note the colon, ":" operator in there. That's optional. If included, it will cause the program to ignore anything before ":" when appending the internal filename to the end of the external filename. For example, if you want your external filename to be S4_3C1D8799_00000000_D3613ABC297B23B7_MyZoneModifier even though the internal filename is Triplis:MyZoneModifier, you would include the ":" operator. This is purely a preference thing; it has nothing to do with the hash generation itself. I put it in because I like to use S4PE and S4PE will build a key list for assets that have a name appended to the end of them, making it easier to navigate your projects when looking at them in S4PE, but if my hash generation appended the entire filename, it could get rather long! You might know that your project is only by you and so there is no need to append your modder name to the external name of the file.</p>
+              <p>Keep in mind, of course, that using a unique modder name does matter for hash generation when it comes to what you choose for the internal filename! You want to make sure the chances of someone using the same hash is as low as possible. MyZoneModifier is not likely to be unique, but TheLastKnightOfBardledom:MyZoneModifier or TheLastKnightOfBardledom_MyZoneModifier probably will be.</p>
+              <p><b>Data Template Files</b></p>
+              <p>The program comes with a set of template data files. Meaning, existing data files that will be copied for some file types when a hash is generated. This is to speed up the process of hunting down data file types every time you want to make a new tuning file that requires one. Not all data template files have been added yet.</p>
+              <p>Some, however, have more than one template and you can choose which one will get copied by naming your XML file in the right way.</p>
+              <p>For example, if you have a buff XML file and you want to generate a data file for the mood Confident, include, somewhere in your internal filename, "BuffConfident." This might look something like: n="Triplis:Buff_StrutAround_BuffConfident"</p>
+              <p>You can look at the template folder (it comes with the program) and see what the syntax looks like for these template variations. Right now, most of the variation revolves around different types for buffs and different types for traits. Note that you will still need to edit the data file somehow for modifying things like strings.</p>
+              <h3>Miscellaneous Features / Preferences</h3>
+              <p><b>Input Options</b></p>
+              <p>Both the Files to Hash box and the Debug Log box come with a Zoom+, Zoom-, and Clear button.</p>
+              <p>Clear erases anything currently in the box. Note that this is the only way to erase contents from the Debug Log box while the program is open; unlike the Files to Hash box, the Debug Log doesn't take input and its contents can't be edited like a normal text box. Its purpose is to show you what is happening and its contents can be saved to a file with the Save Log To File button.</p>
+              <p>Zoom+ and Zoom- zoom in or out. More specifically, they change the size of the text in the box in question. Note that this does not persist upon closing the program. If you want to zoom in or out, you will have to do it each time you load up the program.</p>
+              <p><b>Preferences Menu</b></p>
+              <p>Preferences are saved in the preferences.ini file in the same folder where the .exe file for the program is. Any change you make to a Preferences option (checking it or unchecking it) will be saved to that file when the program is shut down normally. These options are: Auto Hash on Paste, Generate Data File if Needed, Clear Input After Hashing, and Auto Backup File Before Hashing.</p>
+              <p>Auto Hash on Paste will cause input to instantly be processed every time the contents of the Files to Hash box changes. If enabled, the Hash Files button will be disabled, to help make it clear that you don't need to press it after putting in a file path. If disabled, you will have to click the Hash Files button each time you want to process input in the Files to Hash box.</p>
+              <p>Generate Data File if Needed will enable the functionality described in the Data Template Files section above. Note that you don't need to specify your preference for Scumbumbo's XML Extractor format or Sims 4 Studio format. Provided you are using one of those formats for the naming of your XML file, the program should pick out the right kind of companion DATA file. In the case of Sims 4 Studio format, it will be an XML file, but in a format that is readable as the DATA file type when imported into Sims 4 Studio.</p>
+              <p>Clear Input After Hashing will delete the input in the Files to Hash box as soon as the current set of inputted file paths are finished being processed. The idea here is that you don't have to worry about deleting old input after processing it. I made it an option, however, because you might want to keep the input around for whatever reason and Clear it when you're ready to.</p>
+              <p>Auto Backup File Before Hashing will create a copy of the inputted file before any changes are made to it and place the copy in the Backups directory folder, which will be in the same folder as the program. Note that if it encounters a file of the same name in the Backups folder, it will skip copying, rather than overwrite. So keep this in mind when creating backups.</p>
+              <p><b>Help Menu</b></p>
+              <p>The Help menu can lead you to Documentation (this page), Donate (the "Donate" page on this website that describes what ways you can support what I do), or About (a popup window in the program that says a little about what the program is for). The Documentation and Donate buttons will open up a window in your default browser and go to this website.</p>
+              <p><b>File Menu</b></p>
+              <p>The File menu just contains an Exit option. You can also close the program by clicking the X in the top right corner. It's kind of redundant, but it's a common option for a program to have, so I figured why not.</p>
+              <h3>Suggestions</h3>
+              <p>If you use the program and have suggestions/requests for features you'd like to see, you can let me know. I can't guarantee I'll do it, but I can take it into consideration.</p>
+              <p>Note that this is not an invitation to request features that turn the tool into something entirely different. I don't have any plans to expand this particular tool beyond the purpose of creating a unique hash for a file, giving it to the file, and sometimes copying a companion DATA file. I have considered before the possibility of automating the process of copying certain elements from the XML file to the DATA file, if it's Sims 4 Studio format, since it's XML and easier to edit (for example, copying a String ID in an XML buff file to the companion DATA file so you don't have to copy it over yourself), but that's about as large in scope as I tend to think in terms of expanding what it can do.</p>
+              <p>I'd like to keep the tool as narrow in scope as possible, so that it's lightweight and easy to use for its purpose.</p>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
+            <div id="subsection-auto-hash-console">
+              <h4>Sims 4 Auto Hash Console Version</h4>
               <img src="../img/auto-hash-icon-for-show.png">
               <p><a href="http://www.simfileshare.net/download/942022/" target="_blank">Download</a></p>
               <p><a href="http://www.simfileshare.net/download/942024/" target="_blank">Download Source Code</a></p>
