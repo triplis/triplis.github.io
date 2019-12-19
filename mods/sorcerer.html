@@ -66,6 +66,7 @@
             </u>
             <h3>Patch Notes</h3>
             <ul>
+              <li><a href="#subsection-patch-notes-v3-5-2">Version 3-5-2</a></li>
               <li><a href="#subsection-patch-notes-v3-5">Version 3-5</a></li>
               <li><a href="#subsection-patch-notes-v3-4">Version 3-4</a></li>
               <li><a href="#subsection-patch-notes-v3-3">Version 3-3</a></li>
@@ -711,6 +712,21 @@
               </div>
             </div>
             <h3>PATCH NOTES</h3>
+            <div id="subsection-patch-notes-v3-5-2">
+              <h4>Version 3-5-2</h4>
+              <p>This patch comes with redesigned teleports, so that they can be done autonomously. To accomplish this, I had to do some fiddling with the animations and effects, so because of that, they will look a little different (but the spirit of the look is more or less the same).</p>
+              <p>Note also that due to them being changed to the kind of teleport that can be done autonomously when toggled on, you can no longer use them to go anywhere; only places the sim could path to with Go Here. (Example: If there are stairs to an upstairs floor, they can teleport to upstairs; if there are no stairs, they can't. This is the same as the vampire and spellcaster teleports).</p>
+              <p>Since this is somewhat of a trade in functionality, I've added an additional teleport called Teleport Here (using an existing base game string to avoid the need for new translations) and a custom animation/effect setup that retains the capability of the old teleports to go virtually anywhere, but can't be done autonomously. This way, you can still go anywhere, using the new Teleport Here interaction and you can teleport autonomously with the redesigned old teleports.</p>
+              <p>My aim here is to add something, without taking away. I don't want to mess up something people enjoy. :)</p>
+              <p>A couple of others miscellaneous changes:</p>
+              <ul>
+                <li class="patch-note">I've removed the script that excluded Minions from most roles. The reason I'm doing this is that upon further examination, it seemed that excluding them from most roles was not helping keep them on the lot you have them on while you're away and was causing unforeseen problems, like excluding them from choosing to travel with; rather than trying to examine all such roles like that and make exceptions for them, I decided to revert the change. I hope that the previous change did not cause anyone issues and that reverting this change will be better overall for Minion gameplay.</li>
+                <li class="patch-note">I removed the need for two of the overrides used in the mod by using scripts. In the process, I made it so that in the case of being immune to fire spreading to them, now both sims who have the Aura of Nature active will be immune and so will sims who have the Reaper Garb (from Destruction level 5) active. I felt this was a nice little touch fitting for a destructive sim going on a firey rampage.</li>
+              </ul>
+              <div class="to-top">
+                <p><a href="#main-col">^</a></p>
+              </div>
+            </div>
             <div id="subsection-patch-notes-v3-5">
               <h4>Version 3-5</h4>
               <ul>
@@ -887,12 +903,13 @@
         </article>
         <aside id="sidebar">
           <div class="dark">
-            <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/1453230/" target="_blank">Download</a></span></h3>
+            <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/1506517/" target="_blank">Download</a></span></h3>
             <p>If Simfileshare is having issues, you can use the following alternative download link.</p>
-            <h3><span class="dl-link"><a href="https://workupload.com/file/e2Ekc5Kk" target="_blank">Download (Alt)</a></span></h3>
-            <p><b>Latest:</b> V3-5-1, tested with Maxis Patch, November 12, 2019</p>
-            <h4>Patch Notes Summary (full notes found <a href="#subsection-patch-notes-v3-5">here</a>)</h4>
+            <h3><span class="dl-link"><a href="https://workupload.com/file/em52rAbF" target="_blank">Download (Alt)</a></span></h3>
+            <p><b>Latest:</b> V3-5-2, tested with Maxis Patch, December 12, 2019</p>
+            <h4>Patch Notes Summary (full notes found <a href="#subsection-patch-notes-v3-5-2">here</a>)</h4>
             <ul>
+              <li class="patch-note">December 18, 2019: Redesigned teleports so they can be autonomous; removed role exclusion filter for minions (see full patch notes for details).</li>
               <li class="patch-note">November 12, 2019: Various fixes for maxis patch, including a fix for a CTD (crash to desktop)... so definitely get this update.</li>
               <li class="patch-note">September 21, 2019: Added two optional addons: Gain Spellcaster Charge from Sorcerer Spells and Gain Spellcaster XP from Sorcerer Spells</li>
               <li class="patch-note">September 10, 2019: Added a version of Ritual of Neutrality that shows up if you are a Spellcaster (from Realm of Magic Game Pack). This ritual enables you to have access to most Sorcerer abilities, as normal, while being a Spellcaster.</li>
@@ -906,6 +923,21 @@
             <h3><span class="dl-link"><a href="https://workupload.com/file/5mm4nBCb" target="_blank">Download (Alt)</a></span></h3>
           </div>
           <div class="dark">
+            <p><b>Optional Addon:</b> Gain Spellcaster Charge from Sorcerer Spells (requires Realm of Magic and Sorcerer V3-5 or later)</p>
+            <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/1340955/" target="_blank">Download</a></span></h3>
+            <p>If Simfileshare is having issues, you can use the following alternative download link.</p>
+            <h3><span class="dl-link"><a href="https://workupload.com/file/NGBbzfPg" target="_blank">Download (Alt)</a></span></h3>
+          </div>
+          <div class="dark">
+            <b>Legacy: This tab is for the version of the mod released for the legacy patch (or prior to it if no update was needed for the legacy patch). Versions after this have no guarantee of working in the legacy version of the game.</b>
+            <h3><span class="dl-link"><a href="https://www.simfileshare.net/download/1453230/" target="_blank">Download</a></span></h3>
+            <p>If Simfileshare is having issues, you can use the following alternative download link.</p>
+            <h3><span class="dl-link"><a href="https://workupload.com/file/e2Ekc5Kk" target="_blank">Download (Alt)</a></span></h3>
+            <p><b>Latest:</b> V3-5-1, tested with Maxis Patch, November 12, 2019</p>
+            <p><b>Optional Addon:</b> Gain Spellcaster XP from Sorcerer Spells (requires Realm of Magic and Sorcerer V3-5 or later)</p>
+            <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/1340956/" target="_blank">Download</a></span></h3>
+            <p>If Simfileshare is having issues, you can use the following alternative download link.</p>
+            <h3><span class="dl-link"><a href="https://workupload.com/file/5mm4nBCb" target="_blank">Download (Alt)</a></span></h3>
             <p><b>Optional Addon:</b> Gain Spellcaster Charge from Sorcerer Spells (requires Realm of Magic and Sorcerer V3-5 or later)</p>
             <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/1340955/" target="_blank">Download</a></span></h3>
             <p>If Simfileshare is having issues, you can use the following alternative download link.</p>
