@@ -4,139 +4,160 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Sims 4 Mods made by creator Triplis">
-    <meta name="keywords" content="sims 4, modding, mods">
+    <meta name="keywords" content="sims 4, modding, mods, habit, routine">
     <meta name="author" content="Triplis">
     <link rel="stylesheet" type="text/css" href="../main.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico"/>
-    <title>HABIT Mod</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/site.webmanifest">
+    <link rel="mask-icon" href="../img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../img/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>HABIT Mod - Triplis Sims 4 Mods</title>
   </head>
   <body>
+    <span class="to-top-floating-button">
+      <a href="#banner">Top</a>
+    </span>
     <header>
       <div class="container">
-        <div id="branding">
-          <h1>Triplis Mods for <span class="highlight">The Sims 4</span></h1>
+        <div id="banner">
+          <a href="../index.html"><img src="../img/banner.png" alt="Triplis Sims 4 Mods" /></a>
         </div>
+      </div>
+      <div class="container">
         <nav>
           <ul>
-            <li class="nav-link"><a href="../index.html">Home</a></li>
-            <li class="nav-link"><a href="https://www.patreon.com/triplissims" target="_blank">Patreon</a></li>
-            <li class="nav-link"><a href="../nav/community.html">Contact</a></li>
-            <li class="nav-link"><a href="../nav/tools.html">Tools</a></li>
-            <li class="nav-link"><a href="../nav/help.html">Help</a></li>
+            <li><a href="../nav/donate.html">Donate</a></li>
+            <li><a href="../nav/community.html">Contact</a></li>
+            <li><a href="../nav/tools.html">Tools</a></li>
+            <li><a href="../nav/guides.html">Guides</a></li>
+            <li><a href="../nav/help.html">Help</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <section id="mod-name">
-      <div class="container">
-        <div id="page-title">
-          <h1>Habitual Autonomous Behavior Instructions for Typical <s>Morning</s> (HABIT)</h1>
+    <div class="container">
+      <section id="page-intro">
+        <h1>Habitual Autonomous Behavior Instructions for Typical <s>Morning</s> (HABIT)</h1>
+        <p>Allows you to customize a sim's waking routine, including order and actions. Possible priorities are: Bladder, Hygiene, Brush Teeth, Hunger, and Do Homework.</p>
+      </section>
+    </div>
+    <div class="container">
+      <section id="boxes-mod-images">
+        <a href="../img/HABIT.png" target="_blank">
+          <span class="box">
+            <img src="../img/HABIT.png" alt="Habit A Morning Routine Mod" />
+          </span>
+        </a>
+        <a href="../img/HABIT-showcase-img-menu.png" target="_blank">
+          <span class="box">
+            <img src="../img/HABIT-showcase-img-menu.png" alt="Screenshot of Habit menu at top level" />
+          </span>
+        </a>
+        <a href="../img/HABIT-showcase-img-menu-priorities.png" target="_blank">
+          <span class="box">
+            <img src="../img/HABIT-showcase-img-menu-priorities.png" alt="Screenshot of Habit menu showing types of priorities to set" />
+          </span>
+        </a>
+      </section>
+    </div>
+    <div class="container">
+      <section id="download-buttons">
+        <nav>
+          <ul>
+            <li><a href="http://www.simfileshare.net/download/1825901/" target="_blank">Download</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+    <div class="container">
+      <section id="page-key">
+        <p><b>Latest:</b> V1-1, tested with Maxis Patch, June 3, 2020</p>
+        <h3>Patch Notes</h3>
+        <ul>
+          <li class="patch-note">June 3, 2020: Various fixes for official game patch.</li>
+          <li class="patch-note">Changed the functionality of HABIT-setting options, so that you can use them on any sim you can click on, regardless of who the currently controlled sim is.</li>
+          <li class="patch-note">Fixed an issue with the Brush Teeth interaction that would cause a route failure if the sink was in too confined of a space. This should also fix the weirdness there was with counters, where the sim's arm would go into the counter.</li>
+        </ul>
+        <h3>Features</h3>
+        <ul class="keys">
+          <li><a href="#subsection-how-to-routine">Setting a Routine</a></li>
+          <li><a href="#subsection-comprehensive-breakdown">Comprehensive Breakdown</a></li>
+          <li><a href="#subsection-frequently-asked-questions">Quick FAQ</a></li>
+          <li><a href="#subsection-credits">Credits</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="container">
+      <section id="page-sections">
+        <div id="subsection-how-to-routine">
+          <h3>Setting a Routine</h4>
+          <p>The mod comes up with various clickable options under the new Routine menu when you click on your sim. They are listed in detail below in the "Comprehensive Breakdown" section. But rather than forcing you to confront all of the detail at once, I'm going to walk you through a couple examples of using the mod.</p>
+          <ul>
+            <li class="patch-note"><b>The 3S Sim</b>: We'd like our sim to do the three S's of hygiene: Bladder (wait, that's a B... well, you know what I mean), Hygiene (er, Shower), and Brush Teeth (there's no Shaving in the sims, so teeth brushing will have to do). So we go to the Routine menu and under Set Priority 1, choose Bladder. Under Set Priority 2, choose Hygiene. And under Set Priority 3, choose Brush Teeth. We'd also like our sim to only do this routine upon waking in the morning, so under Scheduling, we'll choose Morning (this is set as 4am to 12pm). Now all we need to do is click Enable Routine and we're good to go!</li>
+            <li class="patch-note"><b>The OCD Teeth Brushing Sim</b>: For this sim, we're going to make someone who has some OCD kind of behavior going on. In their case, it manifests as wanting to brush their teeth over and over when they wake up. We're going to do it 5 times in a row, hitting the limit on the number of priorities our sim can have. So we go to the Routine menu and under Set Priority 1, choose Brush Teeth. Under Set Priority 2, choose Brush Teeth. And do the same for Set Priority 3, 4, and 5. For this sim, the routine is only tied to waking up with 50 or higher Energy; time of day doesn't matter. So we're going to leave Scheduling untouched, or set it to None if it was previously set to something. Finally, we'll click Enable Routine to make sure the routine will activate when the proper time comes. If all goes as intended, our sim will go brush their teeth five times in a row, every time they wake up with 50 or higher energy. That poor sim. :(</li>
+          </ul>
+          <p>These are just two possible combinations you could do of many. It's all up to you to customize the routine how you want.</p>
         </div>
-      </div>
-    </section>
-    <section id="main">
-      <div class="container">
-        <article id="main-col">
-          <div class="page-key">
-            <h3>Summary</h3>
-            <p>Allows you to customize a sim's waking routine, including order and actions. Possible priorities are: Bladder, Hygiene, Brush Teeth, Hunger, and Do Homework.</p>
-            <h3>Features</h3>
-            <ul>
-              <li><a href="#subsection-how-to-routine">Setting a Routine</a></li>
-              <li><a href="#subsection-comprehensive-breakdown">Comprehensive Breakdown</a></li>
-              <li><a href="#subsection-frequently-asked-questions">Quick FAQ</a></li>
-              <li><a href="#subsection-credits">Credits</a></li>
-            </u>
-          </div>
-          <div class="page-sections">
-            <div id="subsection-how-to-routine">
-              <h4>Setting a Routine</h4>
-              <p>The mod comes up with various clickable options under the new Routine menu when you click on your sim. They are listed in detail below in the "Comprehensive Breakdown" section. But rather than forcing you to confront all of the detail at once, I'm going to walk you through a couple examples of using the mod.</p>
-              <ul>
-                <li class="patch-note"><b>The 3S Sim</b>: We'd like our sim to do the three S's of hygiene: Bladder (wait, that's a B... well, you know what I mean), Hygiene (er, Shower), and Brush Teeth (there's no Shaving in the sims, so teeth brushing will have to do). So we go to the Routine menu and under Set Priority 1, choose Bladder. Under Set Priority 2, choose Hygiene. And under Set Priority 3, choose Brush Teeth. We'd also like our sim to only do this routine upon waking in the morning, so under Scheduling, we'll choose Morning (this is set as 4am to 12pm). Now all we need to do is click Enable Routine and we're good to go!</li>
-                <li class="patch-note"><b>The OCD Teeth Brushing Sim</b>: For this sim, we're going to make someone who has some OCD kind of behavior going on. In their case, it manifests as wanting to brush their teeth over and over when they wake up. We're going to do it 5 times in a row, hitting the limit on the number of priorities our sim can have. So we go to the Routine menu and under Set Priority 1, choose Brush Teeth. Under Set Priority 2, choose Brush Teeth. And do the same for Set Priority 3, 4, and 5. For this sim, the routine is only tied to waking up with 50 or higher Energy; time of day doesn't matter. So we're going to leave Scheduling untouched, or set it to None if it was previously set to something. Finally, we'll click Enable Routine to make sure the routine will activate when the proper time comes. If all goes as intended, our sim will go brush their teeth five times in a row, every time they wake up with 50 or higher energy. That poor sim. :(</li>
-              </ul>
-              <p>These are just two possible combinations you could do of many. It's all up to you to customize the routine how you want.</p>
-              <div class="to-top">
-                <p><a href="#main-col">^</a></p>
-              </div>
-            </div>
-            <div id="subsection-comprehensive-breakdown">
-              <h4>Comprehensive Breakdown</h4>
-              <p>Everything for this mod is found under the new Routine menu, or a submenu within it.</p>
-              <p>Routine ></p>
-              <ul>
-                <li class="patch-note"><b>Enable/Disable Routine</b>: Sets whether the routine can activate, provided the conditions for it activating are met. These conditions are: The sim has woken up from a sleep-based interaction and has 50 or higher Energy Need. Also, if Scheduling is enabled, it's within the possible hours of activation.</li>
-                <li class="patch-note"><b>Clear Set Routine</b>: Clears any routine priorities that are set (the stuff under Scheduling and Set Priority 1-5)</li>
-                <li class="patch-note"><b>Clear Queued Routine</b>: Clears a routine that is currently being carried out. Recommended use is for debug purposes, if your sim gets stuck in a routine for some reason (this will usually look like they are standing around doing nothing for a strangely long period of time, during a time when you have reason to believe they should be carrying out a routine).</li>
-              </ul>
-              <p>Routine > Scheduling</p>
-              <ul>
-                <li class="patch-note"><b>None</b>: Sets scheduling to nothing. If on nothing, the sim will ignore time of day when considering whether the routine can activate.</li>
-                <li class="patch-note"><b>Morning</b>: The routine can only activate during the hours of 4am to 12pm.</li>
-                <li class="patch-note"><b>Night</b>: The routine can only activate during the hours of 6pm to 2am.</li>
-              </ul>
-              <p>Routine > Set Priority 1, Set Priority 2, Set Priority 3, etc. (goes up to 5)</p>
-              <ul>
-                <li class="patch-note"><b>None</b>: Sets priority to nothing.</li>
-                <li class="patch-note"><b>Bladder</b>: Sets the priority to Bladder. This priority is completed by using the toilet and getting Bladder to full.</li>
-                <li class="patch-note"><b>Hygiene</b>: Sets the priority to Hygiene. This priority is completed by taking a Shower or Bath and getting Hygiene to full.</li>
-                <li class="patch-note"><b>Brush Teeth</b>: Sets the priority to Brush Teeth. This priority is completed by using a custom Brush Teeth interaction at any sink.</li>
-                <li class="patch-note"><b>Hunger</b>: Sets the priority to Hunger. This priority is completed by eating anything, with Hunger increased a moderate amount by the end of it. The sim will prefer going for instant meals from a refridgerator.</li>
-                <li class="patch-note"><b>Homework</b> (only Child and Teen): Sets the priority to Homework. This priority is completed by finishing Homework. Only one stage of finishing is needed, i.e. if no Homework is done, the sim will consider it complete when normal Homework is finished. If the normal Homework is already finished, the sim will consider it done when Extra Credit is finished.</li>
-              </ul>
-              <div class="to-top">
-                <p><a href="#main-col">^</a></p>
-              </div>
-            </div>
-            <div id="subsection-frequently-asked-questions">
-              <h4>Quick FAQ</h4>
-              <p>If you just want quick info without reading the entirety of the Comprehensive Breakdown, or have further questions.</p>
-              <p>Q: When does the routine trigger?</p>
-              <p>A: The routine triggers upon waking up from a sleep-based interaction, provided Energy Need is at 50 or higher. So minimum would look like this:</p>
-              <img src="../img/HABIT-faq-energy-at-fifty.png">
-              <p>The general idea here is to find a sweet spot where it's going to reliably trigger if your sim did a lot of sleeping to get their energy back, but it's not going to trigger every single time they lie down to nap a little bit.</p>
-              <p>Q: My routine isn't triggering, how do I get it to work?</p>
-              <p>A: Make sure that you used Enable Routine (if you did, it will read Disable Routine under the Routine menu), make sure that something is active under Set Priority 1, and that if Scheduling is enabled, it's within the proper time frame. Night is from 6pm to 2am, Morning is from 4am to 12pm.</p>
-              <p>Also, make sure that autonomy is turned on for the sim. One would think this is obvious, but I know I'm not the only one who plays sims with autonomy off sometimes, or with it off for the active sim. They won't be able to carry out their routine properly if they can't act autonomously.</p>
-              <p>Q: Why did my sim skip a step in their routine?</p>
-              <p>A: Sims can skip one or more steps in a routine under the right circumstances. This is intended, if the priority is currently impossible to fulfill. For example, if the priority is Homework and Homework is already done; if the priority is Hygiene and there is no Shower or Bath on the lot; if the priority is Bladder and the only Toilet on the lot is broken.</p>
-              <p>This is designed to minimize situations where a sim gets stuck in a routine, which would undoubtedly be a frustrating experience if it were to happen a lot.</p>
-              <p>Q: My sim is stuck in a routine, what do I do?</p>
-              <p>A: If your sim is stuck in a routine (this will usually look like they are standing around doing nothing for a strangely long period of time, during a time when you have reason to believe they should be carrying out a routine) go to the Routine menu and click "Clear Queued Routine." This will stop the current routine being carried out. Not to be confused with Clear Set Routine, which will clear your routine settings for that sim, putting them back to default.</p>
-              <p>Also, let me know on discord <a href="https://discord.gg/JhNwtYv">Triplis Station</a> in the #mod-has-bug section if your sim does get stuck in a routine. Odds are it's a scenario I didn't account for that can be fixed, or I missed something in the logic of one of the scenarios I thought I was accouting for already.</p>
-              <p>Q: Is it normal for my sim to get temporarily derailed from carrying out their routine?</p>
-              <p>A: As far as I can tell, there should be no interruptions in a sim carrying out their routine on their end. However, if another sim tries to interact with them, they could get temporarily distracted by it. This may include visible or invisible prompts like "watch tv together," where the two sims aren't necessarily going to talk, but one is going to get called over by the other's interaction. If you want to get back to the routine ASAP, you can just cancel the interaction; otherwise, you may see a delay, but they'll get back to it eventually.</p>
-              <div class="to-top">
-                <p><a href="#main-col">^</a></p>
-              </div>
-            </div>
-            <div id="subsection-credits">
-              <h4>Credits</h4>
-              <p>Thanks to Scumbumbo and SimGuruTwoLegs for helping me work out a script issue.</p>
-              <p>Thanks to Scumbumbo, alphabetsmells, and thepancake1 for input/insight on the design of completion for the Hunger priority.</p>
-              <div class="to-top">
-                <p><a href="#main-col">^</a></p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <aside id="sidebar">
-          <div class="dark">
-            <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/1825901/" target="_blank">Download</a></span></h3>
-            <p><b>Latest:</b> V1-1, tested with Maxis Patch, June 3, 2020</p>
-            <h4>Patch Notes</h4>
-            <ul>
-              <li class="patch-note">June 3, 2020: Various fixes for official game patch.</li>
-              <li class="patch-note">Changed the functionality of HABIT-setting options, so that you can use them on any sim you can click on, regardless of who the currently controlled sim is.</li>
-              <li class="patch-note">Fixed an issue with the Brush Teeth interaction that would cause a route failure if the sink was in too confined of a space. This should also fix the weirdness there was with counters, where the sim's arm would go into the counter.</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
-    <footer>
-      <p>Triplis Sims 4 Mods, Copyright &copy; 2018</p>
-    </footer>
+        <div id="subsection-comprehensive-breakdown">
+          <h3>Comprehensive Breakdown</h3>
+          <p>Everything for this mod is found under the new Routine menu, or a submenu within it.</p>
+          <p>Routine ></p>
+          <ul>
+            <li class="patch-note"><b>Enable/Disable Routine</b>: Sets whether the routine can activate, provided the conditions for it activating are met. These conditions are: The sim has woken up from a sleep-based interaction and has 50 or higher Energy Need. Also, if Scheduling is enabled, it's within the possible hours of activation.</li>
+            <li class="patch-note"><b>Clear Set Routine</b>: Clears any routine priorities that are set (the stuff under Scheduling and Set Priority 1-5)</li>
+            <li class="patch-note"><b>Clear Queued Routine</b>: Clears a routine that is currently being carried out. Recommended use is for debug purposes, if your sim gets stuck in a routine for some reason (this will usually look like they are standing around doing nothing for a strangely long period of time, during a time when you have reason to believe they should be carrying out a routine).</li>
+          </ul>
+          <p>Routine > Scheduling</p>
+          <ul>
+            <li class="patch-note"><b>None</b>: Sets scheduling to nothing. If on nothing, the sim will ignore time of day when considering whether the routine can activate.</li>
+            <li class="patch-note"><b>Morning</b>: The routine can only activate during the hours of 4am to 12pm.</li>
+            <li class="patch-note"><b>Night</b>: The routine can only activate during the hours of 6pm to 2am.</li>
+          </ul>
+          <p>Routine > Set Priority 1, Set Priority 2, Set Priority 3, etc. (goes up to 5)</p>
+          <ul>
+            <li class="patch-note"><b>None</b>: Sets priority to nothing.</li>
+            <li class="patch-note"><b>Bladder</b>: Sets the priority to Bladder. This priority is completed by using the toilet and getting Bladder to full.</li>
+            <li class="patch-note"><b>Hygiene</b>: Sets the priority to Hygiene. This priority is completed by taking a Shower or Bath and getting Hygiene to full.</li>
+            <li class="patch-note"><b>Brush Teeth</b>: Sets the priority to Brush Teeth. This priority is completed by using a custom Brush Teeth interaction at any sink.</li>
+            <li class="patch-note"><b>Hunger</b>: Sets the priority to Hunger. This priority is completed by eating anything, with Hunger increased a moderate amount by the end of it. The sim will prefer going for instant meals from a refridgerator.</li>
+            <li class="patch-note"><b>Homework</b> (only Child and Teen): Sets the priority to Homework. This priority is completed by finishing Homework. Only one stage of finishing is needed, i.e. if no Homework is done, the sim will consider it complete when normal Homework is finished. If the normal Homework is already finished, the sim will consider it done when Extra Credit is finished.</li>
+          </ul>
+        </div>
+        <div id="subsection-frequently-asked-questions">
+          <h3>Quick FAQ</h3>
+          <p>If you just want quick info without reading the entirety of the Comprehensive Breakdown, or have further questions.</p>
+          <p>Q: When does the routine trigger?</p>
+          <p>A: The routine triggers upon waking up from a sleep-based interaction, provided Energy Need is at 50 or higher. So minimum would look like this:</p>
+          <img src="../img/HABIT-faq-energy-at-fifty.png">
+          <p>The general idea here is to find a sweet spot where it's going to reliably trigger if your sim did a lot of sleeping to get their energy back, but it's not going to trigger every single time they lie down to nap a little bit.</p>
+          <p>Q: My routine isn't triggering, how do I get it to work?</p>
+          <p>A: Make sure that you used Enable Routine (if you did, it will read Disable Routine under the Routine menu), make sure that something is active under Set Priority 1, and that if Scheduling is enabled, it's within the proper time frame. Night is from 6pm to 2am, Morning is from 4am to 12pm.</p>
+          <p>Also, make sure that autonomy is turned on for the sim. One would think this is obvious, but I know I'm not the only one who plays sims with autonomy off sometimes, or with it off for the active sim. They won't be able to carry out their routine properly if they can't act autonomously.</p>
+          <p>Q: Why did my sim skip a step in their routine?</p>
+          <p>A: Sims can skip one or more steps in a routine under the right circumstances. This is intended, if the priority is currently impossible to fulfill. For example, if the priority is Homework and Homework is already done; if the priority is Hygiene and there is no Shower or Bath on the lot; if the priority is Bladder and the only Toilet on the lot is broken.</p>
+          <p>This is designed to minimize situations where a sim gets stuck in a routine, which would undoubtedly be a frustrating experience if it were to happen a lot.</p>
+          <p>Q: My sim is stuck in a routine, what do I do?</p>
+          <p>A: If your sim is stuck in a routine (this will usually look like they are standing around doing nothing for a strangely long period of time, during a time when you have reason to believe they should be carrying out a routine) go to the Routine menu and click "Clear Queued Routine." This will stop the current routine being carried out. Not to be confused with Clear Set Routine, which will clear your routine settings for that sim, putting them back to default.</p>
+          <p>Also, let me know on discord <a href="https://discord.gg/JhNwtYv">Triplis Station</a> in the #mod-has-bug section if your sim does get stuck in a routine. Odds are it's a scenario I didn't account for that can be fixed, or I missed something in the logic of one of the scenarios I thought I was accouting for already.</p>
+          <p>Q: Is it normal for my sim to get temporarily derailed from carrying out their routine?</p>
+          <p>A: As far as I can tell, there should be no interruptions in a sim carrying out their routine on their end. However, if another sim tries to interact with them, they could get temporarily distracted by it. This may include visible or invisible prompts like "watch tv together," where the two sims aren't necessarily going to talk, but one is going to get called over by the other's interaction. If you want to get back to the routine ASAP, you can just cancel the interaction; otherwise, you may see a delay, but they'll get back to it eventually.</p>
+        </div>
+        <div id="subsection-credits">
+          <h3>Credits</h3>
+          <p>Thanks to Scumbumbo and SimGuruTwoLegs for helping me work out a script issue.</p>
+          <p>Thanks to Scumbumbo, alphabetsmells, and thepancake1 for input/insight on the design of completion for the Hunger priority.</p>
+        </div>
+      </section>
+    </div>
+    <div class="container">
+      <footer>
+        <p>Triplis Sims 4 Mods, Copyright &copy; 2018-<script language="JavaScript" type="text/javascript">document.write((new Date()).getFullYear());</script></p>
+      </footer>
+    </div>
   </body>
 </html>
