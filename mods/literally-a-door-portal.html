@@ -4,113 +4,134 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Sims 4 Mods made by creator Triplis">
-    <meta name="keywords" content="sims 4, modding, mods">
+    <meta name="keywords" content="sims 4, modding, mods, portal, teleport, door portal">
     <meta name="author" content="Triplis">
     <link rel="stylesheet" type="text/css" href="../main.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico"/>
-    <title>Literally a Door Portal Mod</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/site.webmanifest">
+    <link rel="mask-icon" href="../img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../img/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>Literally a Door Portal Mod - Triplis Sims 4 Mods</title>
   </head>
   <body>
+    <span class="to-top-floating-button">
+      <a href="#banner">Top</a>
+    </span>
     <header>
       <div class="container">
-        <div id="branding">
-          <h1>Triplis Mods for <span class="highlight">The Sims 4</span></h1>
+        <div id="banner">
+          <a href="../index.html"><img src="../img/banner.png" alt="Triplis Sims 4 Mods" /></a>
         </div>
+      </div>
+      <div class="container">
         <nav>
           <ul>
-            <li class="nav-link"><a href="../index.html">Home</a></li>
-            <li class="nav-link"><a href="https://www.patreon.com/triplissims" target="_blank">Patreon</a></li>
-            <li class="nav-link"><a href="../nav/community.html">Contact</a></li>
-            <li class="nav-link"><a href="../nav/tools.html">Tools</a></li>
-            <li class="nav-link"><a href="../nav/help.html">Help</a></li>
+            <li><a href="../nav/donate.html">Donate</a></li>
+            <li><a href="../nav/community.html">Contact</a></li>
+            <li><a href="../nav/tools.html">Tools</a></li>
+            <li><a href="../nav/guides.html">Guides</a></li>
+            <li><a href="../nav/help.html">Help</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <section id="mod-name">
-      <div class="container">
-        <div id="page-title">
-          <h1>Literally a Door Portal</h1>
+    <div class="container">
+      <section id="page-intro">
+        <h1>Literally a Door Portal</h1>
+         <p>Adds a new door object called Portal Door Plain. With two or more placed, sims can path through them (regardless of distance, floors, etc.) to get where they need to be faster.</p>
+      </section>
+    </div>
+    <div class="container">
+      <section id="boxes-mod-images">
+        <a href="../img/literallyADoorPortalShowcaseImgSpliced.png" target="_blank">
+          <span class="box">
+            <img src="../img/literallyADoorPortalShowcaseImgSpliced.png" alt="Partitioned screenshot showing Sim disappearing in one side and reappearing in the other" />
+          </span>
+        </a>
+        <a href="../img/literallyADoorPortalShowcaseImgEnteringPortal.png" target="_blank">
+          <span class="box">
+            <img src="../img/literallyADoorPortalShowcaseImgEnteringPortal.png" alt="Screenshot of Sim disappearing into door portal" />
+          </span>
+        </a>
+        <a href="../img/literallyADoorPortalShowcaseImgExitingPortal.png" target="_blank">
+          <span class="box">
+            <img src="../img/literallyADoorPortalShowcaseImgExitingPortal.png" alt="Screenshot of Sim reappearing through door portal" />
+          </span>
+        </a>
+      </section>
+    </div>
+    <div class="container">
+      <section id="download-buttons">
+        <nav>
+          <ul>
+            <li><a href="http://www.simfileshare.net/download/1018570/" target="_blank">Download</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+    <div class="container">
+      <section id="page-key">
+        <p><b>Latest:</b> V1.2b, tested with Maxis Patch, April 16, 2019</p>
+        <h3>Patch Notes</h3>
+        <ul>
+          <li class="patch-note">Fixed an issue with strings from the April 16, 2019 patch that caused them to show up as blank, due to how some of them are made. Thanks to roBurky for spotting what was going wrong with strings in mods.</li>
+          <li class="patch-note">(Since V1.2) Fixed an issue where sims could remain invisible if interrupted while traveling through a portal.</li>
+          <li class="patch-note">(Since V1.1) Added lock/unlock options that come with doors (including expansion stuff like cat/dog locks).</li>
+          <li class="patch-note">(Since V1.1) Added portal door versions of every base game door, so you have lots of options to choose from. Even some arches.</li>
+        </ul>
+        <h3>Features</h3>
+        <ul class="keys">
+          <li><a href="#subsection-portal">Portal Door object</a></li>
+          <li><a href="#subsection-locks-and-variety">Locks and Variety</a></li>
+          <li><a href="#subsection-route-fail">Routing Issues</a></li>
+          <li><a href="#subsection-warning">Mild Warning</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="container">
+      <section id="page-sections">
+        <div id="subsection-portal">
+          <h3>Portal Door object</h3>
+          <p>This mod adds new objects to build mode under Doors. They are visually doors, but act as portals to move between rather than the normal functionality.</p>
+          <ul>
+            <li class="patch-note">If two or more are placed, sims will traverse through them automatically, if using the portal would get them where they are heading faster.</li>
+            <li class="patch-note">Example 1: You place one on the first floor of a home. You place another on the second floor of a home. Your sim is idling angstily about on the first floor and decides they want to go play on the computer on the second floor. Normally, they would need long and arduous stairs to get up to the computer. With the portals in place, your sim should choose the portal instead, getting upstairs much faster! In fact, you don't even need the stairs.</li>
+            <li class="patch-note">Example 2: You've built an extremely extravant and large home on a gargantuan lot. You place one portal on one end of the lot and one portal on the other end of the lot. Your sim is sitting on one end of the lot and decides to go chase down a sim on the other end of the lot to talk to them. Instead of walking all that distance, they choose the portal instead and get there much faster!</li>
+          </ul>
+          <p>As you can see from the examples, sims should generally be smart enough to choose whatever portal will get them where they're going the fastest, if a portal is available to do so (even if you've ordered them where to go). I can't take any credit for this aspect of it; it's baked into the design of the portal logic that I used.</p>
         </div>
-      </div>
-    </section>
-    <section id="main">
-      <div class="container">
-        <article id="main-col">
-          <div class="page-key">
-            <h3>Summary</h3>
-            <p>Adds a new door object called Portal Door Plain. With two or more placed, sims can path through them (regardless of distance, floors, etc.) to get where they need to be faster.</p>
-            <h3>Features</h3>
-            <ul>
-              <li><a href="#subsection-portal">Portal Door object</a></li>
-              <li><a href="#subsection-locks-and-variety">Locks and Variety</a></li>
-              <li><a href="#subsection-route-fail">Routing Issues</a></li>
-              <li><a href="#subsection-warning">Mild Warning</a></li>
-            </u>
-          </div>
-          <div class="page-sections">
-            <div id="subsection-portal">
-              <h4>Portal Door object</h4>
-              <p>This mod adds new objects to build mode under Doors. They are visually doors, but act as portals to move between rather than the normal functionality.</p>
-              <ul>
-                <li class="patch-note">If two or more are placed, sims will traverse through them automatically, if using the portal would get them where they are heading faster.</li>
-                <li class="patch-note">Example 1: You place one on the first floor of a home. You place another on the second floor of a home. Your sim is idling angstily about on the first floor and decides they want to go play on the computer on the second floor. Normally, they would need long and arduous stairs to get up to the computer. With the portals in place, your sim should choose the portal instead, getting upstairs much faster! In fact, you don't even need the stairs.</li>
-                <li class="patch-note">Example 2: You've built an extremely extravant and large home on a gargantuan lot. You place one portal on one end of the lot and one portal on the other end of the lot. Your sim is sitting on one end of the lot and decides to go chase down a sim on the other end of the lot to talk to them. Instead of walking all that distance, they choose the portal instead and get there much faster!</li>
-              </ul>
-              <p>As you can see from the examples, sims should generally be smart enough to choose whatever portal will get them where they're going the fastest, if a portal is available to do so (even if you've ordered them where to go). I can't take any credit for this aspect of it; it's baked into the design of the portal logic that I used.</p>
-              <div class="to-top">
-                <p><a href="#main-col">^</a></p>
-              </div>
-            </div>
-            <div id="subsection-locks-and-variety">
-              <h4>Locks and Variety</h4>
-              <p>Portals can be locked or unlocked with the same options that doors have. They can't, however, act as the front door (e.g. the door visiting sims would come to, that sort of thing). I'm pretty sure I could allow them to be, but I think it would be too messy, considering you need to have at least two portals placed for them to even work and I want to minimize confusion.</p>
-              <p>You can choose from a variety of door variations: As of writing this note, the options include a copy of every base game door and its swatches.</p>
-              <div class="to-top">
-                <p><a href="#main-col">^</a></p>
-              </div>
-            </div>
-            <div id="subsection-route-fail">
-              <h4>Routing Issues</h4>
-              <p>If you're having issues with your sims claiming they can't get in or out of an area using your portals, make sure the portals are facing the correct way.</p>
-              <p>Like normal doors, you can right-click with them selected in build mode to change what direction they are facing. Whatever direction the arrow is facing in, sims can travel through, or exit from, the door on that end. They can't travel through or exit from the other direction.</p>
-              <p>Here's some illustrations to help show what I mean:</p>
-              <img src="../img/portal-facing-example-1.png">
-              <img src="../img/portal-facing-example-2.png">
-              <img src="../img/portal-facing-example-3.png">
-              <div class="to-top">
-                <p><a href="#main-col">^</a></p>
-              </div>
-            </div>
-            <div id="subsection-warning">
-              <h4>Mild Warning</h4>
-              <p>This isn't one of those warnings where you need to turn around and run in the other direction. It's just one stipulation to be mindful of. The portal logic I used utilizes a tag from one of the Jungle Adventure portal type jungle door thingies. This means almost nothing, surprisingly, and you don't need Jungle Adventure for this mod to work (I tested with it disabled).</p>
-              <p>What it does mean is <b>you should be wary of setting up these portals on any of the lots that contain the Jungle Adventure portal type door thingies.</b> It shouldn't break your game or anything, it just may cause your sim to not always quite go where they are expected to go on that lot, i.e. may screw with your experience in trying to get through the portal type jungle door thingies as expected.</p>
-              <p>If you were to do this on accident, it shouldn't have any kind of permanent effect; as soon as you removed the door portals, any issues getting around should go away.</p>
-              <p>Thus... "mild" warning.</p>
-              <div class="to-top">
-                <p><a href="#main-col">^</a></p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <aside id="sidebar">
-          <div class="dark">
-            <h3><span class="dl-link"><a href="http://www.simfileshare.net/download/1018570/" target="_blank">Download</a></span></h3>
-            <p><b>Latest:</b> V1.2b, tested with Maxis Patch, April 16, 2019</p>
-            <h4>Patch Notes</h4>
-            <ul>
-              <li class="patch-note">Fixed an issue with strings from the April 16, 2019 patch that caused them to show up as blank, due to how some of them are made. Thanks to roBurky for spotting what was going wrong with strings in mods.</li>
-              <li class="patch-note">(Since V1.2) Fixed an issue where sims could remain invisible if interrupted while traveling through a portal.</li>
-              <li class="patch-note">(Since V1.1) Added lock/unlock options that come with doors (including expansion stuff like cat/dog locks).</li>
-              <li class="patch-note">(Since V1.1) Added portal door versions of every base game door, so you have lots of options to choose from. Even some arches.</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
-    <footer>
-      <p>Triplis Sims 4 Mods, Copyright &copy; 2019</p>
-    </footer>
+        <div id="subsection-locks-and-variety">
+          <h3>Locks and Variety</h3>
+          <p>Portals can be locked or unlocked with the same options that doors have. They can't, however, act as the front door (e.g. the door visiting sims would come to, that sort of thing). I'm pretty sure I could allow them to be, but I think it would be too messy, considering you need to have at least two portals placed for them to even work and I want to minimize confusion.</p>
+          <p>You can choose from a variety of door variations: As of writing this note, the options include a copy of every base game door and its swatches.</p>
+        </div>
+        <div id="subsection-route-fail">
+          <h3>Routing Issues</h3>
+          <p>If you're having issues with your sims claiming they can't get in or out of an area using your portals, make sure the portals are facing the correct way.</p>
+          <p>Like normal doors, you can right-click with them selected in build mode to change what direction they are facing. Whatever direction the arrow is facing in, sims can travel through, or exit from, the door on that end. They can't travel through or exit from the other direction.</p>
+          <p>Here's some illustrations to help show what I mean:</p>
+          <img src="../img/portal-facing-example-1.png">
+          <img src="../img/portal-facing-example-2.png">
+          <img src="../img/portal-facing-example-3.png">
+        </div>
+        <div id="subsection-warning">
+          <h3>Mild Warning</h3>
+          <p>This isn't one of those warnings where you need to turn around and run in the other direction. It's just one stipulation to be mindful of. The portal logic I used utilizes a tag from one of the Jungle Adventure portal type jungle door thingies. This means almost nothing, surprisingly, and you don't need Jungle Adventure for this mod to work (I tested with it disabled).</p>
+          <p>What it does mean is <b>you should be wary of setting up these portals on any of the lots that contain the Jungle Adventure portal type door thingies.</b> It shouldn't break your game or anything, it just may cause your sim to not always quite go where they are expected to go on that lot, i.e. may screw with your experience in trying to get through the portal type jungle door thingies as expected.</p>
+          <p>If you were to do this on accident, it shouldn't have any kind of permanent effect; as soon as you removed the door portals, any issues getting around should go away.</p>
+          <p>Thus... "mild" warning.</p>
+        </div>
+      </section>
+    </div>
+    <div class="container">
+      <footer>
+        <p>Triplis Sims 4 Mods, Copyright &copy; 2018-<script language="JavaScript" type="text/javascript">document.write((new Date()).getFullYear());</script></p>
+      </footer>
+    </div>
   </body>
 </html>
