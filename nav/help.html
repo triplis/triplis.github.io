@@ -7,91 +7,93 @@
     <meta name="keywords" content="sims 4, modding, mods">
     <meta name="author" content="Triplis">
     <link rel="stylesheet" type="text/css" href="../main.css">
-    <title>Help - Troubleshooting</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/site.webmanifest">
+    <link rel="mask-icon" href="../img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../img/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>Help - Triplis Sims 4 Mods</title>
   </head>
   <body>
+    <span class="to-top-floating-button">
+      <a href="#banner">Top</a>
+    </span>
     <header>
       <div class="container">
-        <div id="branding">
-          <h1>Triplis Mods for <span class="highlight">The Sims 4</span></h1>
+        <div id="banner">
+          <a href="../index.html"><img src="../img/banner.png" alt="Triplis Sims 4 Mods" /></a>
         </div>
+      </div>
+      <div class="container">
         <nav>
           <ul>
-            <li class="nav-link"><a href="../index.html">Home</a></li>
-            <li class="nav-link"><a href="../nav/donate.html">Donate</a></li>
-            <li class="nav-link"><a href="../nav/community.html">Contact</a></li>
-            <li class="nav-link"><a href="../nav/tools.html">Tools</a></li>
-            <li class="nav-link"><a href="../nav/guides.html">Guides</a></li>
-            <li class="current"><a href="../nav/help.html">Help</a></li>
+            <li><a href="../nav/donate.html">Donate</a></li>
+            <li><a href="../nav/community.html">Contact</a></li>
+            <li><a href="../nav/tools.html">Tools</a></li>
+            <li><a href="../nav/guides.html">Guides</a></li>
+            <li><a href="../nav/help.html">Help</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <section id="mod-name">
-      <div class="container">
-        <div id="page-title">
-          <h1>Troubleshooting</h1>
+    <div class="container">
+      <section id="page-intro">
+        <h1>Help</h1>
+        <p>This page offers some possible solutions to problems you may encounter with one of my mods, or a mod that is not mine. Note that when it comes to bringing issues to me, I'm not around much anymore. See <a href="https://www.patreon.com/posts/update-on-my-and-27875114" target="_blank">here.</a></p>
+      </section>
+    </div>
+    <div class="container">
+      <section id="page-key">
+        <h3>Issues</h3>
+        <ul class="keys">
+          <li><a href="#subsection-no-show">I can't get the mod to show up</a></li>
+          <li><a href="#subsection-broken">One of your mods generates a lastexception file / your mod is breaking my game</a></li>
+          <li><a href="#subsection-bug">I've noticed a bug / issue with a specific feature</a></li>
+        </u>
+      </section>
+    </div>
+    <div class="container">
+      <section id="page-sections">
+        <div id="subsection-no-show">
+          <h3>I can't get the mod to show up</h3>
+          <p>Please check these steps before asking for help. If you haven't, I will ask you if you have. This is because all I can do to help you is go down a checklist of possible causes.</p>
+          <ul>
+            <li class="patch-note">Make sure you have the latest version of the mod and the latest patch for the game by EA. Things break and sometimes in a big way. I can't guarantee that anything will work retroactively, as I have no control over what the EA team changes. Latest version of the mod refers to the latest version on this website. Whatever is still on Mod The Sims is outdated.</li>
+            <li class="patch-note">If it is a mod that uses scripts, make sure Scripts Mods are enabled in your game settings. Mods get turned off automatically after most EA patches, so you'll have to turn the settings back on each time such an update happens.</li>
+            <li class="patch-note">If it is a mod that uses scripts, make sure the .ts4script file is not too many folders deep. (examples: Mods > ModName.ts4script = Correct, Mods > MyMod > ModName.ts4script = Correct, Mods > MyMod > ForSureMyMod > ModName.ts4script = Incorrect)</li>
+            <li class="patch-note">Make sure any .zip files are unzipped. Do NOT unzip .ts4script files, unless you want to peer at the compiled python files for some reason.</li>
+            <li class="patch-note">Make sure you only have one version of the mod installed at a time (the most up-to-date one). Rarely, I might have an optional add-on, but it will be specified as such on the mod's page if so. Note: The Sorcerer mod has some old versions whose naming is a little different; be wary of assuming you've found all versions because there isn't more than one right next to each other in the folder.</li>
+            <li class="patch-note">If you are trying to get the Sorcerer mod to work and the interaction isn't showing up on the clay, make sure you're looking on the new custom object that comes with the mod, the Suspicious Lump of Clay, not the old way, the default Lump of Clay.</li>
+            <p>If you've checked this and none of it works, and you'd like my help, please let me know that you've gone down the list. If you've reviewed everything correctly, it's most likely an incompatibility, in which case you can try with only the not-working mod installed and see if it still fails to show up</p>
+            <p>If all of this fails, the best way to get help is to go to my discord server <a href="https://discord.gg/JhNwtYv" target="_blank">Triplis Station</a> and post in the mod-wont-work section. Other forms of asking me for help tend to be slow and drawn out, and it's going to be harder for both of us to keep track of what's been said and what might work to fix the issue.</p>
+          </ul>
         </div>
-      </div>
-    </section>
-    <section id="main">
-      <div class="container">
-        <article id="main-col">
-          <div class="page-key">
-            <p>Having a problem with one of my mods? Here are some possible solutions.</p>
-            <h3>Issues</h3>
-            <ul>
-              <li><a href="#subsection-no-show">I can't get the mod to show up</a></li>
-              <li><a href="#subsection-broken">One of your mods generates a lastexception file / your mod is breaking my game</a></li>
-              <li><a href="#subsection-bug">I've noticed a bug / issue with a specific feature</a></li>
-            </u>
-          </div>
-          <div class="page-sections">
-            <div id="subsection-no-show">
-              <h4>I can't get the mod to show up</h4>
-              <p>Please check these steps before asking for help. If you haven't, I will ask you if you have. This is because all I can do to help you is go down a checklist of possible causes.</p>
-              <ul>
-                <li class="patch-note">Make sure you have the latest version of the mod and the latest patch for the game by EA. Things break and sometimes in a big way. I can't guarantee that anything will work retroactively, as I have no control over what the EA team changes. Latest version of the mod refers to the latest version on this website. Whatever is still on Mod The Sims is outdated.</li>
-                <li class="patch-note">If it is a mod that uses scripts, make sure Scripts Mods are enabled in your game settings. Mods get turned off automatically after most EA patches, so you'll have to turn the settings back on each time such an update happens.</li>
-                <li class="patch-note">If it is a mod that uses scripts, make sure the .ts4script file is not too many folders deep. (examples: Mods > ModName.ts4script = Correct, Mods > MyMod > ModName.ts4script = Correct, Mods > MyMod > ForSureMyMod > ModName.ts4script = Incorrect)</li>
-                <li class="patch-note">Make sure any .zip files are unzipped. Do NOT unzip .ts4script files, unless you want to peer at the compiled python files for some reason.</li>
-                <li class="patch-note">Make sure you only have one version of the mod installed at a time (the most up-to-date one). Rarely, I might have an optional add-on, but it will be specified as such on the mod's page if so. Note: The Sorcerer mod has some old versions whose naming is a little different; be wary of assuming you've found all versions because there isn't more than one right next to each other in the folder.</li>
-                <li class="patch-note">If you are trying to get the Sorcerer mod to work and the interaction isn't showing up on the clay, make sure you're looking on the new custom object that comes with the mod, the Suspicious Lump of Clay, not the old way, the default Lump of Clay.</li>
-                <p>If you've checked this and none of it works, and you'd like my help, please let me know that you've gone down the list. If you've reviewed everything correctly, it's most likely an incompatibility, in which case you can try with only the not-working mod installed and see if it still fails to show up</p>
-                <p>If all of this fails, the best way to get help is to go to my discord server <a href="https://discord.gg/JhNwtYv" target="_blank">Triplis Station</a> and post in the mod-wont-work section. Other forms of asking me for help tend to be slow and drawn out, and it's going to be harder for both of us to keep track of what's been said and what might work to fix the issue.</p>
-              </ul>
-              <div class="to-top">
-                <p><a href="#main-col">^</a></p>
-              </div>
-            </div>
-            <div id="subsection-broken">
-              <h4>One of your mods generates a lastexception file / your mod is breaking my game</h4>
-              <ul>
-                <li class="patch-note">If one of my mods is showing up in a lastexception error, you can drag and drop the file and explain the context of it (ex: when it occurred) in the mod-has-bug section of my discord server <a href="https://discord.gg/JhNwtYv" target="_blank">Triplis Station</a>. Please keep in mind that I can't promise to respond to everything and if I do respond, the response may be that to my knowledge, the mention of the lastexception in my mod is erroneous and isn't caused by my mod. I can only give you my best guess/evaluation based on what I know about how the game works and what the file says.</li>
-                <li class="patch-note">If you do suspect that a mod of mine is breaking your game, there are ways you can test this without requiring a response from me, or requiring help from another member of the community. Namely, "process of elimination." This is a highly useful process to have on hand when you are facing an issue with computers in general and works well for broken mods. First, move all of your mods to somewhere safe, leaving behind the one that you suspect is breaking the game. Now load up the game and see if you can use it without the issue you noticed. I recommend doing this on a New Game, to avoid any accidental mishaps with existing saves, where the lack of a mod causes things to disappear and you inadvertently save it in that state. If the mod works fine, you can be relatively certain that it's not the one causing the issue. You can now add back in each mod, one at a time, until you find the one that is causing the issue, adding in first the ones that seem most suspect if you have any particular suspicions (for example, based on what shows up in lastexception files).</li>
-              </ul>
-              <div class="to-top">
-                <p><a href="#main-col">^</a></p>
-              </div>
-            </div>
-            <div id="subsection-bug">
-              <h4>I've noticed a bug / issue with a specific feature</h4>
-              <p>Please let me know in the mod-has-bug section of my discord server <a href="https://discord.gg/JhNwtYv" target="_blank">Triplis Station</a>.</p>
-              <p>If I can repeat the bug in my own game, I will probably be able to fix it. Sometimes patches break little bits here and there and it's difficult to track them all down on my own, so I appreciate any reports that catch this stuff.</p>
-              <p>When reporting a bug, please try to be as specific as possible (this helps me more easily hone in on the issue and repeat it in my own game). Example:</p>
-              <p>Vague: Lightning Rod doesn't work</p>
-              <p>Specific: When I use the Sorcerer spell Create Lightning Rod, the Sorcerer's animation plays and the targeted sim stops and waits, but they don't get shocked and die.</p>
-              <p>In the specific version, I now know that the reported issue is that the death isn't triggering, which means the custom death interaction is probably broken somehow. In the vague version, it could be any aspect of the spell that is broken and because I don't know which one, if I fail to repeat it in my own game, I have no idea how to begin to reason about what could have lead to the issue described, since I don't even know what exactly didn't work.</p>
-              <div class="to-top">
-                <p><a href="#main-col">^</a></p>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-    <footer>
-      <p>Triplis Sims 4 Mods, Copyright &copy; 2019</p>
-    </footer>
+        <div id="subsection-broken">
+          <h3>One of your mods generates a lastexception file / your mod is breaking my game</h3>
+          <ul>
+            <li class="patch-note">If one of my mods is showing up in a lastexception error, you can drag and drop the file and explain the context of it (ex: when it occurred) in the mod-has-bug section of my discord server <a href="https://discord.gg/JhNwtYv" target="_blank">Triplis Station</a>. Please keep in mind that I can't promise to respond to everything and if I do respond, the response may be that to my knowledge, the mention of the lastexception in my mod is erroneous and isn't caused by my mod. I can only give you my best guess/evaluation based on what I know about how the game works and what the file says.</li>
+            <li class="patch-note">If you do suspect that a mod of mine is breaking your game, there are ways you can test this without requiring a response from me, or requiring help from another member of the community. Namely, "process of elimination." This is a highly useful process to have on hand when you are facing an issue with computers in general and works well for broken mods. First, move all of your mods to somewhere safe, leaving behind the one that you suspect is breaking the game. Now load up the game and see if you can use it without the issue you noticed. I recommend doing this on a New Game, to avoid any accidental mishaps with existing saves, where the lack of a mod causes things to disappear and you inadvertently save it in that state. If the mod works fine, you can be relatively certain that it's not the one causing the issue. You can now add back in each mod, one at a time, until you find the one that is causing the issue, adding in first the ones that seem most suspect if you have any particular suspicions (for example, based on what shows up in lastexception files).</li>
+          </ul>
+        </div>
+        <div id="subsection-bug">
+          <h3>I've noticed a bug / issue with a specific feature</h3>
+          <p>Please let me know in the mod-has-bug section of my discord server <a href="https://discord.gg/JhNwtYv" target="_blank">Triplis Station</a>.</p>
+          <p>If I can repeat the bug in my own game, I will probably be able to fix it. Sometimes patches break little bits here and there and it's difficult to track them all down on my own, so I appreciate any reports that catch this stuff.</p>
+          <p>When reporting a bug, please try to be as specific as possible (this helps me more easily hone in on the issue and repeat it in my own game). Example:</p>
+          <p>Vague: Lightning Rod doesn't work</p>
+          <p>Specific: When I use the Sorcerer spell Create Lightning Rod, the Sorcerer's animation plays and the targeted sim stops and waits, but they don't get shocked and die.</p>
+          <p>In the specific version, I now know that the reported issue is that the death isn't triggering, which means the custom death interaction is probably broken somehow. In the vague version, it could be any aspect of the spell that is broken and because I don't know which one, if I fail to repeat it in my own game, I have no idea how to begin to reason about what could have lead to the issue described, since I don't even know what exactly didn't work.</p>
+        </div>
+      </section>
+    </div>
+    <div class="container">
+      <footer>
+        <p>Triplis Sims 4 Mods, Copyright &copy; 2018-<script language="JavaScript" type="text/javascript">document.write((new Date()).getFullYear());</script></p>
+      </footer>
+    </div>
   </body>
 </html>
