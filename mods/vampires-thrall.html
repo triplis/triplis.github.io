@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Sims 4 Mods made by creator Triplis">
+    <meta name="keywords" content="sims 4, modding, mods, vampires, thrall, minion, mind powers">
+    <meta name="author" content="Triplis">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/site.webmanifest">
+    <link rel="mask-icon" href="../img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../img/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>Vampire's Thrall Mod - Triplis Sims 4 Mods</title>
+  </head>
+  <body>
+    <span class="to-top-floating-button">
+      <a href="#banner">Top</a>
+    </span>
+    <header>
+      <div class="container">
+        <div id="banner">
+          <a href="../index.html"><img src="../img/banner.png" alt="Triplis Sims 4 Mods" /></a>
+        </div>
+      </div>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="../nav/donate.html">Donate</a></li>
+            <li><a href="../nav/community.html">Contact</a></li>
+            <li><a href="../nav/tools.html">Tools</a></li>
+            <li><a href="../nav/guides.html">Guides</a></li>
+            <li><a href="../nav/help.html">Help</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <section id="page-intro">
+        <h1>Vampire's Thrall</h1>
+        <p>Vampires can control other sims with automated roles like Musician, Gardener, Maid, turning them into Thralls. (Clone of Sorcerer Minion system.)</p>
+        <p>Can choose between one of three <a href="#subsection-variations">variations</a> of access to the powers: AllVampires, CommandPerk, or GrandmasterOnly</p>
+      </section>
+    </div>
+    <div class="container">
+      <section id="boxes-mod-images">
+        <a href="../img/vampiresThrallShowcaseImgTeleport.png" target="_blank">
+          <span class="box">
+            <img src="../img/vampiresThrallShowcaseImgTeleport.png" alt="Screenshot of vampire thrall teleporting" />
+          </span>
+        </a>
+        <a href="../img/vampiresThrallShowcaseImgRoleMenu.png" target="_blank">
+          <span class="box">
+            <img src="../img/vampiresThrallShowcaseImgRoleMenu.png" alt="Screenshot of vampire thrall toggle roles menu" />
+          </span>
+        </a>
+        <a href="../img/vampiresThrallShowcaseImgDancing.png" target="_blank">
+          <span class="box">
+            <img src="../img/vampiresThrallShowcaseImgDancing.png" alt="Screenshot of vampire thrall doing dance role's dance" />
+          </span>
+        </a>
+      </section>
+    </div>
+    <div class="container">
+      <section id="download-buttons">
+        <nav>
+          <ul>
+            <li><a href="https://workupload.com/file/8kUNG8qMCFD" target="_blank">Download (AllVampires)</a></li>
+            <li><a href="https://workupload.com/file/cPazVh9J9bx" target="_blank">Download (CommandPerk)</a></li>
+            <li><a href="https://workupload.com/file/z3VSwTJ4mac" target="_blank">Download (GrandmasterOnly)</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+    <div class="container">
+      <section id="page-key">
+        <p><b>Latest:</b> V1.0, tested with Maxis Patch, September 5, 2019</p>
+        <p>Pick one of the download options above to use (only use one at a time!)</p>
+        <p><b>Source Code:</b> <a href="https://workupload.com/file/RtmhbXA9ERq" target="_blank">Download</a> | For those who want to know how the mod's scripts work, without needing to decompile them. Do NOT use the source code as part of the mod install unless you know what you're doing. Use the TS4SCRIPT file that comes with the mod download. [Note: Version number of source code is based on when scripts were changed most recently, so the number may be behind the latest version of the mod.]</p>
+        <h3>Features</h3>
+        <ul class="keys">
+          <li><a href="#subsection-variations">Variations</a></li>
+          <li><a href="#subsection-roles">Roles</a></li>
+          <li><a href="#subsection-moods">Moods</a></li>
+          <li><a href="#subsection-other-commands">Other Commands</a></li>
+          <li><a href="#subsection-why">Why Clone Sorcerer Minion</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="container">
+      <section id="page-sections">
+        <div id="subsection-variations">
+          <h3>Variations</h3>
+          <p>To accommodate possible differences in preference for immersion and playstyle, I'm offering three different variations on access to Thrall commands (only use one at a time!):</p>
+          <ul>
+            <li class="patch-note">AllVampires: Any sim who is a "manifested" vampire will have access to Thrall commands. (Manifested means they are a vampire and are NOT in the middle of becoming one.)</li>
+            <li class="patch-note">CommandPerk: Any vampire who has the Command perk will have access to Thrall commands.</li>
+            <li class="patch-note">GrandmasterOnly: Only Grandmaster rank vampires will have access to Thrall commands.</li>
+          </ul>
+          <p>These variations are done by changing a single TestSetInstance file. If you have some experience modding and want your own variation, it's fairly trivial to change. You'll just need to change what the file: <p><code>Triplis_VampireExpand:Thrall_TestSetInstance_IsVampireActor</code></p> 
+          <p>tests for and replace it with your variation.</p>
+        </div>
+        <div id="subsection-roles">
+          <h3>Roles</h3>
+          <p>Roles can be activated at the same time, allowing you to combine them for creative use. Maid/Repair, Musician/Gardener/Painter. It's up to you and you can change it on a given sim at any time.</p>
+          <p>Most roles are a particular high priority (ex: Maid has a high priority to clean). The exception to this is Guest, which simply enables the Thrall, if an NPC, to act like an invited Guest in your home. Guest is incompatible with the Restricted Autonomy setting for this reason (and vice-versa—they will turn each other off). Restricted Autonomy restricts the sim to ONLY doing the behaviors included in any active roles. If no roles are active, they will stand around and do nothing.</p>
+          <p>The available roles are as follows:</p>
+          <ul>
+            <li class="patch-note">Guest: If on a residential lot, will treat it as if they are an invited guest. If they are not on a residential lot, they will likely just perform whatever range of actions is normal.</li>
+            <li class="patch-note">Dance: Will follow around the sim who applied the role to them and dance near them. If more than one sim has control over the same thrall, the thrall may pick one or the other at random to dance near.</li>
+            <li class="patch-note">Maid: Will clean things up if there is anything to clean.</li>
+            <li class="patch-note">Musician: Guitar, Violin, Piano, and Pipe Organ skills will be set to max. Will play Guitar, Violin, Piano, or Pipe Organ if one is available to play.</li>
+            <li class="patch-note">Painter: Painting skill will be set to max. Will paint if there is an easel available to paint on.</li>
+            <li class="patch-note">Repair: Repair skill will be set to max. Will repair broken objects if there are objects available to repair.</li>
+            <li class="patch-note">Gardener: Gardening skill will be set to max. Will tend to plants in need of care.</li>
+            <li class="patch-note">Comedian: Comedy skill will be set to max. Will use microphone to do comedy if available.</li>
+            <li class="patch-note">Bartender: Mixology skill will be set to max. Will tend a nearby bar if one exists on the lot.</li>
+          </ul>
+        </div>
+        <div id="subsection-moods">
+          <h3>Moods</h3>
+          <p>Mood can be set to any of the normal mood types, including Fine. Most moods will be set to +50.</p>
+          <p>The exceptions to this are Angry, Embarrassed, and Playful, which are set to +1, along with an enforced exclusion of other mood types. This is because of the chance to die from these moods being high. Vampire can do this anyway with other powers. I figured with a controlled thrall, you wouldn't want to put them in danger with a mood switch.</p>
+          <p>Set mood can be cleared with the Clear Set Mood command.</p>
+        </div>
+        <div id="subsection-other-commands">
+          <h3>Other Commands</h3>
+          <p>Other miscellaneous commands are:</p>
+          <ul>
+            <li class="patch-note">Be Thrall: Ties the sim to you as a  thrall with a relationship bit and puts them in the role. Note that other commands will also do this. This command is for if you want to only make them a thrall, without initiating another command first.</li>
+            <li class="patch-note">Restricted Autonomy: Restricts the sim to ONLY doing the behaviors included in any active roles. If no roles are active, they will stand around and do nothing. Will switch off Guest Role when activated to ensure restricted behavior.</li>
+            <li class="patch-note">Ignore Weather: Weather will have no effect on the sim while this is active.</li>
+            <li class="patch-note">Always Teleport: Will use vampire bat teleport when possible. Will use Run walkstyle otherwise.</li>
+            <li class="patch-note">Always Thrall: Will enter the thrall role upon entering a lot, no matter where or when.</li>
+            <li class="patch-note">Sleep: Will put the sim to sleep. Upon waking, their needs will be set to full.</li>
+            <li class="patch-note">Dismiss (NPC only): Will tell them to leave the lot, effectively dismissing them from currently being a thrall (but not sever the relationship).</li>
+            <li class="patch-note">Release (self target picker): Will tell them to leave the lot and thrall role, and release them from being tied to you with a relationship bit.</li>
+            <li class="patch-note">Summon (self target picker): Summon a thrall to the lot.</li>
+            <li class="patch-note">Wake Up (self target picker): Wakes up sleeping thralls.</li>
+            <li class="patch-note">Go Here (ground target picker): Picked thralls go to the clicked location.</li>
+            <li class="patch-note">Sleep (ground target picker): Picked thralls go to the clicked location and Sleep, same as in the Sleep interaction.</li>
+          </ul>
+        </div>
+        <div id="subsection-why">
+          <h3>Why Clone Sorcerer Minion</h3>
+          <p>If you have some experience with my Sorcerer mod, you may be wondering why I would make a clone of the Sorcerer Minion system specifically for Vampires. It already exists, why offer it in another form?</p>
+          <p>This was an idea that came to me out of nowhere I can recall, for no apparent reason, that was fairly trivial to do (comparative to creating brand new mods, though cloning the stuff was more of a pain than I'd like to admit). And I thought some people may enjoy it, including myself. The Minion system was actually envisioned as something Vampires would find useful, in terms of keeping sims around who could be fed on. This was one of the reasons I implemented the feature of locking needs and needs refreshing when they come out of the Sleep interaction.</p>
+          <p>But combining Sorcerer and Vampire has always been messy and you may not want to play a Sorcerer at all to be able to make use of commands like these. Thus this mod, which does not need justification, is somehow given justification anyway because I like to have reasons for doing things. I hope that you will enjoy it.</p>
+          <p>P.S. This also gave me an opportunity to revisit the Minion system and make some additions/improvements, such as the addition of Bartender and Comedian role. These changes have been added to the Sorcerer Minion system too, as of version 3-6-0 or later.</p>
+        </div>
+      </section>
+    </div>
+    <div class="container">
+      <footer>
+        <p>Triplis Sims 4 Mods, Copyright &copy; 2018-<script language="JavaScript" type="text/javascript">document.write((new Date()).getFullYear());</script></p>
+      </footer>
+    </div>
+  </body>
+</html>
