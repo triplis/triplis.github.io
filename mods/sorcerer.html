@@ -69,20 +69,22 @@
       <section id="download-buttons">
         <nav>
           <ul>
-            <li><a href="https://workupload.com/file/JCwk59htcJK" target="_blank">Download (Workupload)</a></li>
-            <li><a href="http://www.simfileshare.net/download/2045726/" target="_blank">Download (Simfileshare)</a></li>
+            <li><a href="https://workupload.com/file/GHaE8aEMjsj" target="_blank">Download (Workupload)</a></li>
+            <li><a href="http://www.simfileshare.net/download/2074451/" target="_blank">Download (Simfileshare)</a></li>
           </ul>
         </nav>
       </section>
     </div>
     <div class="container">
       <section id="page-key">
-        <p><b>Latest:</b> V3-6-0, tested with Maxis Patch, September 15, 2020</p>
+        <p><b>Latest:</b> V3-6-1, tested with Maxis Patch, September 15, 2020</p>
+        <p><b>Optional Replacer:</b> <a href="http://www.simfileshare.net/download/2074452/" target="_blank">Download (Simfileshare)</a> | <a href="https://workupload.com/file/NuTEeZ5KtcN" target="_blank">Download (Workupload)</a> | Replace most Sorcerer animations with Spellcaster animations (requires Realm of Magic and Sorcerer V3-6-1 or later)</p>
         <p><b>Optional Addon:</b> <a href="http://www.simfileshare.net/download/1340956/" target="_blank">Download (Simfileshare)</a> | <a href="https://workupload.com/file/5mm4nBCb" target="_blank">Download (Workupload)</a> | Gain Spellcaster XP from Sorcerer Spells (requires Realm of Magic and Sorcerer V3-5 or later)</p>
         <p><b>Optional Addon:</b> <a href="http://www.simfileshare.net/download/1340955/" target="_blank">Download (Simfileshare)</a> | <a href="https://workupload.com/file/NGBbzfPg" target="_blank">Download (Workupload)</a> | Gain Spellcaster Charge from Sorcerer Spells (requires Realm of Magic and Sorcerer V3-5 or later)</p>
-        <p><b>Source Code:</b> <a href="https://workupload.com/file/fQ7fKrX8Kw3" target="_blank">Download</a> | For those who want to know how the mod's scripts work, without needing to decompile them. Do NOT use the source code as part of the mod install unless you know what you're doing. Use the TS4SCRIPT file that comes with the mod download. [Note: Version number of source code is based on when scripts were changed most recently, so the number may be behind the latest version of the mod.]</p>
-        <h3>Patch Notes Summary (full notes found <a href="#subsection-patch-notes-v3-6-0">here</a>)</h3>
+        <p><b>Source Code:</b> <a href="https://workupload.com/file/38xuZXCB5C6" target="_blank">Download</a> | For those who want to know how the mod's scripts work, without needing to decompile them. Do NOT use the source code as part of the mod install unless you know what you're doing. Use the TS4SCRIPT file that comes with the mod download. [Note: Version number of source code is based on when scripts were changed most recently, so the number may be behind the latest version of the mod.]</p>
+        <h3>Patch Notes Summary (full notes found <a href="#subsection-patch-notes-v3-6-1">here</a>)</h3>
         <ul>
+          <li class="patch-note">September 25, 2020: Added optional replacer: Replaces most Sorcerer animations with Spellcaster animations.</li>
           <li class="patch-note">September 15, 2020: Various additions/tweaks to the Minion system.</li>
           <li class="patch-note">September 3, 2020: Various fixes for official game patch.</li>
           <li class="patch-note">December 18, 2019: Redesigned teleports so they can be autonomous; removed role exclusion filter for minions (see full patch notes for details).</li>
@@ -108,6 +110,7 @@
           <li><a href="#subsection-mastery">Mastery</a></li>
           <li><a href="#subsection-child">Child</a></li>
           <li><a href="#subsection-toddler">Toddler</a></li>
+          <li><a href="#subsection-sorcerer-removal">Removing Sorcerer From a Sim</a></li>
           <li><a href="#subsection-inheritance">Inheritance and Club Filters</a></li>
           <li><a href="#subsection-cheats">Cheats</a></li>
           <li><a href="#subsection-compatibility">Compatibility</a></li>
@@ -117,6 +120,7 @@
         </ul>
         <h3>Patch Notes</h3>
         <ul class="keys">
+          <li><a href="#subsection-patch-notes-v3-6-1">Version 3-6-1</a></li>
           <li><a href="#subsection-patch-notes-v3-6-0">Version 3-6-0</a></li>
           <li><a href="#subsection-patch-notes-v3-5-2">Version 3-5-2</a></li>
           <li><a href="#subsection-patch-notes-v3-5">Version 3-5</a></li>
@@ -585,6 +589,21 @@
           <p>This interaction, like the connotation of the word "play," is for "fun." It doesn't do anything other than look cute and give them some Fun Need. It looks magical though, so there's that. Weirder stories!</p>
           <p>Toddlers can also be teleported by older Sims and will get a buff specific to their Toddler trait as a result.</p>
         </div>
+        <div id="subsection-sorcerer-removal">
+          <h3>Removing Sorcerer From a Sim</h3>
+          <p>With v3-6-1, I've made the Sorcerer-specific trait removal more thorough when you use the Purge Magic -> Return Magic to Object interaction on the Suspicious Lump of Clay.</p>
+          <p>However, due to how complex the mod has gotten, this is still not a complete removal of everything relating to Sorcerer on a specific Sim. Leveled skills and relationships like Subjugate, Empower, and Minion will stick around, and leveled specializations likely will too and will slowly decay until fully gone.</p>
+          <p>If you want to remove Sorcerer as thoroughly as possible from a specific Sim without uninstalling the mod and saving over your game with the data missing, I recommend the following steps:</p>
+          <ul>
+            <li class="patch-note">Use self target "Release" to end the relationship with any Minions and dismiss them from service.</li>
+            <li class="patch-note">Use self target "Mass -> Dispel Enchantment" to free any Sims trapped in Stasis Field</li>
+            <li class="patch-note">Use "Release from Subjugation" on any Subjugated Sims.</li>
+            <li class="patch-note">Use "End Empowerment" on any Empowered Sims.</li>
+            <li class="patch-note">Use "Set to Min" cheat under Spells (Cheat) to set all specializations to 0.</li>
+          </ul>
+          <p>Neglecting to do most of this probably isn't going to be very noticeable, since most of the components of the mod depend on you being a Sorcerer for it to matter. The ones I most recommend doing are releasing any Minions from service and any Sims in Stasis Field, so they don't get stuck in the situation.</p>
+          <p>I may try to make removal more thoroughly automated in the future, but I wanted to provide something of a guide for now, so if you ever run into issues with components lingering and are confused as to what to do, there's something with some info on it.</p>
+        </div>
         <div id="subsection-inheritance">
           <h3>Inheritance and Club Filters</h3>
           <p>If you would like to have either of these features in relation to the Sorcerer mod, head on over to <a href="http://modthesims.info/download.php?t=594519" target="_blank">KlingonDragon's mod</a> and add that to your game, in addition to this mod. </p>
@@ -706,6 +725,16 @@
           <p>A: As far as I'm aware, there is no known way to change this with modding, but it's nothing to be concerned about either. The Plumbob changes color because Alignment uses the Needs coding and that coding signals your Need being low with a Plumbob color change. Because Dark Alignment uses the lower end of a Need (it not being full) it shows up as a different color.</p>
         </div>
         <h1>PATCH NOTES</h1>
+        <div id="subsection-patch-notes-v3-6-1">
+          <h3>Version 3-6-1</h3>
+          <p>This patch comes with the long-awaited (or long-forgotten? ...or long-ago-announced-as-a-possibility-and-abanonded-for-a-very-long-time?)... anyway, optional replacement for animations. You simply use v3-6-1 or later and use the Optional Replacer script and ta-da, your Sorcerer will now be spellcasting like a Spellcaster.</p>
+          <p>More detail below:</p>
+          <ul>
+            <li class="patch-note">Added optional script that replaces (most of) the Sorcerer animations with Spellcaster animations, with some slight variation on the visual effects by alignment (requires Realm of Magic and v3-6-1 or later). Some are untouched because they are a special case, like the animations by Simone Caporalini used in the Bonded interactions, but you can expect standard stuff like casting a dark spell on someone, is changed with the optional script.</li>
+            <li class="patch-note">Modified some things in the main mod to accommodate the optional script (e.g. using the optional script won't work if you don't get v3-6-1 or later).</li>
+            <li class="patch-note">Unrelated to animations, I reevaluated and tweaked sorcerer removal ("Return Magic to Object") to be a bit more thorough; the list of traits to remove had lagged behind updates. I also added an info section to this page, on the details of removing Sorcerer from a specific Sim. The long and short of it is, the mod has for some time been complex to the point where that one interaction isn't as thorough at removing everything as it could be, so in lieu of having complete automated removal, for the time being, I'm providing some details on how to be as thorough as possible if you want to be. You can find that <a href="#subsection-sorcerer-removal">here</a>.</li>
+          </ul>
+        </div>
         <div id="subsection-patch-notes-v3-6-0">
           <h3>Version 3-6-0</h3>
           <p>This patch comes with some additions/tweaks to the Minion system.</p>
