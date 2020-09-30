@@ -69,21 +69,22 @@
       <section id="download-buttons">
         <nav>
           <ul>
-            <li><a href="https://workupload.com/file/GHaE8aEMjsj" target="_blank">Download (Workupload)</a></li>
-            <li><a href="http://www.simfileshare.net/download/2074451/" target="_blank">Download (Simfileshare)</a></li>
+            <li><a href="https://workupload.com/file/vaAGBvcu9sj" target="_blank">Download (Workupload)</a></li>
+            <li><a href="http://www.simfileshare.net/download/2080367/" target="_blank">Download (Simfileshare)</a></li>
           </ul>
         </nav>
       </section>
     </div>
     <div class="container">
       <section id="page-key">
-        <p><b>Latest:</b> V3-6-1, tested with Maxis Patch, September 15, 2020</p>
+        <p><b>Latest:</b> V3-6-2, tested with Maxis Patch, September 15, 2020</p>
         <p><b>Optional Replacer:</b> <a href="http://www.simfileshare.net/download/2074452/" target="_blank">Download (Simfileshare)</a> | <a href="https://workupload.com/file/NuTEeZ5KtcN" target="_blank">Download (Workupload)</a> | Replace most Sorcerer animations with Spellcaster animations (requires Realm of Magic and Sorcerer V3-6-1 or later)</p>
         <p><b>Optional Addon:</b> <a href="http://www.simfileshare.net/download/1340956/" target="_blank">Download (Simfileshare)</a> | <a href="https://workupload.com/file/5mm4nBCb" target="_blank">Download (Workupload)</a> | Gain Spellcaster XP from Sorcerer Spells (requires Realm of Magic and Sorcerer V3-5 or later)</p>
         <p><b>Optional Addon:</b> <a href="http://www.simfileshare.net/download/1340955/" target="_blank">Download (Simfileshare)</a> | <a href="https://workupload.com/file/NGBbzfPg" target="_blank">Download (Workupload)</a> | Gain Spellcaster Charge from Sorcerer Spells (requires Realm of Magic and Sorcerer V3-5 or later)</p>
         <p><b>Source Code:</b> <a href="https://workupload.com/file/38xuZXCB5C6" target="_blank">Download</a> | For those who want to know how the mod's scripts work, without needing to decompile them. Do NOT use the source code as part of the mod install unless you know what you're doing. Use the TS4SCRIPT file that comes with the mod download. [Note: Version number of source code is based on when scripts were changed most recently, so the number may be behind the latest version of the mod.]</p>
-        <h3>Patch Notes Summary (full notes found <a href="#subsection-patch-notes-v3-6-1">here</a>)</h3>
+        <h3>Patch Notes Summary (full notes found <a href="#subsection-patch-notes-v3-6-2">here</a>)</h3>
         <ul>
+          <li class="patch-note">September 29, 2020: Some quality of life and bug fixes.</li>
           <li class="patch-note">September 25, 2020: Added optional replacer: Replaces most Sorcerer animations with Spellcaster animations.</li>
           <li class="patch-note">September 15, 2020: Various additions/tweaks to the Minion system.</li>
           <li class="patch-note">September 3, 2020: Various fixes for official game patch.</li>
@@ -120,6 +121,7 @@
         </ul>
         <h3>Patch Notes</h3>
         <ul class="keys">
+          <li><a href="#subsection-patch-notes-v3-6-2">Version 3-6-2</a></li>
           <li><a href="#subsection-patch-notes-v3-6-1">Version 3-6-1</a></li>
           <li><a href="#subsection-patch-notes-v3-6-0">Version 3-6-0</a></li>
           <li><a href="#subsection-patch-notes-v3-5-2">Version 3-5-2</a></li>
@@ -725,6 +727,17 @@
           <p>A: As far as I'm aware, there is no known way to change this with modding, but it's nothing to be concerned about either. The Plumbob changes color because Alignment uses the Needs coding and that coding signals your Need being low with a Plumbob color change. Because Dark Alignment uses the lower end of a Need (it not being full) it shows up as a different color.</p>
         </div>
         <h1>PATCH NOTES</h1>
+        <div id="subsection-patch-notes-v3-6-2">
+          <h3>Version 3-6-2</h3>
+          <ul>
+            <li class="patch-note">Fixed an animation transition issue in the Practice interactions, relating to the optional Animation Replacer. Note: You do NOT need to re-download the replacer script to get this fix. Just the main mod.</li>
+            <li class="patch-note">The visual style of Teleport and Enchanted Run is normally determined by Alignment. You can now override this by going to Spells > Visuals and clicking "Movement..." to set a style override. In particular, I made this an option because the neutral rituals stick you with neutral visual, with no way to change the style, since they are stuck at neutral alignment.</li>
+            <li class="patch-note">Spells (Cheat) Decay lock/unlock for specializations can now be applied more quickly with an "All Sorcerer Specializations" option in each.</li>
+            <li class="patch-note">Mischief Arts: Apply Random Hairstyle wasn't working at all anymore in my testing. I kinda fixed it, which required changing it so it only changes the style and leaves the color alone. Better than completely broken, I say.</li>
+            <li class="patch-note">Plumbbob color will no longer turn red if Alignment is a low value, as if you have a low need. (It was never intended to turn red, I just didn't have a way to disable it in the past. I discovered by accident it's possible to change that now.)</li>
+            <li class="patch-note">Douse should no longer erroneously show up on fireplaces.</li>
+          </ul>
+        </div>
         <div id="subsection-patch-notes-v3-6-1">
           <h3>Version 3-6-1</h3>
           <p>This patch comes with the long-awaited (or long-forgotten? ...or long-ago-announced-as-a-possibility-and-abanonded-for-a-very-long-time?)... anyway, optional replacement for animations. You simply use v3-6-1 or later and use the Optional Replacer script and ta-da, your Sorcerer will now be spellcasting like a Spellcaster.</p>
