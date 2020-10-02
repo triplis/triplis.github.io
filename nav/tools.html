@@ -54,13 +54,14 @@
           <li><a href="#subsection-auto-hash-console">Sims 4 Auto Hash Console Version</a></li>
           <li><a href="#subsection-auto-stbl-gui">Sims 4 Auto STBL GUI Version</a></li>
           <li><a href="#subsection-auto-stbl-console">Sims 4 Auto STBL Console Version</a></li>
+          <li><a href="#subsection-auto-tuning-ref">Sims 4 Auto Tuning Ref</a></li>
         </u>
       </section>
     </div>
     <div class="container">
       <section id="page-sections">
         <div id="subsection-auto-hash-gui">
-          <h3>Sims 4 Auto Hash GUI Version</h3>
+          <h1>Sims 4 Auto Hash GUI Version</h1>
           <img src="../img/auto-hash-icon-for-show.png">
           <p><a href="http://www.simfileshare.net/download/1226931/" target="_blank">Download</a></p>
           <h3>Introduction</h3>
@@ -113,7 +114,7 @@
           <p>I'd like to keep the tool as narrow in scope as possible, so that it's lightweight and easy to use for its purpose.</p>
         </div>
         <div id="subsection-auto-hash-console">
-          <h3>Sims 4 Auto Hash Console Version</h3>
+          <h1>Sims 4 Auto Hash Console Version</h1>
           <img src="../img/auto-hash-icon-for-show.png">
           <p><a href="http://www.simfileshare.net/download/942022/" target="_blank">Download</a></p>
           <p><a href="http://www.simfileshare.net/download/942024/" target="_blank">Download Source Code</a></p>
@@ -150,7 +151,7 @@
           <p>You can look at the template folder (it comes with the program) and see what the syntax looks like for these template variations. Right now, most of the variation revolves around different types for buffs and different types for traits. Note that you will still need to edit the data file somehow for modifying things like strings.</p>
         </div>
         <div id="subsection-auto-stbl-gui">
-          <h3>Sims 4 Auto STBL GUI Version</h3>
+          <h1>Sims 4 Auto STBL GUI Version</h1>
           <img src="../img/auto-stbl-icon-for-show.png">
           <p><a href="http://www.simfileshare.net/download/1236799/" target="_blank">Download</a></p>
           <h3>Introduction</h3>
@@ -196,7 +197,7 @@
           <p>The original console version of this program, which is what most of this program is underneath the interface, would not have been possible without the help of Scumbumbo aiding me in tracking down a mysterious bug that was causing a game crash. As is often the case in programming, it turned out to be an "off by one" error. You don't have to worry about that error though. I've utilized the tool extensively since and there is no crashing from the string tables it makes anymore (I would not be releasing it if there was such an issue still). Thank you to Fogity and Turbodriver as well, who also offered some input and insight in the process of trying to figure out the bug.</p>
         </div>
         <div id="subsection-auto-stbl-console">
-          <h3>Sims 4 Auto STBL Console Version</h3>
+          <h1>Sims 4 Auto STBL Console Version</h1>
           <img src="../img/auto-stbl-icon-for-show.png">
           <p><a href="http://www.simfileshare.net/download/948625/" target="_blank">Download</a></p>
           <p><a href="http://www.simfileshare.net/download/948626/" target="_blank">Download Source Code</a></p>
@@ -226,6 +227,35 @@
           <p>Like the Auto Hash tool, make sure the external filename includes "S4_" and is the file type XML. I can consider offering support for S4S syntax on request. My habit is using the default syntax from Scumbumbo's XML Extractor along with S4PE, so that's what it was made to support.</p>
           <h3>Credits</h3>
           <p>This program would not have been possible without the help of Scumbumbo aiding me in tracking down a mysterious bug that was causing a game crash. As is often the case in programming, it turned out to be an "off by one" error. You don't have to worry about that error though. I've utilized the tool extensively since and there is no crashing from the string tables it makes anymore (I would not be releasing it if there was such an issue still). Thank you to Fogity and Turbodriver as well, who also offered some input and insight in the process of trying to figure out the bug.</p>
+        </div>
+        <div id="subsection-auto-tuning-ref">
+          <h1>Sims 4 Auto Tuning Ref</h1>
+          <img src="../img/autoTuningRefIconForShow.png">
+          <p>Compatible with Windows</p>
+          <p><a href="https://workupload.com/file/h8NE7XvNmwC" target="_blank">Download</a></p>
+          <p><a href="https://workupload.com/file/BNgfHct9tDk" target="_blank">Download Source Code</a> | Includes cpp files and such. Program as a whole was built in Visual Studio 2017, using Qt VS Tools extension.</p>
+          <h3>Introduction</h3>
+          <p>The concept of this tool is fairly basic. Don't expect something that's going to automate everything for you. However, it may help some, particularly when working with lots of tuning files in a larger mod.</p>
+          <p>An example of its usefulness is if you have a lot of traits you want to be removed through a loot file. Normally, you'd have to open up each trait file, copy the hash, and then paste it into a trait_remove tuning one after another in your loot file at bare minimum. If you mod like me, you've got to paste the name of the file too, into a comment, so you know what's what at a glance. Extremely tedious with a lot of files.<p>
+          <p>With this tool, you can simply navigate to the folder where your traits are, choose trait_remove, process the files, and you'll have some text you can copy/paste into your loot file with all the traits and their IDs in trait_remove procedures, put together for you.</p>
+          <h3>How to Use</h3>
+          <p>Using the tool at its most basic should be fairly self-explanatory once you see it. Click Pick Files... to navigate to a folder that contains your custom tuning file (for example, a custom interaction). Choose the procedure from the dropdown menu (for example, "AffordanceList value" to spit out your interaction ID as part of a list of affordances), choose a Subject if it's relevant (for example, if you're doing blacklist_traits, you might want the Subject to be TargetSim), and then click Process Files. Now you should have some text you can copy or save to a file, to paste in your XML file.</p>
+          <p>Note that you don't have to pick a Subject at all, even if it's relevant. If you don't pick one and one is used in the tuning, it will default to Actor.</p>
+          <p>Also note, in case it's not clear, this tool does not do any kind of hashing or naming for you. It is expected that you're working with custom named files and have some idea of how to link them together.</p>
+          <h3>Advanced Use</h3>
+          <p>I wanted the program to be as simple and flexible as possible, so you can to some extent add your own XML files to the tunables folder that comes with the program and it will recognize them.</p>
+          <p>Currently, keywords recognized by the program are: TUNING_REFERENCE_GOES_HERE, TUNING_REFERENCE_LIST_GOES_HERE, and PARTICIPANT_TYPE_GOES_HERE</p>
+          <ul>
+            <li class="patch-note">TUNING_REFERENCE_GOES_HERE: The program will expect to put a single tuning reference here.</li>
+            <li class="patch-note">TUNING_REFERENCE_LIST_GOES_HERE: The program will expect to put multiple tuning references here (e.g. in the case of blacklist_traits).</li>
+            <li class="patch-note">PARTICIPANT_TYPE_GOES_HERE: The program will expect to put a participant type here, such as Actor, TargetSim, etc.</li>
+          </ul>
+          <p>You may notice some files have a comment like this: <code>&#x3C;!--Instance Restriction: statistic--&#x3E;</code> or this: <code>&#x3C;!--Class Restriction: Trait--&#x3E;</code></p>
+          <p>This is completely optional and is just a "minimize user error" kind of thing. If you give something a restriction, then it will be ignored in processing if the types don't match. For example, if trait_remove has a class restriction of Trait and somebody tries to process a Buff file as a tuning to be placed in trait_remove.</p>
+          <p>You can also add stuff to the enums folder, but it won't do anything with it yet. It will just sit there abandoned, alone, destitute. The only thing that gets used in there right now is the ParticipantType file. I may expand on that in the future.</p>
+          <h3>Requests/Ideas</h3>
+          <p>Additions/changes to the tool will likely be sporadic, if they come at all. Usually what happens is I'm doing something with modding and I build a tool to help with some aspect of it that I repeatedly encounter issues with. I do all of my modding by hand where possible, other than minimal helper tools, so I often end up wanting stuff like this.</p>
+          <p>That said, if you have ideas or requests for features that fit within the scope of the tool, I may consider it.</p>
         </div>
       </section>
     </div>
