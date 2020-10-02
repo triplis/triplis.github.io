@@ -232,8 +232,8 @@
           <h1>Sims 4 Auto Tuning Ref</h1>
           <img src="../img/autoTuningRefIconForShow.png">
           <p>Compatible with Windows</p>
-          <p><a href="https://workupload.com/file/h8NE7XvNmwC" target="_blank">Download</a></p>
-          <p><a href="https://workupload.com/file/BNgfHct9tDk" target="_blank">Download Source Code</a> | Includes cpp files and such. Program as a whole was built in Visual Studio 2017, using Qt VS Tools extension.</p>
+          <p><a href="https://workupload.com/file/zjsst7Lqppn" target="_blank">Download</a></p>
+          <p><a href="https://workupload.com/file/8r8DbSFuvDT">Download Source Code</a> | Includes cpp files and such. Program as a whole was built in Visual Studio 2017, using Qt VS Tools extension.</p>
           <h3>Introduction</h3>
           <p>The concept of this tool is fairly basic. Don't expect something that's going to automate everything for you. However, it may help some, particularly when working with lots of tuning files in a larger mod.</p>
           <p>An example of its usefulness is if you have a lot of traits you want to be removed through a loot file. Normally, you'd have to open up each trait file, copy the hash, and then paste it into a trait_remove tuning one after another in your loot file at bare minimum. If you mod like me, you've got to paste the name of the file too, into a comment, so you know what's what at a glance. Extremely tedious with a lot of files.<p>
@@ -244,15 +244,16 @@
           <p>Also note, in case it's not clear, this tool does not do any kind of hashing or naming for you. It is expected that you're working with custom named files and have some idea of how to link them together.</p>
           <h3>Advanced Use</h3>
           <p>I wanted the program to be as simple and flexible as possible, so you can to some extent add your own XML files to the tunables folder that comes with the program and it will recognize them.</p>
-          <p>Currently, keywords recognized by the program are: TUNING_REFERENCE_GOES_HERE, TUNING_REFERENCE_LIST_GOES_HERE, and PARTICIPANT_TYPE_GOES_HERE</p>
+          <p>Currently, keywords recognized by the program are: TUNING_REFERENCE_GOES_HERE, TUNING_REFERENCE_LIST_GOES_HERE, and ENUM_GOES_HERE</p>
           <ul>
             <li class="patch-note">TUNING_REFERENCE_GOES_HERE: The program will expect to put a single tuning reference here.</li>
             <li class="patch-note">TUNING_REFERENCE_LIST_GOES_HERE: The program will expect to put multiple tuning references here (e.g. in the case of a list, like in blacklist_traits).</li>
-            <li class="patch-note">PARTICIPANT_TYPE_GOES_HERE: The program will expect to put a participant type here, such as Actor, TargetSim, etc.</li>
+            <li class="patch-note">ENUM_GOES_HERE: The program will expect to put an enum here, such as ParticipantType's Actor, TargetSim, etc.</li>
           </ul>
           <p>You may notice some files have a comment like this: <code>&#x3C;!--Instance Restriction: statistic--&#x3E;</code> or this: <code>&#x3C;!--Class Restriction: Trait--&#x3E;</code></p>
           <p>This is completely optional and is just a "minimize user error" kind of thing. If you give something a restriction, then it will be ignored in processing if the types don't match. For example, if trait_remove has a class restriction of Trait and somebody tries to process a Buff file as a tuning to be placed in trait_remove.</p>
-          <p>You can also add stuff to the enums folder, but it won't do anything with it yet. It will just sit there abandoned, alone, destitute. The only thing that gets used in there right now is the ParticipantType file. I may expand on that in the future.</p>
+          <p>You can also add stuff to the enums folder, but I'm not sure how useful it is as a functionality beyond ParticipantType. At least for the way the program is set up.</p>
+          <p>If you add a set of enums, make sure to specify it with an <code>&#x3C;!--Enum Type: ParticipantType--&#x3E;</code> kind of comment in tunables that should use it, where ParticipantType is the kind of enum that should be used. Otherwise, it'll be a possible enum, but won't be linked to any specific tunables file.</p>
           <h3>Requests/Ideas</h3>
           <p>Additions/changes to the tool will likely be sporadic, if they come at all. Usually what happens is I'm doing something with modding and I build a tool to help with some aspect of it that I repeatedly encounter issues with. I do all of my modding by hand where possible, other than minimal helper tools, so I often end up wanting stuff like this.</p>
           <p>That said, if you have ideas or requests for features that fit within the scope of the tool, I may consider it.</p>
