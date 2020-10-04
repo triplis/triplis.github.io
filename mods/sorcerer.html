@@ -69,21 +69,22 @@
       <section id="download-buttons">
         <nav>
           <ul>
-            <li><a href="https://workupload.com/file/vaAGBvcu9sj" target="_blank">Download (Workupload)</a></li>
-            <li><a href="http://www.simfileshare.net/download/2080367/" target="_blank">Download (Simfileshare)</a></li>
+            <li><a href="https://workupload.com/file/JhwHL8xcFY2" target="_blank">Download (Workupload)</a></li>
+            <li><a href="http://www.simfileshare.net/download/2084737/" target="_blank">Download (Simfileshare)</a></li>
           </ul>
         </nav>
       </section>
     </div>
     <div class="container">
       <section id="page-key">
-        <p><b>Latest:</b> V3-6-2, tested with Maxis Patch, September 15, 2020</p>
+        <p><b>Latest:</b> V3-6-3, tested with Maxis Patch, September 15, 2020</p>
         <p><b>Optional Replacer:</b> <a href="http://www.simfileshare.net/download/2074452/" target="_blank">Download (Simfileshare)</a> | <a href="https://workupload.com/file/NuTEeZ5KtcN" target="_blank">Download (Workupload)</a> | Replace most Sorcerer animations with Spellcaster animations (requires Realm of Magic and Sorcerer V3-6-1 or later)</p>
         <p><b>Optional Addon:</b> <a href="http://www.simfileshare.net/download/1340956/" target="_blank">Download (Simfileshare)</a> | <a href="https://workupload.com/file/5mm4nBCb" target="_blank">Download (Workupload)</a> | Gain Spellcaster XP from Sorcerer Spells (requires Realm of Magic and Sorcerer V3-5 or later)</p>
         <p><b>Optional Addon:</b> <a href="http://www.simfileshare.net/download/1340955/" target="_blank">Download (Simfileshare)</a> | <a href="https://workupload.com/file/NGBbzfPg" target="_blank">Download (Workupload)</a> | Gain Spellcaster Charge from Sorcerer Spells (requires Realm of Magic and Sorcerer V3-5 or later)</p>
-        <p><b>Source Code:</b> <a href="https://workupload.com/file/38xuZXCB5C6" target="_blank">Download</a> | For those who want to know how the mod's scripts work, without needing to decompile them. Do NOT use the source code as part of the mod install unless you know what you're doing. Use the TS4SCRIPT file that comes with the mod download. [Note: Version number of source code is based on when scripts were changed most recently, so the number may be behind the latest version of the mod.]</p>
-        <h3>Patch Notes Summary (full notes found <a href="#subsection-patch-notes-v3-6-2">here</a>)</h3>
+        <p><b>Source Code:</b> <a href="https://workupload.com/file/xrvQM3Xu57Y" target="_blank">Download</a> | For those who want to know how the mod's scripts work, without needing to decompile them. Do NOT use the source code as part of the mod install unless you know what you're doing. Use the TS4SCRIPT file that comes with the mod download. [Note: Version number of source code is based on when scripts were changed most recently, so the number may be behind the latest version of the mod.]</p>
+        <h3>Patch Notes Summary (full notes found <a href="#subsection-patch-notes-v3-6-3">here</a>)</h3>
         <ul>
+          <li class="patch-note">October 3, 2020: Create Sims with Creation Grandmaster, Make Random Hairstyle Permanent, tweaks, bug fixes.</li>
           <li class="patch-note">September 29, 2020: Some quality of life and bug fixes.</li>
           <li class="patch-note">September 25, 2020: Added optional replacer: Replaces most Sorcerer animations with Spellcaster animations.</li>
           <li class="patch-note">September 15, 2020: Various additions/tweaks to the Minion system.</li>
@@ -594,14 +595,13 @@
         <div id="subsection-sorcerer-removal">
           <h3>Removing Sorcerer From a Sim</h3>
           <p>With v3-6-1, I've made the Sorcerer-specific trait removal more thorough when you use the Purge Magic -> Return Magic to Object interaction on the Suspicious Lump of Clay.</p>
-          <p>However, due to how complex the mod has gotten, this is still not a complete removal of everything relating to Sorcerer on a specific Sim. Leveled skills and relationships like Subjugate, Empower, and Minion will stick around, and leveled specializations likely will too and will slowly decay until fully gone.</p>
+          <p>However, due to how complex the mod has gotten, this is still not a complete removal of everything relating to Sorcerer on a specific Sim. Relationships like Subjugate, Empower, and Minion will stick around.</p>
           <p>If you want to remove Sorcerer as thoroughly as possible from a specific Sim without uninstalling the mod and saving over your game with the data missing, I recommend the following steps:</p>
           <ul>
             <li class="patch-note">Use self target "Release" to end the relationship with any Minions and dismiss them from service.</li>
             <li class="patch-note">Use self target "Mass -> Dispel Enchantment" to free any Sims trapped in Stasis Field</li>
             <li class="patch-note">Use "Release from Subjugation" on any Subjugated Sims.</li>
             <li class="patch-note">Use "End Empowerment" on any Empowered Sims.</li>
-            <li class="patch-note">Use "Set to Min" cheat under Spells (Cheat) to set all specializations to 0.</li>
           </ul>
           <p>Neglecting to do most of this probably isn't going to be very noticeable, since most of the components of the mod depend on you being a Sorcerer for it to matter. The ones I most recommend doing are releasing any Minions from service and any Sims in Stasis Field, so they don't get stuck in the situation.</p>
           <p>I may try to make removal more thoroughly automated in the future, but I wanted to provide something of a guide for now, so if you ever run into issues with components lingering and are confused as to what to do, there's something with some info on it.</p>
@@ -727,6 +727,19 @@
           <p>A: As far as I'm aware, there is no known way to change this with modding, but it's nothing to be concerned about either. The Plumbob changes color because Alignment uses the Needs coding and that coding signals your Need being low with a Plumbob color change. Because Dark Alignment uses the lower end of a Need (it not being full) it shows up as a different color.</p>
         </div>
         <h1>PATCH NOTES</h1>
+        <div id="subsection-patch-notes-v3-6-3">
+          <h3>Version 3-6-3</h3>
+          <ul>
+            <li class="patch-note">Mischief Arts "Apply Random Hairstyle" can now select from nine different style categorizations: Any, Long, Medium, Short, Updo, Straight, Curly, Wavy, Bald</li>
+            <li class="patch-note">Added Mischief Arts spell "Make Random Hairstyle Permanent": Picked Sim with a temporary hairstyle from Apply Random Hairstyle spell will have that hairstyle applied permanently (*permanent meaning equivalent to going into CAS and changing their hairstyle, as opposed to something that disappears after a few sim hours).</li>
+            <li class="patch-note">Removed the tooltip on "Apply Random Hairstyle," since "this spell can't last forever" isn't quite accurate anymore and the existence of "Make Permanent" spell hopefully makes it clear that it is, by default, temporary.</li>
+            <li class="patch-note">Creation Level 5 (Grandmaster) can now target the ground and create sims under Spells > Create Sim menu (can create Teen or older). Some info/warnings about this: The sim will be created with no household. Spawning a lot of sims at once may be hard on performance and could impact population with regards to culling and the like. Just something to keep in mind.</li>
+            <li class="patch-note">Fixed an issue with a number of self-target picker interactions that would cause the option to not show up if the self-target sim was the only one who qualified as a target.</li>
+            <li class="patch-note">Away behavior should hopefully be a bit better. Magical Connection can now recover on an away sim if Care For Self is being used.</li>
+            <li class="patch-note">Related to away behavior, I've hopefully fixed the issue with 'locked' needs like Energy popping up as low on an away sim who is a sorcerer. Needs like this have been set to a decay rate of 0, instead of locked, so with the lock gone, your existing sorcerers may have a period in which they seek out filling one of those hidden needs, but then should stop caring about it once they've filled it the one time. If you still see an issue like this, make sure there is a bed on the home lot (the game checks for that on away action for Energy).</li>
+            <li class="patch-note">Sorcerer Removal: In order to make removal more thorough, "Return Magic To Object" now resets Sorcerer Skills and Specializations, so that specializations are at 0 and skills are no longer visible in the skill UI, as if you never had them.</li>
+          </ul>
+        </div>
         <div id="subsection-patch-notes-v3-6-2">
           <h3>Version 3-6-2</h3>
           <ul>
