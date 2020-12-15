@@ -69,24 +69,32 @@
       <section id="download-buttons">
         <nav>
           <ul>
-            <li><a href="http://www.simfileshare.net/download/1825905/" target="_blank">Download (ChildTeen)</a></li>
-            <li><a href="http://www.simfileshare.net/download/1825904/" target="_blank">Download (ChildOnly)</a></li>
+            <li><a href="http://www.simfileshare.net/download/2186414/" target="_blank">Download</a></li>
           </ul>
         </nav>
       </section>
     </div>
     <div class="container">
       <section id="page-key">
-        <p><b>Latest:</b> V1-9, tested with Maxis Patch, June 3, 2020</p>
-        <p>Pick one of the two download options above to use for the main mod (only use one at a time!)</p>
-        <p><b>Optional Addon:</b> <a href="http://www.simfileshare.net/download/683909/" target="_blank">Download</a> | UnlimitedPTO</p>
+        <p><b>Latest:</b> v2.0, tested with Maxis Patch, December 14, 2020</p>
+        <p><b>Optional Addon:</b> <a href="http://www.simfileshare.net/download/683909/" target="_blank">Download</a> | UnlimitedPTO: Taking a day off school doesn't reduce the number of days off you have, so you can do it as much as you want.</p>
+        <h3>Patch Notes</h3>
+        <p>Version 2.0 comes with some changes to address a longstanding nuisance about quitting and joining, which I hope will make the mod more enjoyable to use.</p>
+        <p>Previously, the way it worked is I made the school "careers" "quittable", which allowed you to quit/join them through the "job" interface, but also meant that when taking on extracurricular activities, you had to choose that or school.</p>
+        <p>What I've done now is they are no longer officially "quittable." Instead, you do a sort of cheat to bypass their quittable status and quit anyway. The result is that you can still quit and you can have school and extracurricular activities at the same time! The result is also that Join/Quit are now done through two new interactions, Join School and Quit School, which show up in phone interactions under Career.</p>
+        <p>In Summary:</p>
+        <ul>
+          <li class="patch-note">Join/Quit is now done through Join School and Quit School in Phone interactions under Career.</li>
+          <li class="patch-note">You can now be in school and have extracurricular activities at the same time, as is the case without the mod.</li>
+          <li class="patch-note">Homework gets added if not in your inventory when you use Join School, so keep in mind if you have homework but it's placed in the world when you join, you could end up with a duplicate. This is just to make sure your sim gets the homework they are supposed to have when they join. I'm honestly not sure if it was an issue with the previous setup, but I ran into an edge case and wanted to make sure you get the homework.</li>
+          <li class="patch-note">XML overrides have been replaced with scripts, with the exception of the one loot file that the Optional Addon "UnlimitedPTO" overrides.</li>
+          <li class="patch-note">The two different download options have been reduced to one, since the reason for splitting them originally had to do with the "school and extracurricular activities at the same time" limitation.</li>
+        </ul>
         <h3>Features</h3>
         <ul class="keys">
           <li><a href="#subsection-no-auto-enroll">No Auto Enroll</a></li>
           <li><a href="#subsection-quit-join">Quit or Join</a></li>
           <li><a href="#subsection-ages">Ages</a></li>
-          <li><a href="#subsection-compatibility">Compatibility</a></li>
-          <li><a href="#subsection-versions">Two Versions</a></li>
         </ul>
       </section>
     </div>
@@ -99,36 +107,15 @@
         </div>
         <div id="subsection-quit-join">
           <h3>Quit or Join</h3>
+          <p>These are found in the Phone interactions, under Career.</p>
           <ul>
-            <li class="patch-note"><b>Join School (TEEN)</b>: You can join school by opening up your phone, going to the Career/Household panel, and clicking "Find a Job," or click "Join a Career" under the Career/School panel.</li>
-            <li class="patch-note"><b>Quit School (TEEN)</b>: You can quit school by opening up your phone, going to the Career/Household panel, and clicking "Quit Job." The game will prompt you to confirm your decision, the same as if you're quitting a career as an adult.</li>
-            <li class="patch-note"><b>Join School (CHILD)</b>: You can join school by opening up your phone and using the "Join After School Activity" option.</li>
-            <li class="patch-note"><b>Quit School (CHILD)</b>: You can quit school by opening up your phone and using the "Quit After School Activity" option.</li>
+            <li class="patch-note">Join School: Enrolls the Child or Teen in school.</li>
+            <li class="patch-note">Quit School: Removes the Child or Teen from school.</li>
           </ul>
         </div>
         <div id="subsection-ages">
           <h3>Ages</h3>
-          <p>Children can't be whisked away from having too low of a Grade. I originally put this in the mod to handle situations where you quit/rejoin a lot and end up with a terrible grade that is hard to get out of and puts your Child Sim close to being taken away; for now, it's the default (and only) up to date version, along with grades not going down when you quit/rejoin.</p>
-          <p>Due to how the baked in logic of quitting/joining works for careers in the Maxis Python code, allowing school to be quittable means you can't be in school and add another career on top of it.</p>
-          <p>For this reason, I long ago made the different versions ChildTeen and ChildOnly, in case you wanted Child Sims to be able to quit/join school, but keep Teens restricted, thereby keeping their possibility of enrollment in school and career at the same time, intact.</p>
-          <p>With Seasons, this same problem now exists for Child Sims with joining an "After School Activity" and being enrolled in school at the same time.</p>
-          <p>To create a sort of workaround for this, since the problem now exists for both ages with this mod, I created an optional, additional download, UnlimitedPTO, that makes it so that Child and Teen Sims can take time off from school, one day at a time, without having a limited number of days. I recommend using this as a standalone alternative to the mod if the aforementioned career/school restriction is more important for you to avoid than being able to quit/join school at will.</p>
-        </div>
-        <div id="subsection-compatibility">
-          <h3>Compatibility</h3>
-          <p>This mod overrides several game files. Mods that edit the same files will conflict. The files are as follows:</p>
-          <ul>
-            <li class="patch-note">commodity_Career_Child_Neglect | S4_339BC5BD_00000000_0000000000018282</li>
-            <li class="patch-note">career_Child_GradeSchool | S4_73996BEB_00000000_000000000000325F</li>
-            <li class="patch-note">career_Teen_HighSchool | S4_73996BEB_00000000_0000000000002545</li>
-            <li class="patch-note">phone_JoinCareer_Child | S4_E882D22F_0000001A_000000000002EC8A</li>
-          </ul>
-          <p>Scripting note for other modders: The script to avoid auto enroll edits "_apply_school_career" in simulation\careers\school\school_tuning.py (so any scripts that change the default code for that method will conflict... appending code may or may not)</p>
-        </div>
-        <div id="subsection-versions">
-          <h3>Two Versions</h3>
-          <p>The package file comes in two versions: ChildTeen and ChildOnly</p>
-          <p>This was a decision I made long ago, so that if you want Child sims to be able to quit/join, but you don't want Teens to have their joint school/career thing mucked with (see <a href="#subsection-ages">Ages</a> section of features for an explanation on this), you can just apply the possibility of quitting to Child sims. Teens will still be affected by the no-auto-enrolling script though.</p>
+          <p>Child Sims can't be whisked away from having too low of a Grade. I originally put this in the mod to handle situations where you quit/rejoin a lot and end up with a terrible grade that is hard to get out of and puts your Child Sim close to being taken away. It eventually stuck as a main part of the mod and so I've been keeping it as such, despite it not strictly being necessary since the mod will also prevent you from dropping a grade when you quit.</p>
         </div>
       </section>
     </div>
