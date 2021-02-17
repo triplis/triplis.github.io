@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Sims 4 Mods made by creator Triplis">
+    <meta name="keywords" content="sims 4, modding, mods, tools, auto hash, auto stbl, auto tuning ref, stbl editor, hash generator">
+    <meta name="author" content="Triplis">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/site.webmanifest">
+    <link rel="mask-icon" href="../img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../img/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>Sims Hash Assistant to the Modder - Triplis Sims 4 Mods</title>
+  </head>
+  <body>
+    <span class="to-top-floating-button">
+      <a href="#banner">Top</a>
+    </span>
+    <header>
+      <div class="container">
+        <div id="banner">
+          <a href="../index.html"><img src="../img/banner.png" alt="Triplis Sims 4 Mods" /></a>
+        </div>
+      </div>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="../nav/donate.html">Donate</a></li>
+            <li><a href="../nav/community.html">Contact</a></li>
+            <li><a href="../nav/tools.html">Tools</a></li>
+            <li><a href="../nav/guides.html">Guides</a></li>
+            <li><a href="../nav/help.html">Help</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <section id="page-intro">
+        <h1>Sims Hash Assistant to the Modder (SHAM) <img src="../img/shamIconForShow.png" /></h1>
+        <p>A multi-purpose tool to assist in modding, combining the capabilities of my previous tools: Auto Hash, Auto STBL, and Auto Tuning Ref. Along with a new STBL Editor/Viewer and Hash Generator.</p>
+      </section>
+    </div>
+    <div class="container">
+      <section id="boxes-mod-images">
+        <a href="../img/shamShowcaseImgHashTuning.png" target="_blank">
+          <span class="box">
+            <img src="../img/shamShowcaseImgHashTuning.png" alt="Screenshot of Hash Tuning tab in program, having just hashed a flie." />
+          </span>
+        </a>
+        <a href="../img/shamShowcaseImgHashText.png" target="_blank">
+          <span class="box">
+            <img src="../img/shamShowcaseImgHashText.png" alt="Screenshot of Hash Text tab in program, with an example of Full File Aspiration name and Append Text." />
+          </span>
+        </a>
+        <a href="../img/shamShowcaseImgStblTable.png" target="_blank">
+          <span class="box">
+            <img src="../img/shamShowcaseImgStblTable.png" alt="Screenshot of STBL Table tab in program, with Become a Sorcerer english STBL file open." />
+          </span>
+        </a>
+      </section>
+    </div>
+    <div class="container">
+      <section id="download-buttons">
+        <nav>
+          <ul>
+            <li><a href="http://www.simfileshare.net/download/2361594/" target="_blank">Download</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+    <div class="container">
+      <section id="page-key">
+        <p><b>Latest:</b> v1.0</p>
+        <p><a href="https://workupload.com/file/2azwAEGF5cU" target="_blank">Download Source Code</a></p>
+        <h3>Features</h3>
+        <ul class="keys">
+          <li><a href="#subsectionIntro">Introduction</a></li>
+          <li><a href="#subsectionHashTuning">Hash Tuning</a></li>
+          <li><a href="#subsectionHashText">Hash Text</a></li>
+          <li><a href="#subsectionHashSTBL">Hash STBL</a></li>
+          <li><a href="#subsectionSTBLTable">STBL Table</a></li>
+          <li><a href="#subsectionTuningRef">Tuning Ref</a></li>
+          <li><a href="#subsectionCustomTheme">Custom Theme</a></li>
+          <li><a href="#subsectionCrossPlatform">Can I use this on a Mac?</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="container">
+      <section id="page-sections">
+        <div id="subsectionIntro">
+          <h3>Introduction</h3>
+          <p>Sims Hash Assistant to the Modder (SHAM) is sort of like if Sims 4 Auto Hash and Sims 4 Auto STBL had their arms melted into each other and then also had a baby. Probably one of the weirdest analogies I've ever come up with, but the point is that it's both of those programs and more.</p>
+          <p>If you're already familiar with the GUI version of Sims 4 Auto Hash and Sims 4 Auto STBL, the general idea of how they work is still the same. But I have made a number of changes, additions, and improvements, in part geared toward making some of the features from my previous tools a little more intuitive or having tooltips, instead of you having to pore over documentation to understand.</p>
+          <p><b>Overview of Changes</b></p>
+          <ul>
+            <li class="patch-note">The core parts of the program are split into tabs: Hash Tuning (Sims 4 Auto Hash), Hash Text (NEW), Hash STBL (Sims 4 Auto STBL), STBL Table (NEW), and Tuning Ref (Sims 4 Auto Tuning Ref).</li>
+            <li class="patch-note">Hash Tuning: Added "Scared" to the buff DataTemplates.</li>
+            <li class="patch-note">Hash Tuning: Custom or missing classes can be recognized by adding to the additionalClasses.txt file.</li>
+            <li class="patch-note">Hash Tuning: Personality traits will be given a 32 High Bit hash instead of 64 High Bit, given their issues with the UI as 64 High Bit.</li>
+            <li class="patch-note">Hash STBL: Choose "Language of New Strings" for better duplicate checking, i.e. English if strings you're adding are in English.</li>
+            <li class="patch-note">Hash STBL: Add and remove folder locations to a saved dropdown list. The current chosen location is where it will look for existing STBL files to edit, allowing you to switch between projects easily.</li>
+            <li class="patch-note">NEW Hash Text: Works similar to S4S's Hash Generator. You put in text and it gives you a hash value of various types.</li>
+            <li class="patch-note">NEW Hash Text: Tries to suggest the right hash for the job. Ex: If you check Full File and pick Aspiration, it will underline 32 High Bit. In most cases, it will recommend 64 High Bit since that's the typical for tuning files.</li>
+            <li class="patch-note">NEW Hash Text: Optionally append the text you put in and/or full file name to get something you can use as a filename right away, or close to it. Ex: If you check Full File and pick SuperInteraction, it might give you something like this: S4_E882D22F_00000000_A8322168125B1E3A</li>
+            <li class="patch-note">NEW STBL Table: Easily switch between two modes: STBL Editor (for editing and saving changes) and STBL Viewer (for safe viewing, free of any concern of accidentally making or saving changes).</li>
+            <li class="patch-note">Set "Creator Name" under Preferences. This currently has limited use; it's used in folder naming if generating STBLs using the "New STBL File (Default)" option as part of Hash STBL tab. It will get immediately saved with Preferences when set, to ensure you only need to set it once.</li>
+            <li class="patch-note">Tuning file location can now be: copy/pasted in (Ex: shift-click, "Copy as Path" in Windows, or right-click the file itself and copy it); dragged and dropped in; or you can click the dropdown, choose Find Files, and select files from a file dialog.</li>
+            <li class="patch-note">A number of things have been given tooltips or placeholder text, to hopefully make it clearer at a glance how stuff works without needing to pore over detailed documentation.</li>
+            <li class="patch-note">Debug info now takes up most of the space in the Hash Tuning and Hash STBL UI and has been overhauled to focus on clearer and more succinct info, to communicate to you what's happening as files are processed.</li>
+            <li class="patch-note">Your cursor "focus" starts in the input box on startup and when switching tabs, to save you a click (if there is an input box).</li>
+            <li class="patch-note">Error checking more distinctly validates your input as an actual file path and sternly tells it to go home if it's not.</li>
+            <li class="patch-note">Preferences are now sorted under categories (ex: Hash Tuning, Hash Text, Hash STBL).</li>
+            <li class="patch-note">Added support for unicode characters. If you run into any issues with this, let me know. I tested it some, but English is my native language, so I'm not likely to catch issues with it outside of limited testing.</li>
+            <li class="patch-note">Use a custom theme I designed, or disable in Preferences if you prefer to use your platform's native theme. (I understand some people generally prefer their native theme for various reasons). Note that the icons in the top toolbar are going to be custom either way, but I gave the ones for the native theme what I think is a fairly neutral look.</li>
+          </ul>
+        </div>
+        <div id="subsectionHashTuning">
+          <h3>Hash Tuning</h3>
+          <p><b>Example How To</b></p>
+          <p>In the box with the "put location of tuning files here" placeholder text, you put in a file path, and it will do a number of operations on the file: generate a hash for it, insert the hash as its internal file hash in decimal and then apply the hash to its external filename as hexadecimal.</p>
+          <p>So the simplest usage should look something like the following:</p>
+          <ul>
+            <li class="patch-note">Pick a name for your XML file internally and save it with that name. For example: n="Triplis:Interaction_DoThings" — This is the name that will be used for generating the hash. Make sure the external filename is in one of two formats: Scumbumbo's XML Extractor or Sims 4 Studio, and that it's the file type XML. If you are unsure what those formats are, I'm referring to the default format when you extract XML files using Scumbumbo's tool or the Sims 4 Studio tool.</li>
+            <li class="patch-note">Copy the file path. You can do this by doing shift + right-click while looking at the file in windows explorer. Notepad++ and Atom text editors both have an option to copy file path as well. You can also drag and drop it in, copy/paste the file itself in (it'll be interpreted as the path location), or hit the arrow and select &lt;Find Files...&gt; to choose it from a file dialog window.</li>
+            <li class="patch-note">Paste the file path into the program. If Preferences > Hash Tuning > Auto Process Filenames is checked, the file will start being processed as soon as the input box detects a filename. If it's not checked, you'll have to click the little Process Input gear icon above the box.</li>
+            <li class="patch-note">You're done!</li>
+          </ul>
+          <p>When you're finished, you can exit it out, leave it open for using it more, up to you. You can also click the little save icon or hit CTRL+S to save the contents of the debug log to a file, which should have some stuff in it after hashing.</p>
+          <p><b>Multiple Files</b></p>
+          <p>You can do more than one file at a time. To do this in windows, select more than one file in windows explorer, use shift + right-click to copy path, and then paste into the program.</p>
+          <p><b>What Gets Appended as Name</b></p>
+          <p>When choosing an internal filename, consider the example n="Triplis:Interaction_DoThings"</p>
+          <p>Note the colon, ":" operator in there. That's optional. If included, it will cause the program to ignore anything before ":" when appending the internal filename to the end of the external filename. For example, if you want your external filename to be S4_3C1D8799_00000000_D3613ABC297B23B7_MyZoneModifier even though the internal filename is Triplis:MyZoneModifier, you would include the ":" operator. This is purely a preference thing; it has nothing to do with the hash generation itself. I put it in because I like to use S4PE and S4PE will build a key list for assets that have a name appended to the end of them, making it easier to navigate your projects when looking at them in S4PE, but if my hash generation appended the entire filename, it could get rather long! You might know that your project is only by you and so there is no need to append your modder name to the external name of the file.</p>
+          <p>Keep in mind, of course, that using a unique modder name does matter for hash generation when it comes to what you choose for the internal filename! You want to make sure the chances of someone using the same hash is as low as possible. MyZoneModifier is not likely to be unique, but TheLastKnightOfBardledom:MyZoneModifier or TheLastKnightOfBardledom_MyZoneModifier probably will be.</p>
+          <p><b>Data Template Files</b></p>
+          <p>The program comes with a set of template data files. Meaning, existing data files that will be copied for some file types when a hash is generated. This is to speed up the process of hunting down data file types every time you want to make a new tuning file that requires one. Not all data template files have been added yet.</p>
+          <p>Some, however, have more than one template and you can choose which one will get copied by naming your XML file in the right way.</p>
+          <p>For example, if you have a buff XML file and you want to generate a data file for the mood Confident, include, somewhere in your internal filename, "BuffConfident." This might look something like: n="Triplis:Buff_StrutAround_BuffConfident"</p>
+          <p>You can look at the template folder (it comes with the program) and see what the syntax looks like for these template variations. Right now, most of the variation revolves around different types for buffs and different types for traits. Note that you will still need to edit the data file somehow for modifying things like strings.</p>
+          <p><b>Additional Classes</b></p>
+          <p>In the past, the auto hash tool has ignored classes that aren't in its compiled list, so you could make a custom snippet class called BoopOnTheNoseSnippet and the program would just tell you it can't do anything with it.</p>
+          <p>Now it will default to snippet as the type if the class doesn't exist in its list, assuming it to be a custom snippet class, which is the most common kind of custom class.</p>
+          <p>Or if that doesn't cover you, you can add to the additionalClasses.txt file. The program comes with an example in there, so you have an idea of what to do. The "NONE" part will always be "NONE" unless you were going to connect a simdata file to it that is supported by the program, such as in the case of a custom buff class maybe. If you do need to use it, just use the simdata group type (it must be one that shows up in the DataTemplates folder). Note: If you need to set the hash type to something other than 64 high bit, the supported types are: BIT_64, BIT_64_HIGH, BIT_32, BIT_32_HIGH</p>
+        </div>
+        <div id="subsectionHashText">
+          <h3>Hash Text</h3>
+          <p>Hash Text tab is a hash generating tool, similar to the Hash Generator tool you can find in Sims 4 Studio. You put in some text and it gives you different types of hashes that you can copy/paste for use in custom mod files.</p>
+          <p>It provides:</p> 
+          <ul>
+            <li class="patch-note">64 and 32 bit / high bit results.</li>
+            <li class="patch-note">Is String toggle to produce a hash formatted for use in a Sims 4 string.</li>
+            <li class="patch-note">Append Text toggle to append the text you're hashing to the end of the hex hash (useful if you're using the hash in an external filename).</li>
+            <li class="patch-note">Full File toggle with a classes list to turn the hex hash into a full, usable filename with the right instance type hash (ex: S4_E882D22F_00000000_D1E6F29284C618FF for SuperInteraction).</li>
+            <li class="patch-note">Recommended hash highlighting: underlines the recommended hash for the job. Usually this will be 64 High Bit, as that is the standard for mod files. Exceptions to this are hard-coded in and may require updating, depending on the most up-to-date knowledge of modding different types of files.</li>
+          </ul>
+        </div>
+        <div id="subsectionHashSTBL">
+          <h3>Hash STBL</h3>
+          <p><b>Example How To</b></p>
+          <p>In the box with the "put location of tuning files here" placeholder text, you put in a file path to an XML tuning file. Then you select a target set of STBL files with "Add New Strings To...", or leave it as New STBL File (Default) to create new STBL files intead.</p>
+          <p>The following is an example to explain how it works.</p>
+          <p>You have a custom interaction file and you want a unique string name for your interaction that'll show up in-game. Somewhere in the file is a line like the following:</p>
+          <p><code>&lt;T n=&quot;display_name&quot;&gt;0x588ECF04&lt;!--String: &quot;Enchant to Kneel&quot;--&gt;&lt;/T&gt;</code></p>
+          <p>Note that the comment describing what the string should be is important. The formatting the program looks for is precise and is based on strings being commented in the way that standard tools do (like Scumbumbo's XML Extractor—I'm not sure if S4S extraction does the same).</p>
+          <p>Now let's get the tool to recognize our string. It was Enchant to Kneel, but we're going to change it to Bungalow Banjos. So we do this:</p>
+          <p><code>&lt;T n=&quot;display_name&quot;&gt;0x588ECF04&lt;!--StringCustom: &quot;Bungalow Banjos&quot;--&gt;&lt;/T&gt;</code></p>
+          <p>If we run the program on this XML file, it will find the commented string with the "StringCustom" identifier and create a unique hash for the string in quotes, our "Bungalow Banjos." Note that this hash is created from a combination of the string itself and the internal name of the file (the "n=" value), so for best practice to avoid hash collisions, make sure you've given the file a unique name first!</p>
+          <p>This also means that you could theoretically put "Bungalow Banjos" in two different files and generate the same string for both, but with a different hash value, which is not ideal. To prevent this, make sure to set Language of New Strings to the language of the strings you're adding. This will have it check against the related file when adding to existing STBL files (e.g. 00 Locale Code STBL file for English), to ensure duplicate strings are ignored.</p>
+          <p>Next, the program will insert the new hash into the XML file for you. So your line of code might end looking something like this:</p>
+          <p><code>&lt;T n=&quot;display_name&quot;&gt;0xA706DD72&lt;!--StringCustom: &quot;Bungalow Banjos&quot;--&gt;&lt;/T&gt;</code></p>
+          <p>Now all that's left is the string table itself. The target string table (STBL) works as follows:</p>
+          <ul>
+            <li class="patch-note">If the dropdown option is the default "New STBL File (Default)", the new strings will be added to a new set of STBL files (one for each language) and these will be placed in the folder where the program is located "NewSTBLs" > CreatorName_SomeHashFromNewStrings (ex: Triplis_E714D8AB2D9F8FE1). The CreatorName part comes from what is set under Preferences > Creator Name.</li>
+            <li class="patch-note">If the dropdown option is a selected folder of your choosing, it will add the new strings to every STBL file in the chosen folder. If no STBL files are in the chosen folder, it will create a new set in the chosen folder.</li>
+            <li class="patch-note">New STBL files created will be in either Scumbumbo's XML Extractor format, aka: Sims 4 Package Editor format, or in Sims 4 Studio format, depending on which format the XML file is in that you pasted into the box</li>
+          </ul>
+          <p>The goal of the dropdown design is to make it easier to manage multiple sets of STBL files from different projects and in general, have finer control over where STBL files are targeted for string addition.</p>
+          <p>And that's it! You can add the STBL files from your chosen folder to a package file, add in your interaction, and you're ready to see your string in-game.</p>
+        </div>
+        <div id="subsectionSTBLTable">
+          <h3>STBL Table</h3>
+          <p>STBL Table is both an STBL Editor and STBL Viewer, depending on how you wish to use it. You can switch it back and forth from one to the other as desired, to, for example, safeguard against making accidental changes if you just want to view a file.</p>
+          <p>It also includes a Find box with Find Next and Find Previous switching to search for particular strings in the table by name</p>
+          <p>How it works should be fairly self-evident, but I'll provide some details below just in case.</p>
+          <p>One thing I want to mention is it works like a text editor in that you can make and save changes easily and quickly with saving and shortcut for it (CTRL+S). This means you could also muck up your STBL file pretty easily if you aren't careful and don't know what you're doing. For this reason, I recommend working with backups/copies of files when making edits. This is good practice for software in general, but it's especially important here.</p>
+          <p>I will note, however, it's creating a new STBL file each time you save; meaning, it's rebuilding it from scratch with whatever entries are in the STBL Table tab's table. So if you muck something up in a way that your STBL file no longer works, it shouldn't be too hard to fix it. The worst you can probably do is delete something you didn't mean to delete, or save an entry with a placeholder Hash like 0x00000000.</p>
+          <p>Some details on how to use it:</p> 
+          <ul>
+            <li class="patch-note">Add New Entry adds a new entry to the table. This entry will be made with some default, placeholder stuff (0x00000000 for Hash and MyNewString for Text). It's expected that you fill these out with real values before saving.</li>
+            <li class="patch-note">Remove Selected Entry removes the currently selected entry from the table. There is no undo on this other than closing/exiting the file without saving changes, so use carefully.</li>
+            <li class="patch-note">The buttons in the toolbar at the top from left to right are: Open File, Save, Save As, and Close File. It should warn you if you're trying to Open or Close without saving current changes.</li>
+            <li class="patch-note">Edit Mode: Click one of the two buttons to switch between STBL Editor and STBL Viewer. STBL Viewer is made with safe viewing in mind, for if you just want to look at the entries in an STBL file, without concern for accidentally hitting buttons like Remove Selected Entry.</li>
+            <li class="patch-note">Find Entry: Type in text and move through entries that match it with the enter key. This can match Hash or Text entries, depending on what you want to find. Find Previous will search backwards through the found entries, instead of forward.</li>
+          </ul>
+          <p></p>
+        </div>
+        <div id="subsectionTuningRef">
+          <h3>Tuning Ref</h3>
+          <p>The usefulness of this tool may not be immediately apparent. Unlike some of the other tools in this program, it doesn't hash or name things for you and it doesn't edit the files you input at all. Its purpose is instead to produce tuning-ready XML with references to other tuning files in it, that can be copy/pasted into XML files as you desire.</p>
+          <p>If, for example, you have a lot of traits you want to be removed through a loot file: Normally, you'd have to open up each trait file, copy the hash, and then paste it into a trait_remove tuning one after another in your loot file at bare minimum. If you mod like me, you've got to paste the name of the file too, into a comment, so you know what's what at a glance. Extremely tedious with a lot of files, lots of dead time to question your life choices.<p>
+          <p>With this tool, you can simply navigate to the folder where your traits are, choose trait_remove, process the files, and you'll have some text you can copy/paste into your loot file with all the traits and their IDs in trait_remove procedures, put together for you.</p></p>
+          <p><b>Example How To</b></p>
+          <p>You have a bunch of interactions you want to reference in an AffordanceList, but getting all of their IDs to reference them in the file is tedious, not to mention blindingly boring, and error prone. So you:</p>
+          <ul>
+            <li class="patch-note">Choose the location of the interactions with the dropdown and file dialog, or paste them in.</li>
+            <li class="patch-note">Choose "AffordanceList value" from the dropdown on the left, below the tuning file dropdown.</li>
+            <li class="patch-note">The dropdown on the right will be left blank, since our affordance list references don't use an enum.</li>
+            <li class="patch-note">Click the "Process Input" gear icon.</li>
+          </ul>
+          <p>This will add some XML to the Big Blue Box (BBB). Or Big White Box (BWB) maybe, if you're using the native theme.</p>
+          <p>From here, you have a number of options to work with the XML. You can hit the Copy Output icon and then paste it into your AffordanceList tuning file. You can select it and copy it more manually. You can hit the Save As icon to save it to a file and then copy/paste it or add to it from there. Whatever works for you.</p>
+          <p><b>Advanced Use</b></p>
+          <p>I wanted the program to be as simple and flexible as possible, so you can to some extent add your own XML files to the tunables folder that comes with the program and it will recognize them.</p>
+          <p>Currently, keywords recognized by the program are: TUNING_REFERENCE_GOES_HERE, TUNING_REFERENCE_LIST_GOES_HERE, and ENUM_GOES_HERE</p>
+          <ul>
+            <li class="patch-note">TUNING_REFERENCE_GOES_HERE: The program will expect to put a single tuning reference here.</li>
+            <li class="patch-note">TUNING_REFERENCE_LIST_GOES_HERE: The program will expect to put multiple tuning references here (e.g. in the case of a list, like in blacklist_traits).</li>
+            <li class="patch-note">ENUM_GOES_HERE: The program will expect to put an enum here, such as ParticipantType's Actor, TargetSim, etc.</li>
+          </ul>
+          <p>You may notice some files have a comment like this: <code>&#x3C;!--Instance Restriction: statistic--&#x3E;</code> or this: <code>&#x3C;!--Class Restriction: Trait--&#x3E;</code></p>
+          <p>This is completely optional and is just a "minimize user error" kind of thing. If you give something a restriction, then it will be ignored in processing if the types don't match. For example, if trait_remove has a class restriction of Trait and somebody tries to process a Buff file as a tuning to be placed in trait_remove.</p>
+          <p>You can also add stuff to the enums folder, but I'm not sure how useful it is as a functionality beyond ParticipantType. At least for the way the program is set up.</p>
+          <p>If you add a set of enums, make sure to specify it with an <code>&#x3C;!--Enum Type: ParticipantType--&#x3E;</code> kind of comment in tunables that should use it, where ParticipantType is the kind of enum that should be used. Otherwise, it'll be a possible enum, but won't be linked to any specific tunables file.</p>
+        </div>
+        <div id="subsectionCustomTheme">
+          <h3>Custom Theme</h3>
+          <p>This deserves its own section not because there is a custom theme I made that you can enable or disable if you want, but because you can also create your own theme if you wish.</p>
+          <p>In the files for the program, you'll find a folder called Tutorials > Custom Theme Example. The README file in there explains the gist of how you can create a custom theme with a complete example.</p>
+          <p>You can set one Override theme at a time and Use Custom Theme must be enabled in Preferences > Appearance for it to be applied.</p>
+          <p>I added support for this basically because I could. It was fairly easy to do and this is a modding tool, after all. Customization is a mindset at home here.</p>
+          <p>I don't expect anyone to go to the trouble to make a custom theme, but hey, if you do and you'd like to share it, you can let me know on my discord and I'll add a link to it on this page so it has more visibility.</p>
+        </div>
+        <div id="subsectionCrossPlatform">
+          <h3>Can I use this on a Mac?</h3>
+          <p>Short answer: No, but I will update this note if that changes.</p>
+          <p>Longer answer: You may have seen me give some contradicting or confusing information on cross platform about my programs in the past. At the time, I had little idea what the deal was.</p>
+          <p>What the deal is, as far as I can tell, is this: Qt is largely built to be a cross-platform library and this program uses it heavily, along with C++. But, to actually be able to use a Qt program cross-platform, you still need to have that platform to compile it on, to get an executable that will work on that platform.</p>
+          <p>I don't have a Mac, so I can't compile the program for a Mac and test it to make sure it'll all work on a Mac. If you have a Mac and would like to compile it for a Mac and test it to make sure it'll all work on a Mac, you're welcome to do so (the source code is freely available for download). You can even share the result and I'll share a link here.</p>
+          <p>I can't create a Mac version myself though, or offer support for such a version, since I don't have a Mac or Mac environment of any kind and am unlikely to have one any time soon.</p>
+        </div>
+      </section>
+    </div>
+    <div class="container">
+      <footer>
+        <p>Triplis Sims 4 Mods, Copyright &copy; 2018-<script language="JavaScript" type="text/javascript">document.write((new Date()).getFullYear());</script></p>
+      </footer>
+    </div>
+  </body>
+</html>
