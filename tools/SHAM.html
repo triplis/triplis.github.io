@@ -43,7 +43,7 @@
     <div class="container">
       <section id="page-intro">
         <h1>Sims Hash Assistant to the Modder (SHAM) <img src="../img/shamIconForShow.png" /></h1>
-        <p>A multi-purpose tool to assist in modding, combining the capabilities of my previous tools: Auto Hash, Auto STBL, and Auto Tuning Ref. Along with a new STBL Editor/Viewer and Hash Generator.</p>
+        <p>A multi-purpose tool to assist in modding, combining the capabilities of my previous tools: Auto Hash, Auto STBL, and Auto Tuning Ref. Along with a new XML Editor, STBL Editor/Viewer, and Hash Generator.</p>
       </section>
     </div>
     <div class="container">
@@ -69,15 +69,26 @@
       <section id="download-buttons">
         <nav>
           <ul>
-            <li><a href="http://www.simfileshare.net/download/2361594/" target="_blank">Download</a></li>
+            <li><a href="http://www.simfileshare.net/download/2428354/" target="_blank">Download (Simfileshare)</a></li>
+            <li><a href="https://www.patreon.com/file?h=48138763&i=7709609" target="_blank">Download (Patreon)</a></li>
           </ul>
         </nav>
       </section>
     </div>
     <div class="container">
       <section id="page-key">
-        <p><b>Latest:</b> v1.0</p>
-        <p><a href="https://workupload.com/file/2azwAEGF5cU" target="_blank">Download Source Code</a></p>
+        <p><b>Latest:</b> v1.1</p>
+        <p><a href="https://workupload.com/file/5ZsGgca2wpQ" target="_blank">Download Source Code (Workupload)</a> | <a href="https://www.patreon.com/file?h=48138763&i=7709673" target="_blank">Download Source Code (Patreon)</a></p>
+        <h3>Updating</h3>
+        <p>If you've used the previous version, you may have settings (e.g. preferences.ini) or things in folders you want to keep (ex: edited additionalClasses.txt file). I recommend simply copying them over to where you've put the new version. I don't have an installer (partly cause I didn't anticipate making many changes) but I might consider one in the future.</p>
+        <h3>Patch Notes</h3>
+        <ul class="patch-note">
+          <li>NEW XML Tuning tab: Offers a plaintext XML Editor, with some standard text editing features and some specialized features specifically to make it easier to do modding with sims 4 xml tuning files. This is an unfairly concise summary of it: I suggest <a href="#subsectionXMLTuning">reading what it can do in detail.</a></li>
+          <li>Added some basic support for opening XML and STBL from outside the program. Currently, this has to be chosen manually under "Open With", to register it as a possible program for the file type. Doing so will open the file in a new instance of the program.</li>
+          <li>STBL Table: You can now right-click the open file icon and select a language. This will give you a file dialog that filters out all but STBL files with the selected language locale code in their name.</li>
+          <li>Hash Text: For convenience, clicking a hash value will copy it to the clipboard. This can be turned on or off in preferences.</li>
+          <li>Hash Tuning: Fixed an issue with DataTemplates file selection. It should now be more accurate in the relevant template it looks for.</li>
+        </ul>
         <h3>Features</h3>
         <ul class="keys">
           <li><a href="#subsectionIntro">Introduction</a></li>
@@ -85,6 +96,7 @@
           <li><a href="#subsectionHashText">Hash Text</a></li>
           <li><a href="#subsectionHashSTBL">Hash STBL</a></li>
           <li><a href="#subsectionSTBLTable">STBL Table</a></li>
+          <li><a href="#subsectionXMLTuning">XML Tuning</a></li>
           <li><a href="#subsectionTuningRef">Tuning Ref</a></li>
           <li><a href="#subsectionCustomTheme">Custom Theme</a></li>
           <li><a href="#subsectionCrossPlatform">Can I use this on a Mac?</a></li>
@@ -97,6 +109,7 @@
           <h3>Introduction</h3>
           <p>Sims Hash Assistant to the Modder (SHAM) is sort of like if Sims 4 Auto Hash and Sims 4 Auto STBL had their arms melted into each other and then also had a baby. Probably one of the weirdest analogies I've ever come up with, but the point is that it's both of those programs and more.</p>
           <p>If you're already familiar with the GUI version of Sims 4 Auto Hash and Sims 4 Auto STBL, the general idea of how they work is still the same. But I have made a number of changes, additions, and improvements, in part geared toward making some of the features from my previous tools a little more intuitive or having tooltips, instead of you having to pore over documentation to understand.</p>
+          <p>As of v1.1, it now has an XML Editor, too (the tab is called "XML Tuning"). This was specially designed for those who are used to creating and editing Sims 4 XML Tuning files in a plaintext editor like Notepad++, to make modding easier.</p>
           <p><b>Overview of Changes</b></p>
           <ul>
             <li class="patch-note">The core parts of the program are split into tabs: Hash Tuning (Sims 4 Auto Hash), Hash Text (NEW), Hash STBL (Sims 4 Auto STBL), STBL Table (NEW), and Tuning Ref (Sims 4 Auto Tuning Ref).</li>
@@ -197,6 +210,28 @@
             <li class="patch-note">The buttons in the toolbar at the top from left to right are: Open File, Save, Save As, and Close File. It should warn you if you're trying to Open or Close without saving current changes.</li>
             <li class="patch-note">Edit Mode: Click one of the two buttons to switch between STBL Editor and STBL Viewer. STBL Viewer is made with safe viewing in mind, for if you just want to look at the entries in an STBL file, without concern for accidentally hitting buttons like Remove Selected Entry.</li>
             <li class="patch-note">Find Entry: Type in text and move through entries that match it with the enter key. This can match Hash or Text entries, depending on what you want to find. Find Previous will search backwards through the found entries, instead of forward.</li>
+          </ul>
+          <p></p>
+        </div>
+        <div id="subsectionXMLTuning">
+          <h3>XML Tuning</h3>
+          <p>XML Tuning is a standard plaintext editor, but designed to be specialized in ways that are more convenient for working with Sims 4 Tuning Files.</p>
+          <p>If you are like me and are used to modding XML tuning files by hand in an editor like Notepad++, that is the kind of person I had in mind. I knew I couldn't match the years of detail Notepad++ has, but I tried to bring it up to speed with some of the most essential features for convenient text editing. Things like syntax highlighting, for example.</p>
+          <p>But I knew that would not be enough. I thought about it from the standpoint of what would convince me to mod with it instead of doing the bulk of my work in Notepad++. So I came up with features like Insert Template and Save As Hash, which together, are designed to make it painless to find an example of a type of tuning and give it a unique hash, without having to hunt it down, copy it, etc. These are based on an open tuningTemplates folder that you can modify yourself to update tuning syntax changes or add templates of your own. There is really no limit on what snippet of xml you can make a template be. You can, for example, use it for entire tuning examples, as it's done in the templates that come with the program, or add short snippets of xml.</p>
+          <p>There is also notably a Link Tuning feature, which allows you to right-click on a line where a tuning gets referenced, select its location from a file dialog or copy it in, and it'll insert into the correct position with hash and commented name. Making it easier to tie tunings together without having to squint at a bunch of stuff to make sure you've entered it correctly.</p>
+          <p>Unlike Notepad++, it doesn't allow you to open multiple files at once, but it does provide an optional Project View to the left of the XML Editor, which can be set to a specific folder ("project") location. It'll then provide a filesystem view into that folder sort of like windows explorer does. You can double-click a file in there to open it and right-click to copy its path.</p>
+          <p>You can also click an open file's displayed title to instantly copy its path. You could then navigate over to the Hash Tuning tab and hash the file from there. So there are multiple ways to go about hashing your files.</p>
+          <p>Some other details about what it can do:</p>
+          <ul>
+            <li class="patch-note">Save As Hash uses the same logic as Hash Tuning with regards to data files, so it'll generate a companion data file where relevant/possible, if that option is checked in Hash Tuning.</li>
+            <li class="patch-note">Auto completion popup for tuning names, as of whenever I put the feature together (may not include new tunings since then).</li>
+            <li class="patch-note">Syntax highlighting can be changed and saved for both the native theme and the custom theme with a live color editor (live meaning it shows your color changes on a sample XML tuning as you make them). Yeah, I really put hours into a live color editor that has nothing to do with modding. You can't ever say I'm not into customization.</li>
+            <li class="patch-note">The Project View can be shown or hidden entirely, if you don't like it taking up part of the screen, and you can customize how much of the screen is taken up by the Project View compared to the XML Editor.</li>
+            <li class="patch-note">The Project View can show/hide internal Tuning Name. This is shown by default with arrow buttons to allow you to more quickly scroll to file name (Name) or internal tuning name (Tuning Name). The goal of this is to make it easier to see what files you're working with at a glance, since the file names themselves may be long and unwieldy with all that S4_E882D22F_00000000_A8322168125B1E3A type mumbo jumbo.</li>
+            <li class="patch-note">XML Tuning is integrated with the Hash Tuning and Hash STBL tab, such that if you attempt to hash the file that's open in XML Tuning in one of those tabs, it'll prompt you if there are unsaved changes and will reload the file after it's processed.</li>
+            <li class="patch-note">It'll try to warn you with a red underline if you have a space before or after a tuned value inbetween tags. This is probably not a problem for most XML, but I put it in there because I've seen do_command values fail to parse as intended because of an extra space.</li>
+            <li class="patch-note">Pasting in text or using Insert Template will try to match the indent level of the text to that of the current line and give it indentation if necessary. This is designed to handle Sims 4 XML Tuning files specifically; there may be kinds of XML it would fail on beyond S4. If you have issues with it, you can turn it off in preferences: "Insert: Match Indent to Current Line" | If you think there's an edge case in Sims 4 Tuning structure I've missed, you can let me know in my discord with sample XML that is indenting strangely.</li>
+            <li class="patch-note">Selecting a bool value in the XML ("True" or "False") will bring up a popup with a checkbox, that allows you to change it from False to True, or True to False, without being concerned about typos. This popup appears below the XML Editor while a bool is selected and can be ignored easily if you prefer to just type out the change.</li>
           </ul>
           <p></p>
         </div>
